@@ -28,11 +28,15 @@ This command tells your computer "hey, I'm working on the `webapp` project, so i
 
 You are ready to run Python! Your computer's Python installation can run in two important ways:
 
+#### Running Python Code Written in `.py` Files
+
 1. Python can execute Python code, which is written in `.py` files, such as `app.py`. If you write code in a `.py` file called `app.py`, you can tell Python to run __all__ the code with the following command (without typing `>>`):
 
 			>> python app.py
 
 This command tells Python to execute every line of code written in the `app.py` file.
+
+#### Running Python Code in the Interactive Console
 
 2. Python has an "Interactive Console" called the "Python Interactive Console".
 
