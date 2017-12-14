@@ -34,7 +34,7 @@ Python can execute Python code, which is written in `.py` files, such as `app.py
 
 			>> python app.py
 
-This command tells Python to execute every line of code written in the `app.py` file.
+This command tells Python to execute every line of code written in the `app.py` file. Try running this command and, if there are no error messages, navigate to [localhost](localhost:5000).
 
 ### 2. Running Python Code in the Interactive Console
 
@@ -58,4 +58,8 @@ __Type `python` to start the Python interactive console.__ Then try the followin
 * `print(y + z)`
 	* How is this different from `print(x + 1)`? How is it the same?
 * `print(y + " " + z)`
+
+# Resources:
+
+[HTML Guide](https://www.w3schools.com/html/html_elements.asp)
 
