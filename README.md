@@ -28,17 +28,17 @@ This command tells your computer "hey, I'm working on the `webapp` project, so i
 
 You are ready to run Python! Your computer's Python installation can run in two important ways:
 
-#### Running Python Code Written in `.py` Files
+### 1. Running Python Code Written in `.py` Files
 
-1. Python can execute Python code, which is written in `.py` files, such as `app.py`. If you write code in a `.py` file called `app.py`, you can tell Python to run __all__ the code with the following command (without typing `>>`):
+Python can execute Python code, which is written in `.py` files, such as `app.py`. If you write code in a `.py` file called `app.py`, you can tell Python to run __all__ the code with the following command (without typing `>>`):
 
 			>> python app.py
 
 This command tells Python to execute every line of code written in the `app.py` file.
 
-#### Running Python Code in the Interactive Console
+### 2. Running Python Code in the Interactive Console
 
-2. Python has an "Interactive Console" called the "Python Interactive Console".
+Python has an "Interactive Console" called the "Python Interactive Console".
 
 	Any Python commands can be executed one at a time by writing them in the command prompt and hitting the <kbd>Enter</kbd> key. This is called a __Read-Evaluate-Print-Loop__ environment, because it "reads" your input, "evaluates" it, "prints" the output, and then "loops" by starting the process over again.
 
