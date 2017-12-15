@@ -33,7 +33,11 @@ I suggest that you download SublimeText 2, a text editor (like Microsoft Word or
 # Resources:
 
 [Khan Academy HTML Lessons](https://www.khanacademy.org/computing/computer-programming/html-css)
+
 [HTML Guide](https://www.w3schools.com/html/html_elements.asp)
+
 [codepen.com](https://codepen.io/zsiegel/)
+
 [jsfiddle.net](https://jsfiddle.net/)
+
 [Zach's Github Page](https://github.com/zsiegel92)
