@@ -15,9 +15,9 @@ You are ready to write HTML code!
 
 ### 3. Viewing .html Files in Your Browser
 
-Download
+Navigate to [your first HTML file](https://github.com/zsiegel92/Eitan_S/raw/master/static/hello.html) and download the html file by selecting "File > Save Page As" in your web browser. Then, drag this file from the folder it was downloaded to onto your web browser app icon.
 
 ### 4. Serving .html Files from Python
 
-
+This will be Lesson 3.
 
