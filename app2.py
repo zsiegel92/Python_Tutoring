@@ -7,6 +7,7 @@ def index():
     print("HELLO")
     return app.send_static_file('hello.html')
 
+
 @app.route("/<name>")
 def say_name(name):
     text = """<!DOCTYPE html>
