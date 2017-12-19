@@ -9,7 +9,7 @@ def index():
 
 @app.route("/<name>")
 def say_name(name):
-    return "Hi, " + name
+    return "Hi, my friend, " + name
 
 
 if __name__=="__main__":

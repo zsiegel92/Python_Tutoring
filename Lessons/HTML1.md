@@ -1,4 +1,4 @@
-# Lesson 2: HTML
+# HTML Lesson 1
 
 
 ## Creating HTML Code

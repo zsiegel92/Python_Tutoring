@@ -21,7 +21,7 @@ Before getting started, you have to take care of a few things:
 	* Type `ls -AL` to list all the files and folders in the folder you are in, INCLUDING the hidden folders, which begin with a dot (such as `.env`).
 
 3. When you are in the folder called `webapp`, type the command
-            `/venv/Scripts/activate`
+            `venv\Scripts\activate.bat`
 This command tells your computer "hey, I'm working on the `webapp` project, so if I install anything, please don't let it affect the rest of my computer."
 
 

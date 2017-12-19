@@ -1,9 +1,15 @@
-# Lesson 1: Python
-
+# Python Lesson 2
 
 ## Running Python
 
-You are ready to run Python! Your computer's Python installation can run in two important ways:
+#### Running Python Scripts (`something.py`)
+
+Use `cd` and `dir` to navigate to the folder containing a Python file with the `.py` extension. Type `python filename.py` to execute all the Python commands in the `.py` file.
+
+#### Running the Python Interactive Console (REPL)
+
+Type `python` <kbd>enter</kbd> from the command prompt at any time to open the Python Interactive Console, which will **R**ead **E**valuate **P**rint and **L**oop as you provide commands.
+
 
 ### 1. Running Python Code Written in `.py` Files
 
