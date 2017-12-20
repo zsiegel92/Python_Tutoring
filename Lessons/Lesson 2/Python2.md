@@ -10,7 +10,7 @@ Use `cd` and `dir` to navigate to the folder containing a Python file with the `
 
 Type `python` <kbd>enter</kbd> from the command prompt at any time to open the Python Interactive Console, which will **R**ead **E**valuate **P**rint and **L**oop as you provide commands.
 
-## Variable Types and the `type` Keyword
+## Variable "Types" and the `type` Keyword
 
 Open the Python Interactive Console by typing `python`<kbd>enter</kbd> in the command prompt.
 
@@ -112,6 +112,7 @@ print(4 >= 5)
 print(4 == 4)
 print(4 == 5)
 print(4 == 'hello')
+print('hello' == 'hello')
 ```
 
 >**NOTE:** We call the double equals sign `==` the "**equality operator**", and it turns an expression into `True` or `False` (like `5 == 5`). Remember we call the single equals sign `=` the "**assignment operator**" and we use it to "assign" values to variables (like `x = 5`).
@@ -175,3 +176,5 @@ else:
 ```
 
 Try executing `x=5`, then copying the above code into Python. What happened? Execute `x=4` and do the same. Execute `x=6` and do the same.
+
+Run the script `conditionals.py` using `python conditionals.py`.

@@ -730,67 +730,116 @@ pre {
 <p>Use <code>cd</code> and <code>dir</code> to navigate to the folder containing a Python file with the <code>.py</code> extension. Type <code>python filename.py</code> to execute all the Python commands in the <code>.py</code> file.</p>
 <h4>
 <a id="user-content-running-the-python-interactive-console-repl" class="anchor" href="#running-the-python-interactive-console-repl" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running the Python Interactive Console (REPL)</h4>
-<p>Type <code>python</code> <kbd>enter</kbd> from the command prompt at any time to open the Python Interactive Console, which will __R__ead __E__valuate __P__rint and __L__oop as you provide commands.</p>
-<h3>
-<a id="user-content-1-running-python-code-written-in-py-files" class="anchor" href="#1-running-python-code-written-in-py-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Running Python Code Written in <code>.py</code> Files</h3>
-<p>Python can execute Python code, which is written in <code>.py</code> files, such as <code>app.py</code>. If you write code in a <code>.py</code> file called <code>app.py</code>, you can tell Python to run <strong>all</strong> the code with the following command (without typing <code>&gt;&gt;</code>):</p>
-<pre><code>		&gt;&gt; python app.py
-</code></pre>
-<p>This command tells Python to execute every line of code written in the <code>app.py</code> file. Try running this command and, if there are no error messages, navigate to localhost.</p>
-<h3>
-<a id="user-content-2-running-python-code-in-the-interactive-console" class="anchor" href="#2-running-python-code-in-the-interactive-console" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Running Python Code in the Interactive Console</h3>
-<p>Python has an "Interactive Console" called the "Python Interactive Console".</p>
-<p>Any Python commands can be executed one at a time by writing them in the command prompt and hitting the <kbd>Enter</kbd> key. This is called a <strong>Read-Evaluate-Print-Loop (REPL)</strong> environment, because it "reads" your input, "evaluates" it, "prints" the output, and then "loops" by starting the process over again.</p>
-<p><strong>Type <code>python</code> to start the Python interactive console.</strong> Then try the following Python commands:</p>
-<ul>
-<li>
-<code>x=5</code> to create a variable named <code>x</code> with the value <code>5</code>.
-<ul>
-<li>
-<code>x = 5</code> will also work. Spaces (made with the <kbd>spacebar</kbd>) are known as <strong>whitespace</strong>, and are generally ignored by Python.</li>
-</ul>
-</li>
-<li>
-<code>print(x)</code> to print the value of <code>x</code>
-<ul>
-<li>
-<code>x</code> (on its own) is another way to say <code>print(x)</code>, but this only works in the interactive shell.</li>
-</ul>
-</li>
-<li>
-<code>print(x+1)</code>
-<ul>
-<li>
-<code>x+1</code> (on its own) will also work.</li>
-</ul>
-</li>
-<li>
-<code>y = "Eitan"</code>
-<ul>
-<li>(why did we need quotes around <code>Eitan</code> but not around the number <code>5</code>?)</li>
-</ul>
-</li>
-<li><code>z = "Zach"</code></li>
-<li><code>w = y</code></li>
-<li>
-<code>print(y + z)</code>
-<ul>
-<li>How is this different from <code>print(x + 1)</code>? How is it the same?</li>
-</ul>
-</li>
-<li><code>print(y + " " + z)</code></li>
-</ul>
+<p>Type <code>python</code> <kbd>enter</kbd> from the command prompt at any time to open the Python Interactive Console, which will <strong>R</strong>ead <strong>E</strong>valuate <strong>P</strong>rint and <strong>L</strong>oop as you provide commands.</p>
 <h2>
-<a id="user-content-first-python-script" class="anchor" href="#first-python-script" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>First Python Script</h2>
-<p>Create a file called <strong>loops.py</strong> and open it in your favorite text editor (SublimeText is reccommended).</p>
-<p>In this file, add the following code:</p>
-<pre><code>x = 5
-print(x)
-</code></pre>
-<p>Now, navigate to the folder containing this file and type in your command line</p>
-<pre><code>python loops.py
-</code></pre>
-<p>You should see the following output:</p>
-<pre><code>	&gt;&gt; 5
-</code></pre>
+<a id="user-content-variable-types-and-the-type-keyword" class="anchor" href="#variable-types-and-the-type-keyword" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variable Types and the <code>type</code> Keyword</h2>
+<p>Open the Python Interactive Console by typing <code>python</code><kbd>enter</kbd> in the command prompt.</p>
+<p>To create a variable named <code>x</code> storing the value <code>5</code>, we write <code>x=5</code>. The <code>=</code> symbol is called the "assignment operator", because we use it to "assign" values to variables.</p>
+<div class="highlight highlight-source-python"><pre>x <span class="pl-k">=</span> <span class="pl-c1">5</span>
+<span class="pl-c1">print</span>(x)</pre></div>
+<p>Now, change the value of <code>x</code> and print the new value.</p>
+<div class="highlight highlight-source-python"><pre>x <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>hello<span class="pl-pds">'</span></span>
+<span class="pl-c1">print</span>(x)</pre></div>
+<p>Wouldn't you say that the value <code>'hello'</code> and the value <code>5</code> are fundamentally different? That's because they have different <strong>type</strong>. Some variables hold numbers, others hold words or other data. The <strong>type</strong> keeps track of what a variable holds, and a computer treats different types differently.</p>
+<p>Check the type of <code>x</code> with the keyword <code>type</code>.</p>
+<div class="highlight highlight-source-python"><pre>x <span class="pl-k">=</span> <span class="pl-c1">5</span>
+<span class="pl-c1">print</span>(<span class="pl-c1">type</span>(x))</pre></div>
+<blockquote>
+<p><code>int</code> is short for "Integer", which is what we call numbers like 0, 1, and 2. Some numbers are not integers, like "two and a half". Negative numbers are integers.</p>
+</blockquote>
+<div class="highlight highlight-source-python"><pre>x <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>hello<span class="pl-pds">'</span></span>
+<span class="pl-c1">print</span>(<span class="pl-c1">type</span>(x))</pre></div>
+<blockquote>
+<p><code>str</code> is short for "String", which is what we call sequences of characters. To create strings, we usually have to put text between quotes (like <code>"hello"</code> or <code>'hello'</code>)</p>
+</blockquote>
+<div class="highlight highlight-source-python"><pre>x <span class="pl-k">=</span> [<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>]
+<span class="pl-c1">print</span>(<span class="pl-c1">type</span>(x))</pre></div>
+<blockquote>
+<p><code>list</code> is what Python calls ordered sequences of other variables. We can create a <code>list</code> of <code>str</code> variables (like <code>['a','b','c']</code>), a <code>list</code> of <code>int</code> variables (like <code>[1,2,3]</code>), or a <code>list</code> of both (like <code>[1,2,'a']</code>)! More on that later.</p>
+</blockquote>
+<div class="highlight highlight-source-python"><pre>x <span class="pl-k">=</span> <span class="pl-c1">1.5</span>
+<span class="pl-c1">print</span>(<span class="pl-c1">type</span>(x))</pre></div>
+<blockquote>
+<p><code>float</code> is what Python calls most numbers that are not integers (<code>int</code>). These are numbers like "two and a half", which can be represented with a decimal as 2.5. The word "float" is used because the decimal point "floats" between numbers.</p>
+</blockquote>
+<div class="highlight highlight-source-python"><pre>x <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>True<span class="pl-pds">'</span></span>
+<span class="pl-c1">print</span>(<span class="pl-c1">type</span>(x))</pre></div>
+<blockquote>
+<p>This is another <code>str</code> variable because it is between quotes (<code>""</code>).</p>
+</blockquote>
+<div class="highlight highlight-source-python"><pre>x <span class="pl-k">=</span> <span class="pl-c1">True</span>
+<span class="pl-c1">print</span>(<span class="pl-c1">type</span>(x))
+x <span class="pl-k">=</span> <span class="pl-c1">False</span>
+<span class="pl-c1">print</span>(<span class="pl-c1">type</span>(x))</pre></div>
+<blockquote>
+<p><code>bool</code> is short for "Boolean", which means "True or False". In fact, all <code>bool</code> variables are either <code>True</code> or <code>False</code>.</p>
+</blockquote>
+<h3>
+<a id="user-content-boolean-variables-of-type-bool-true-and-false" class="anchor" href="#boolean-variables-of-type-bool-true-and-false" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Boolean Variables of Type <code>bool</code>: <code>True</code> and <code>False</code>
+</h3>
+<p>We saw that the <strong>type</strong> of <code>True</code> was <code>bool</code>. Let's analyze some more <code>bool</code> data.</p>
+<div class="highlight highlight-source-python"><pre><span class="pl-c1">print</span>(<span class="pl-c1">4</span> <span class="pl-k">&lt;</span> <span class="pl-c1">5</span>)
+<span class="pl-c1">type</span>(<span class="pl-c1">4</span> <span class="pl-k">&lt;</span> <span class="pl-c1">5</span>)</pre></div>
+<p>Note that <code>print(4 &lt; 5)</code> printed <code>True</code>. That's because the <code>&lt;</code> symbol is an "operator" that tells Python to compare what's on its left to what's on its right, and to "turn into" <code>True</code> if what's on the left <strong>is less than</strong> what's on the right, and <code>False</code> otherwise.</p>
+<div class="highlight highlight-source-python"><pre><span class="pl-c1">print</span>(<span class="pl-c1">5</span> <span class="pl-k">&lt;</span> <span class="pl-c1">4</span>)
+<span class="pl-c1">type</span>(<span class="pl-c1">5</span> <span class="pl-k">&lt;</span> <span class="pl-c1">4</span>)</pre></div>
+<h3>
+<a id="user-content-comparison-operators-----and-" class="anchor" href="#comparison-operators-----and-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Comparison Operators: <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, and <code>==</code>
+</h3>
+<p>We have seen that the operator <code>&lt;</code> can be placed between two numbers, and the whole expression will either "turn into" <code>True</code> or <code>False</code> depending on whether the number on the left is "less than" the number on the right.</p>
+<p>Think about what the output of each <code>print</code> statement will bebefore running these commands:</p>
+<div class="highlight highlight-source-python"><pre><span class="pl-c1">print</span>(<span class="pl-c1">4</span> <span class="pl-k">&lt;</span> <span class="pl-c1">4</span>)
+<span class="pl-c1">print</span>(<span class="pl-c1">4</span> <span class="pl-k">&lt;</span> <span class="pl-c1">5</span>)
+
+<span class="pl-c1">print</span>(<span class="pl-c1">4</span> <span class="pl-k">&gt;</span> <span class="pl-c1">4</span>)
+<span class="pl-c1">print</span>(<span class="pl-c1">4</span> <span class="pl-k">&gt;</span> <span class="pl-c1">5</span>)
+
+<span class="pl-c1">print</span>(<span class="pl-c1">4</span> <span class="pl-k">&lt;=</span> <span class="pl-c1">4</span>)
+<span class="pl-c1">print</span>(<span class="pl-c1">4</span> <span class="pl-k">&gt;=</span> <span class="pl-c1">4</span>)
+<span class="pl-c1">print</span>(<span class="pl-c1">4</span> <span class="pl-k">&lt;=</span> <span class="pl-c1">5</span>)
+<span class="pl-c1">print</span>(<span class="pl-c1">4</span> <span class="pl-k">&gt;=</span> <span class="pl-c1">5</span>)
+
+<span class="pl-c1">print</span>(<span class="pl-c1">4</span> <span class="pl-k">==</span> <span class="pl-c1">4</span>)
+<span class="pl-c1">print</span>(<span class="pl-c1">4</span> <span class="pl-k">==</span> <span class="pl-c1">5</span>)
+<span class="pl-c1">print</span>(<span class="pl-c1">4</span> <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">'</span>hello<span class="pl-pds">'</span></span>)</pre></div>
+<blockquote>
+<p><strong>NOTE:</strong> We call the double equals sign <code>==</code> the "<strong>equality operator</strong>", and it turns an expression into <code>True</code> or <code>False</code> (like <code>5 == 5</code>). Remember we call the single equals sign <code>=</code> the "<strong>assignment operator</strong>" and we use it to "assign" values to variables (like <code>x = 5</code>).</p>
+</blockquote>
+<p>Think about what the output of each <code>print</code> statement will bebefore running these commands:</p>
+<div class="highlight highlight-source-python"><pre><span class="pl-c1">print</span>(<span class="pl-c1">5</span> <span class="pl-k">==</span> <span class="pl-c1">5</span>)
+x <span class="pl-k">=</span> (<span class="pl-c1">5</span> <span class="pl-k">==</span> <span class="pl-c1">5</span>)
+<span class="pl-c1">print</span>(x)
+<span class="pl-c1">print</span>(<span class="pl-c1">True</span> <span class="pl-k">==</span> <span class="pl-c1">True</span>)
+<span class="pl-c1">print</span>(<span class="pl-c1">False</span> <span class="pl-k">==</span> <span class="pl-c1">False</span>)</pre></div>
+<h2>
+<a id="user-content-conditionals-and-tacos-the-if-else-and-elif-keywords" class="anchor" href="#conditionals-and-tacos-the-if-else-and-elif-keywords" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Conditionals and Tacos: The <code>if</code>, <code>else</code>, and <code>elif</code> Keywords</h2>
+<blockquote>
+<p>Is 5 greater than 4? Is 5 less than 4? If you don't know what "less than", "equal to", and "less than or equal to" mean, then please ask a Math teacher at this moment (or Google it)!</p>
+</blockquote>
+<p>Suppose <code>x</code> represents the amount of money I have, and a taco costs $5. I want to print "I have enough money for a taco" only if <code>x</code> is greater than 5. We could use</p>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">if</span> x<span class="pl-k">&gt;</span><span class="pl-c1">5</span>:
+	<span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>I have enough money for a taco<span class="pl-pds">"</span></span>)</pre></div>
+<p>Let's test this code by copying the following two snippets into
+the python shell:</p>
+<div class="highlight highlight-source-python"><pre>x<span class="pl-k">=</span><span class="pl-c1">4</span>
+<span class="pl-k">if</span> x<span class="pl-k">&gt;</span><span class="pl-c1">5</span>:
+	<span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>I have enough money for a taco<span class="pl-pds">"</span></span>)</pre></div>
+<p>and</p>
+<div class="highlight highlight-source-python"><pre>x<span class="pl-k">=</span><span class="pl-c1">6</span>
+<span class="pl-k">if</span> x<span class="pl-k">&gt;</span><span class="pl-c1">5</span>:
+	<span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>I have enough money for a taco<span class="pl-pds">"</span></span>)</pre></div>
+<p>Did Python execute these snippets as you'd expect?</p>
+<p>Now, what if we wanted to print "I don't have enough money for a taco" when <code>x</code> is less than 5? We can use <code>if</code> and <code>else</code> together as follows:</p>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">if</span> x <span class="pl-k">&gt;</span><span class="pl-c1">5</span>:
+	<span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>I have enough money for a taco<span class="pl-pds">"</span></span>)
+<span class="pl-k">else</span>:
+	<span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>I don't have enough money for a taco<span class="pl-pds">"</span></span>)</pre></div>
+<p>Finally, we can create additional conditions using <code>elif</code>. The code after <code>else</code> will only be executed if our first conditions are <code>True</code>.</p>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">if</span> x <span class="pl-k">&gt;</span> <span class="pl-c1">5</span>:
+	<span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>I have enough money for a taco<span class="pl-pds">"</span></span>)
+<span class="pl-k">elif</span> x <span class="pl-k">==</span> <span class="pl-c1">5</span>:
+	<span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>I have exactly enough money for a taco<span class="pl-pds">"</span></span>)
+<span class="pl-k">else</span>:
+	<span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>I don't have enough money for a taco<span class="pl-pds">"</span></span>)</pre></div>
+<p>Try executing <code>x=5</code>, then copying the above code into Python. What happened? Execute <code>x=4</code> and do the same. Execute <code>x=6</code> and do the same.</p>
 </article></body></html>
