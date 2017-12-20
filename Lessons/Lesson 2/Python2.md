@@ -177,4 +177,8 @@ else:
 
 Try executing `x=5`, then copying the above code into Python. What happened? Execute `x=4` and do the same. Execute `x=6` and do the same.
 
+## Resources
+
 Run the script `conditionals.py` using `python conditionals.py`.
+
+Run the webapp `app_conditionals.py` using `python app_conditionals.py`.
