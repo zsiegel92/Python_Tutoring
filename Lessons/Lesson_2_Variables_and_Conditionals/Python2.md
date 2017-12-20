@@ -177,6 +177,18 @@ else:
 
 Try executing `x=5`, then copying the above code into Python. What happened? Execute `x=4` and do the same. Execute `x=6` and do the same.
 
+### The `pass` Command
+
+If we want to "Do Nothing" when we satisfy a condition, we can use the command `pass`:
+
+```python
+if x < 5:
+	pass
+else:
+	print("Woohoo! I can buy a taco.")
+```
+
+
 ## Resources
 
 Run the script `conditionals.py` using `python conditionals.py`.
