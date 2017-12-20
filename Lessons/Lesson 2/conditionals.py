@@ -9,5 +9,7 @@ if x > 5:
     print("I have enough money for a taco")
 elif x == 5:
     print("I have exactly enough money for a taco")
+elif x == 4:
+    print("I don't have enough money for a taco...but I can buy tortilla chips!")
 else:
     print("I don't have enough money for a taco")
