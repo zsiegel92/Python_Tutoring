@@ -89,13 +89,51 @@ print("You are my " + relationship + " and I can't wait to " + action + " you!")
 Concatenation is one of the most important jobs most computer programs do. Just like the line of code we re-used, most websites just concatenate in a tiny snippet of data (like `title = "Watch This Cute Panda Eat Bamboo"`) to a bigger webpage.
 
 
+Imagine how many ways we could use and re-use this code:
 
+```python
+name = "Malia Obama"
+preferred_pronoun = "she"
+relationship = "classmate"
+role = "smartest person ever"
+place_of_employment = "my school"
+hobby = "invent amazing things for everyone to see"
+future_role = "president...of NASA"
+print("I want to tell you about my " + relationship + ", " + name + ". " + preferred_pronoun + " is the " + role + " at " + place_of_employment + ". " + preferred_pronoun + " loves to " + hobby + ", and, someday, " + preferred_pronoun + " will be " + future_role + "!")
+```
 
+>Notice that the `preferred_pronoun` should be capitalized at the beginning of the last sentence. We will come back to that!
 
+##### Concatenation is Fun
 
+Try your parent's information!
 
+```python
+name = "[parent's name]"
+preferred_pronoun = "[parent's preferred pronoun, like "he" or "she" or "they"]"
+relationship = "parent [or 'father' or 'mother']"
+role = "[their job, or skill, or just 'best parent ever']"
+place_of_employment = "[where they do their work, or 'my home']"
+hobby = "[their hobby]"
+future_role = "very happy to see me become a computer scientist"
+print("I want to tell you about my " + relationship + ", " + name + ". " + preferred_pronoun + " is the " + role + " at " + place_of_employment + ". " + preferred_pronoun + " loves to " + hobby + ", and, someday, " + preferred_pronoun + " will be " + future_role + "!")
+```
 
+Here's the information I'd input to tell you about my Dad:
 
+```python3
+name = "Lawrence Siegel"
+preferred_pronoun = "he"
+relationship = "Dad"
+role = "psychiatrist"
+place_of_employment = "New York's public mental health services"
+hobby = "bike ride"
+future_role = "even more proud of me than he is now"
+```
+
+### Substrings
+
+We have seen how to combine little snippets into a longer string. How can we **extract** little snippets **from** a longer string?
 
 
 
