@@ -319,39 +319,15 @@ Using `list` slicing, we can extract just the arguments of a URL without a domai
 ```
 
 
-### Automatically Upper-Casing: `str.upper` and `str.capitalize`
-
-Python includes some useful functions to work with textual data. In particular, in English we care about capitalization, and Python can help.
-
-* If we call `"hello".upper()`, the output will be `"HELLO"`. The `upper` function capitalizes every alphabetical character in the string.
-
-* If we call `"hello".capitalize()`, the output will be `"Hello"`. The `capitalize` function capitalizes the first character in the string if it is alphabetical (otherwise, it does nothing).
-
-Not every letter can be capitalized, but `upper` and `capitalize` both can affect alphabetical characters in a given string. This is very convenient, since **capital and lowercase letters are different characters completely** as far as computers know. Python's built-in functions contain information about the relationships between these characters.
-
-Now we can revisit our "very re-usable" string code from earlier:
-
-```python
-name = "Malia Obama"
-preferred_pronoun = "she"
-relationship = "classmate"
-role = "smartest person ever"
-place_of_employment = "my school"
-hobby = "build model figurines"
-future_role = "president...of NASA"
-print("I want to tell you about my " + relationship + ", " + name.upper() + ". " + preferred_pronoun.capitalize() + " is the " + role + " at " + place_of_employment + ". " + preferred_pronoun.capitalize() + " loves to " + hobby + ", and, someday, " + preferred_pronoun + " will be " + future_role + "!")
-```
-
-Now we've fixed the capitalization of the first letters of the first words of sentences. Also, the `name` is made entirely uppercase, just for fun.
-
->The `len` function was usable straight from Python. We can even type `len` <kbd>enter</kbd> and see the output `<built-in function len>` telling us that `len` **is defined**. On the other hand, the `split`, `join`, `upper`, and `capitalize` functions are part of a `str` variable. More on that later.
 
 
 ### Formatting Strings: `.format`
 
 We know that we can concatenate diferent `str` variables using the `+` operator, and we can combine tokens in a `list` with a delimiter using `str.join`.
 
-Joining long strings with `+`, though, takes a lot of work, and even makes Python work much harder than it should, believe it or not.
+Joining long strings with `+`, though, takes a lot of work, and even makes Python work much harder than it should, believe it or not. Plus, we can't easily concatenate `str` variables to other variables, like `int`s.
+
+>Try `mystring = "hey" + 7`. We get `TypeError: must be str, not int`. And if we try `mystring = 7  "hey"` we get a different error message (butt the same error type, `TypeError`): `TypeError: unsupported operand type(s) for +: 'int' and 'str'`
 
 Just like `str.split`, `str.join`, `str.upper`, and `str.capitalize`, let's think about another useful function contained in variables of type `str`: `str.format`.
 
@@ -359,7 +335,7 @@ In the previous example (about Malia Obama), we had a lot of text concatenated t
 
 ##### Formatting with Positional Arguments
 
-If we know which parts of a string we'd want to insert another string, we can create a string to use as a template, with holes in it ready to be filled by variables, using `format`:
+If we know which parts of a string we'd want to insert another string into, we can create a string to use as a template, with holes in it ready to be filled by variables, using `format`:
 
 ```python
 name = "Zach"
@@ -419,6 +395,34 @@ hobby = "running"
 print(f"{name} works as a {occupation}. {pronoun} loves {hobby}.")
 ```
 
+
+### Automatically Upper-Casing: `str.upper` and `str.capitalize`
+
+Python includes some useful functions to work with textual data. In particular, in English we care about capitalization, and Python can help.
+
+* If we call `"hello".upper()`, the output will be `"HELLO"`. The `upper` function capitalizes every alphabetical character in the string.
+
+* If we call `"hello".capitalize()`, the output will be `"Hello"`. The `capitalize` function capitalizes the first character in the string if it is alphabetical (otherwise, it does nothing).
+
+Not every letter can be capitalized, but `upper` and `capitalize` both can affect alphabetical characters in a given string. This is very convenient, since **capital and lowercase letters are different characters completely** as far as computers know. Python's built-in functions contain information about the relationships between these characters.
+
+Now we can revisit our "very re-usable" string code from earlier:
+
+```python
+name = "Malia Obama"
+preferred_pronoun = "she"
+relationship = "classmate"
+role = "smartest person ever"
+place_of_employment = "my school"
+hobby = "build model figurines"
+future_role = "president...of NASA"
+print("I want to tell you about my " + relationship + ", " + name.upper() + ". " + preferred_pronoun.capitalize() + " is the " + role + " at " + place_of_employment + ". " + preferred_pronoun.capitalize() + " loves to " + hobby + ", and, someday, " + preferred_pronoun + " will be " + future_role + "!")
+```
+
+Now we've fixed the capitalization of the first letters of the first words of sentences. Also, the `name` is made entirely uppercase, just for fun.
+
+>The `len` function was usable straight from Python. We can even type `len` <kbd>enter</kbd> and see the output `<built-in function len>` telling us that `len` **is defined**. On the other hand, the `split`, `join`, `upper`, and `capitalize` functions are part of a `str` variable. More on that later.
+
 ### Line Breaks in Python: The **Newline** Character `\n`
 
 When we press <kbd>enter</kbd> in the Python Interactive Shell, our command executes. When we type <kbd>enter</kbd> in a script (a `.py` file), we start typing our next command. So, how do we insert a **line break** in a Python string?
@@ -445,4 +449,7 @@ Each time there's a `\n` character, Python prints a line break. This is an extre
 
 	A sufficient file `poem_example.py` is in the `/code` folder of this repository. Run it using `python poem_example.py`.
 
+	**The poem does not have to make perfect sense!!** This is poetry, not science. However, they should make some sense and adhere to English grammar as much as possible.
+
+2.
 
