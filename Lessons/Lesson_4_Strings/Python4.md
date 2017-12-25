@@ -267,19 +267,9 @@ If we know which parts of a string we'd want to insert another string into, we c
 
 It may not seem like a big deal, but this can save a lot of work. Observe the example from before, and try to understand how to use `format`:
 
-```python
-name = "Malia Obama"
-preferred_pronoun = "she"
-relationship = "classmate"
-role = "smartest person ever"
-place_of_employment = "my school"
-hobby = "build model figurines"
-future_role = "president...of NASA"
 
-template = "I want to tell you about my {}, {}. {} is the {} at {}. {} loves to {}, and, someday, {} will be {}!"
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/strformat?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-print(template.format(relationship,name.upper(),preferred_pronoun.capitalize(),role,place_of_employment,preferred_pronoun.capitalize(),hobby,preferred_pronoun,future_role))
-```
 
 It is easier to read and manage a template without all those `+` operators in the way. The downside is that we have to remember to give all the data **in the right order**!
 
@@ -287,7 +277,10 @@ It is easier to read and manage a template without all those `+` operators in th
 
 We can also use `format` with **keyword arguments**. The concepts of **arguments** and of keyword arguments will become more clear as soon as we cover functions. For now, just know that you can give arguments in any order, as long as you clearly label which argument means what.
 
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/strformat?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+
+
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/strformat-with-Keyword-Arguments?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 
 This may seem like a pain right now (why do we need to say `name = name`?!?), but it will become more clear later on, when we talk about **functions**.
