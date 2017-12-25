@@ -1,5 +1,10 @@
 # Python Lesson 4 - Strings (`str`)
 
+>This lesson contains embedded code snippets! This uses a tool called **repl.it**, and we will use embedded REPL environments frequently from now on. To run any of these code snippets, hit the triangular "play button" in the repl.it window.
+
+>You will still have to use the `python` command in your command prompt for assignments, though.
+
+
 ## Review of Lesson 3
 
 ### Loops: `while`
@@ -8,36 +13,20 @@ To repeat some command or commands, we can place those commands in a `while` sta
 
 Example:
 
-```python
-x = 0
-while(x < 10):
-	print(x)
-	x = x + 1
-```
 
-will output
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Print-1-10?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-```python
-0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-```
 
 ### Types
 
 We can find out the type of any variable by using the `type` function:
 
-```python
-x= 'hello'
-type(x)
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Type-Check?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+
+>Don't worry about the `.format` commands now. They will make more sense after this lesson.
+
+
 Here are the types we have seen so far:
 
 | Type Name | Type | Example 1 | Example 2 |
@@ -55,83 +44,36 @@ We have seen the Python `str` type, but have not used all of its functionality y
 
 The `+` operator is assigned to **arithmetic addition** when the expressions on either side of it are numbers (`int` or `float`). When given two `str` variables, however, the `+` operator is assigned to **string concatenation**, which combines two strings by placing them side-by-side.
 
-##### Concatenation is **Exact**
+#### Concatenation is **Exact**
 
-```python
-x = "hey"
-y = "my friend"
-print(x + y)
-```
-You should see the output
-
-```python
-heymy friend
-```
-Oops - no space! Try this:
-
-```python
-print(x + " " + y)
-```
-That's more like it.
-
-##### Concatenation Makes Code Re-Usable
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/String-Concatenation?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 
-```python
-relationship = "friend"
-action = "high-five"
-print("You are my " + relationship + " and I can't wait to " + action + " you!")
 
-relationship = "enemy"
-action = "pour water on"
-print("You are my " + relationship + " and I can't wait to " + action + " you!")
-```
->Notice that we were able to re-use the line of code with the `print` statement!
+#### Concatenation Makes Code Re-Usable
+
+
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Concatenation-2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+
+>Notice that we were able to exactly re-use the line of code with the `print` statement!
 
 Concatenation is one of the most important jobs most computer programs do. Just like the line of code we re-used, most websites just concatenate in a tiny snippet of data (like `title = "Watch This Cute Panda Eat Bamboo"`) to a bigger webpage.
 
 
 Imagine how many ways we could use and re-use this code:
 
-```python
-name = "Malia Obama"
-preferred_pronoun = "she"
-relationship = "classmate"
-role = "smartest person ever"
-place_of_employment = "my school"
-hobby = "build model figurines"
-future_role = "president...of NASA"
-print("I want to tell you about my " + relationship + ", " + name + ". " + preferred_pronoun + " is the " + role + " at " + place_of_employment + ". " + preferred_pronoun + " loves to " + hobby + ", and, someday, " + preferred_pronoun + " will be " + future_role + "!")
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Concatenation-3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 
 >Notice that the `preferred_pronoun` should be capitalized at the beginning of the last sentence. We will come back to that!
 
-##### Concatenation is Fun
+#### Concatenation is Fun
 
 Try your parent's information!
 
-```python
-name = "[parent's name]"
-preferred_pronoun = "[parent's preferred pronoun, like "he" or "she" or "they"]"
-relationship = "parent [or 'father' or 'mother']"
-role = "[their job, or skill, or just 'best parent ever']"
-place_of_employment = "[where they do their work, or 'my home']"
-hobby = "[their hobby]"
-future_role = "very happy to see me become a computer scientist"
-print("I want to tell you about my " + relationship + ", " + name + ". " + preferred_pronoun + " is the " + role + " at " + place_of_employment + ". " + preferred_pronoun + " loves to " + hobby + ", and, someday, " + preferred_pronoun + " will be " + future_role + "!")
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Complicated-Concatenation?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Here's some input that tells you about my Dad:
-
-```python3
-name = "Lawrence Siegel"
-preferred_pronoun = "he"
-relationship = "Dad"
-role = "psychiatrist"
-place_of_employment = "New York's public mental health services"
-hobby = "bike ride"
-future_role = "even more proud of me than he is now"
-```
 
 ### Substrings
 
@@ -140,48 +82,38 @@ We have seen how to combine little snippets into a longer string. How can we **e
 
 Python offers intuitive ways to do this, and we will talk about three: **the `in` keyword**, **indexing** and **slicing**. You have seen that a `list` is a Python type that contains other Python variables (eg `x = [1,2,3,'hello']`). The ways we **index** and **slice** substrings of strings will prepare us for working with the `list` data type in an upcoming lesson.
 
-##### The `in` Keyword
+#### The `in` Keyword
 
 ```python
-name = 'Zach'
-print('a' in name)
-print('b' in name)
+>>> name = 'Zach'
+>>> print('a' in name)
+True
+>>> print('b' in name)
+False
 ```
 
 Why did we see `True` and then `False`? Didn't we ask to print "a" and "b"?
 
 The `in` keyword allows us to check whether a string contains a given substring.
 
-```python
-name = "Zach"
-if "a" in name:
-	print("Your name contains an 'a'!")
-elif "b" in name:
-	print("Your name does not contain an 'a', but it contains a 'b'!")
-else:
-	print("Your name does not contain an 'a' or a 'b'!")
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/The-in-Keyword?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Try that with `name = "ben"` and `name = "Doris"`.
 
 We can use `in` to check for more than single-letter substrings:
 
 ```python
-story = "I love taking the bus! It gives me the freedom to travel around for very little money. Thanks to public resources like the bus, I know that no matter how tough a situation I'm in, I will survive and be able to do my job."
-query = "the freedom"
-print(query in story)
+>>> story = "I love taking the bus! It gives me the freedom to travel around for very little money. Thanks to public resources like the bus, I know that no matter how tough a situation I'm in, I will survive and be able to do my job."
+>>> query = "the freedom"
+>>> print(query in story)
+True
 ```
 
-##### String Indexing and Slicing
+#### String Indexing and Slicing
 
 Let's say we wanted to print the first letter of a middle name
 
-```python
-first_name = "Zach"
-middle_name = "Edmund"
-last_name = "Siegel"
-print(first_name + " " + middle_name[0] + " " + last_name)
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/String-Indexing?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 
 Great! Why did I have to print `middle_name[0]` and not `middle_name[1]` to get the **first** character of the `str` `"Edmund"`? Try `middle_name[1]` and `middle_name[2]`. Try `middle_name[n]` for all `n` between `0` and `5`.
 
@@ -190,8 +122,9 @@ Great! Why did I have to print `middle_name[0]` and not `middle_name[1]` to get 
 Can we access more than a single character using indexing? Yes, and when we do, it is called **slicing**.
 
 ```python
-middle_name = "Edmund"
-print(middle_name[0:3])
+>>> middle_name = "Edmund"
+>>> print(middle_name[0:3])
+Edm
 ```
 
 When you see `0:3`, you might expect the characters at indices `0`, `1`, `2`, and `3` to be printed. However, we only saw `0`, `1`, and `2`. **Slicing is non-inclusive**, meaning the last index in a slice is not part of that slice.
@@ -205,22 +138,23 @@ We know the last index of `"Edmund"` is `5`, so, since slicing is non-inclusive,
 To find the number of characters in a `str` (or the number of elements in a `list`), we can use the `len` function:
 
 ```python
-print(len("hello"))
-print(len("Zach"))
-print(len([1,2,3]))
+>>> print(len("hello"))
+5
+>>> print(len("Zach"))
+4
+>>> print(len([1,2,3]))
+3
 ```
 
 Usually, we use `len` to provide a number that will be used as an index. Remember, **the number of characters in a `str` (which `len` tells us) is one greater than the highest index because indexing starts at 0**.
 
 >In a `str` called `mystring`, the last character is `mystring[len(mystring)-1]`.
 
-Here are some uses of `len`. Suppose we first created the variables `category`, `prices` and `names`:
+Here are some uses of `len`:
 
-```python
-category = "phones"
-prices = [100, 200, 1000, 600, 700]
-names = ["Nokia NK100", "LG vx1100", "iPhone X", "iPhone 7", "Google Pixl"]
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Indexing-Using-len?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+
 
 | Code | Value | Explanation|
 |:-------|:----|:----|
@@ -233,39 +167,44 @@ names = ["Nokia NK100", "LG vx1100", "iPhone X", "iPhone 7", "Google Pixl"]
 
 ### Accessing the Last Element: the `[-1]` Shortcut
 
-##### Indexing with `[-1]`
+#### Indexing with `[-1]`
 
 Finding **the last** element of a `list` or character of a `str` is **so** common in python that there is a special shortcut to access it.
 
 Instead of typing `mystring[len(mystring)-1]` or `mylist[len(mylist)-1]` we can just type `mystring[-1]` or `mylist[-1]` to access the last element of a `str` or `list`.
 
 ```python
-mystring = "Zach"
-mylist = ["Zach", "Susan", "Lawrence"]
-print(mystring[-1])
-print(mylist[-1])
+>>> mystring = "Zach"
+>>> mylist = ["Zach", "Susan", "Lawrence"]
+>>> print(mystring[-1])
+h
+>>> print(mylist[-1])
+Lawrence
 ```
 
 Notice that the index `-1` gives the exact same result as `len(mystring)-1`.
 
-##### Slicing with `:-1`
+#### Slicing with `:-1`
 
 We can also use a `-1` in a slice to access **all elements through the final element**.
 
 >Remember that slicing is **non-inclusive**, meaning that a slice ending in `-1` will not include the `-1` element, which is the final element.
 
 ```python
-myname = "Zachary Edmund Siegel"
-print(myname[0:-1])
+>>> myname = "Zachary Edmund Siegel"
+>>> print(myname[0:-1])
+Zachary Edmund Siege
 ```
 You should see `Zachary Edmund Siege`.
 
-In fact, **slices can include any negative numbers, which refer to the index of a given number of elements from the end of the list**.
+>**Slices can include any negative numbers, which refer to the index of a given number of elements from the end of the list**.
 
 ```python
-myname = "Zach"
-print(myname[-4])
-print(myname[1:-2])
+>>> myname = "Zach"
+>>> print(myname[-4])
+Z
+>>> print(myname[1:-2])
+a
 ```
 
 ### Splitting Substrings at Delimiters: `str.split` and `str.join`
@@ -276,48 +215,31 @@ In English, the most common delimiter is the **space** (`" "`). Sometimes, like 
 
 In Python, there is a great way to deal with ordered sequences of tokens, or of any data - lists! How can we turn a `str` consisting of tokens separated by delimiters into a `list` consisting of only tokens?
 
-##### Meet `split`!
+#### Meet `split`!
 
 Every `str` variable in Python carries with it some built-in functionality, like the `split` function.
 
 >The `len` function was usable straight from Python. We can even type `len` <kbd>enter</kbd> and see the output `<built-in function len>` telling us that `len` **is defined**. On the other hand, the `split` function is part of a `str` variable, and we have to "reach inside" the variable to find the definition of `split` by using `.split` after the variable name of a string variable.
 
+Split breaks apart a `str` and gives a `list`:
 
-The input:
 
-```python
-"hello, my name is Zach, and I love coffee and chocolate.".split(" ")
-```
-outputs
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Split?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-```python
-['hello,', 'my', 'name', 'is', 'Zach,', 'and', 'I', 'love', 'coffee', 'and', 'chocolate.']
-```
 
-##### Meet `join`
+
+#### Meet `join`
 
 Now, let's say we had a `list` of tokens and a delimiter and wanted to turn them into a `str`. We can do that using `str.join`. Like `split`, `join` is "part of" `str` variables, and cannot be called without one.
 
-```python
-" ".join(['hello,', 'my', 'name', 'is', 'Zach'])
-```
-outputs `'hello, my name is Zach'`
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/strjoin?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 
-##### Combining `split` and `join`
 
-Observe the following:
+#### Combining `split` and `join`
 
-```python
-" ".join("google.com/I/love/bananas/so/much!".split("/"))
-```
 
-Using `list` slicing, we can extract just the arguments of a URL without a domain:
-
-```python
-" ".join("google.com/I/love/bananas/so/much!".split("/"))
-```
-
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Split-and-Join-2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 
 
@@ -333,13 +255,14 @@ Just like `str.split`, `str.join`, `str.upper`, and `str.capitalize`, let's thin
 
 In the previous example (about Malia Obama), we had a lot of text concatenated to our variables, but it didn't get its own variable. If we had to use that line `"I want to tell you about my " + relationship + ", " + name.upper() + ` many times, we would be doing more work than we need to in copying and pasting, and furthermore it's hard to read.
 
-##### Formatting with Positional Arguments
+#### Formatting with Positional Arguments
 
 If we know which parts of a string we'd want to insert another string into, we can create a string to use as a template, with holes in it ready to be filled by variables, using `format`:
 
 ```python
-name = "Zach"
-"Hi, {}".format(name)
+>>> name = "Zach"
+>>> "Hi, {}".format(name)
+'Hi, Zach'
 ```
 
 It may not seem like a big deal, but this can save a lot of work. Observe the example from before, and try to understand how to use `format`:
@@ -360,26 +283,16 @@ print(template.format(relationship,name.upper(),preferred_pronoun.capitalize(),r
 
 It is easier to read and manage a template without all those `+` operators in the way. The downside is that we have to remember to give all the data **in the right order**!
 
-##### Formatting with Keyword Arguments
+#### Formatting with Keyword Arguments
 
 We can also use `format` with **keyword arguments**. The concepts of **arguments** and of keyword arguments will become more clear as soon as we cover functions. For now, just know that you can give arguments in any order, as long as you clearly label which argument means what.
 
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/strformat?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-```python
-name = "Malia Obama"
-preferred_pronoun = "she"
-relationship = "classmate"
-role = "very smart person"
-hobby = "build model figurines"
-
-template = "I want to tell you about my {relationship}, {name}. {name} is a {role}, but {preferred_pronoun} really loves to {hobby}. {preferred_pronoun} is one of my favorite people in the world, because {preferred_pronoun} is kind."
-
-print(template.format(name=name,relationship=relationship, role=role,preferred_pronoun=preferred_pronoun,hobby=hobby))
-```
 
 This may seem like a pain right now (why do we need to say `name = name`?!?), but it will become more clear later on, when we talk about **functions**.
 
-##### Formatting with **Format String Literals**
+#### Formatting with **Format String Literals**
 
 Formatting strings is *such* a common task, that Python includes a special shortcut to do what we have just done: **format string literals**.
 
@@ -387,36 +300,43 @@ We use format string literals by using `f"` or `f'` at the beginning of our stri
 
 You won't be expected to use this, but you can if you want to:
 
-```python
-name = "Zach"
-pronoun = "he"
-occupation = "tutor"
-hobby = "running"
-print(f"{name} works as a {occupation}. {pronoun} loves {hobby}.")
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Format-String-Literals?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 
-### Automatically Upper-Casing: `str.upper` and `str.capitalize`
+### Automatically Upper-Casing and Lower-Casing: `str.upper`, `str.lower`, and `str.capitalize`
 
 Python includes some useful functions to work with textual data. In particular, in English we care about capitalization, and Python can help.
 
 * If we call `"hello".upper()`, the output will be `"HELLO"`. The `upper` function capitalizes every alphabetical character in the string.
 
-* If we call `"hello".capitalize()`, the output will be `"Hello"`. The `capitalize` function capitalizes the first character in the string if it is alphabetical (otherwise, it does nothing).
+* If we call `"HELLO".lower()"`, the output will be `"hello"`. The `lower` function makes every alphabetical character in the string lowercase.
 
-Not every letter can be capitalized, but `upper` and `capitalize` both can affect alphabetical characters in a given string. This is very convenient, since **capital and lowercase letters are different characters completely** as far as computers know. Python's built-in functions contain information about the relationships between these characters.
+* If we call `"hello".capitalize()`, the output will be `"Hello"`. The `capitalize` function capitalizes the first character in the string if it is alphabetical, and makes lowercase every other alphabetical character.
+
+```python
+>>> "hello".upper()
+'HELLO'
+>>> "hElLo".capitalize()
+'Hello'
+>>> "HELLO".lower()
+'hello'
+```
+
+
+Not every letter can be capitalized, but `upper`, `lower`, and `capitalize` all affect alphabetical characters in a given string. This is very convenient, since **capital and lowercase letters are different characters completely** as far as computers know. Python's built-in functions contain information about the relationships between these characters.
 
 Now we can revisit our "very re-usable" string code from earlier:
 
 ```python
-name = "Malia Obama"
-preferred_pronoun = "she"
-relationship = "classmate"
-role = "smartest person ever"
-place_of_employment = "my school"
-hobby = "build model figurines"
-future_role = "president...of NASA"
-print("I want to tell you about my " + relationship + ", " + name.upper() + ". " + preferred_pronoun.capitalize() + " is the " + role + " at " + place_of_employment + ". " + preferred_pronoun.capitalize() + " loves to " + hobby + ", and, someday, " + preferred_pronoun + " will be " + future_role + "!")
+>>> name = "Malia Obama"
+>>> preferred_pronoun = "she"
+>>> relationship = "classmate"
+>>> role = "smartest person ever"
+>>> place_of_employment = "my school"
+>>> hobby = "build model figurines"
+>>> future_role = "president...of NASA"
+>>> print("I want to tell you about my " + relationship + ", " + name.upper() + ". " + preferred_pronoun.capitalize() + " is the " + role + " at " + place_of_employment + ". " + preferred_pronoun.capitalize() + " loves to " + hobby + ", and, someday, " + preferred_pronoun + " will be " + future_role + "!")
+I want to tell you about my classmate, MALIA OBAMA. She is the smartest person ever at my school. She loves to build model figurines, and, someday, she will be president...of NASA!
 ```
 
 Now we've fixed the capitalization of the first letters of the first words of sentences. Also, the `name` is made entirely uppercase, just for fun.
@@ -430,7 +350,16 @@ When we press <kbd>enter</kbd> in the Python Interactive Shell, our command exec
 If we include the characters `\n` in a Python string, they will be interpreted as a single character, namely the **newline** character, which gives a line break.
 
 ```python
-print("\n\nMy name is Zach\nAnd I love typing.\nI love to pack\nLots of words on my screen.\n\n")
+>>> print("\n\nMy name is Zach\nAnd I love typing.\nI love to pack\nLots of words on my screen.\n\n")
+
+
+My name is Zach
+And I love typing.
+I love to pack
+Lots of words on my screen.
+
+
+>>>
 ```
 
 Each time there's a `\n` character, Python prints a line break. This is an extremely useful character.
@@ -439,17 +368,19 @@ Each time there's a `\n` character, Python prints a line break. This is an extre
 
 ## Assignment
 
-1. Create a template of a poem, print the poem with variables **for each of three people you know**. The poem must satisfy these requirements:
-	* **Obtain values from the people themselves by asking them**. For example, if one of your variables was `role`, you would ask someone "What is your role? It's for a poem." At least one variable for each person must be obtained this way. The others you can fill in yourself if possible.
-	* **Use at least five variables** that are each different for each person
-	* Your poem must have **at least four lines**. Use newline characters (`\n`) to accomplish this.
-	* **Use `str.format`** with either positional arguments (and `{}`) or keyword arguments (and `{variable_name}`)
-	* Save the code in a file called `poem.py`. **When you execute the code in this file using `python poem.py`, the poems should all print**. Nothing should print except the poems.
-	* **Be nice!** This should be fun for you and everyone who is part of your poems. Otherwise, they won't be part of your poems next time, and that won't be fun.
+Create a template of a poem, print the poem with variables **for each of three people you know**. The poem must satisfy these requirements:
 
-	A sufficient file `poem_example.py` is in the `/code` folder of this repository. Run it using `python poem_example.py`.
+* **Obtain values from the people themselves by asking them**. For example, if one of your variables was `role`, you would ask someone "What is your role? It's for a poem." At least one variable for each person must be obtained this way. The others you can fill in yourself if possible.
+* **Use at least five variables** that are each different for each person
+* Your poem must have **at least four lines**. Use newline characters (`\n`) to accomplish this.
+* **Use `str.format`** with either positional arguments (and `{}`) or keyword arguments (and `{variable_name}`)
+* Save the code in a file called `poem.py`. **When you execute the code in this file using `python poem.py`, the poems should all print**. Nothing should print except the poems.
+* **Be nice!** This should be fun for you and everyone who is part of your poems. Otherwise, they won't be part of your poems next time, and that won't be fun.
+* **The poem does not have to make perfect sense!!** This is poetry, not science. However, they should make some sense and adhere to English grammar as much as possible.
+* **HAVE FUN**
 
-	**The poem does not have to make perfect sense!!** This is poetry, not science. However, they should make some sense and adhere to English grammar as much as possible.
 
-2.
+A sufficient file `poem_example.py` is in the `/code` folder of this repository. Run it using `python poem_example.py`. The same code can be run in here:
+
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Poem-Example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
