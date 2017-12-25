@@ -1260,23 +1260,12 @@ a
 </code></pre>
 
 <p>It may not seem like a big deal, but this can save a lot of work. Observe the example from before, and try to understand how to use <code>format</code>:</p>
-<pre><code class="python">name = &quot;Malia Obama&quot;
-preferred_pronoun = &quot;she&quot;
-relationship = &quot;classmate&quot;
-role = &quot;smartest person ever&quot;
-place_of_employment = &quot;my school&quot;
-hobby = &quot;build model figurines&quot;
-future_role = &quot;president...of NASA&quot;
-
-template = &quot;I want to tell you about my {}, {}. {} is the {} at {}. {} loves to {}, and, someday, {} will be {}!&quot;
-
-print(template.format(relationship,name.upper(),preferred_pronoun.capitalize(),role,place_of_employment,preferred_pronoun.capitalize(),hobby,preferred_pronoun,future_role))
-</code></pre>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/strformat?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p>It is easier to read and manage a template without all those <code>+</code> operators in the way. The downside is that we have to remember to give all the data <strong>in the right order</strong>!</p>
 <h4 id="formatting-with-keyword-arguments"><a name="user-content-formatting-with-keyword-arguments" href="#formatting-with-keyword-arguments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Formatting with Keyword Arguments</h4>
 <p>We can also use <code>format</code> with <strong>keyword arguments</strong>. The concepts of <strong>arguments</strong> and of keyword arguments will become more clear as soon as we cover functions. For now, just know that you can give arguments in any order, as long as you clearly label which argument means what.</p>
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/strformat?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/strformat-with-Keyword-Arguments?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p>This may seem like a pain right now (why do we need to say <code>name = name</code>?!?), but it will become more clear later on, when we talk about <strong>functions</strong>.</p>
 <h4 id="formatting-with-format-string-literals"><a name="user-content-formatting-with-format-string-literals" href="#formatting-with-format-string-literals" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Formatting with <strong>Format String Literals</strong></h4>
