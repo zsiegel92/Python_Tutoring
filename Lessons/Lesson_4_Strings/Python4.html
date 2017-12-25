@@ -1259,10 +1259,17 @@ a
 'Hi, Zach'
 </code></pre>
 
+<p>Let&rsquo;s get just a bit more complicated:</p>
+<pre><code class="python">&gt;&gt;&gt; myname = &quot;Zach&quot;
+&gt;&gt;&gt; friendname = &quot;Samuel&quot;
+&gt;&gt;&gt; &quot;Hi, {}! My name is {}&quot;.format(friendname, myname)
+'Hi, Samuel! My name is Zach'
+</code></pre>
+
 <p>It may not seem like a big deal, but this can save a lot of work. Observe the example from before, and try to understand how to use <code>format</code>:</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/strformat?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-<p>It is easier to read and manage a template without all those <code>+</code> operators in the way. The downside is that we have to remember to give all the data <strong>in the right order</strong>!</p>
+<p>It is easier to read and manage a template without all those <code>+</code> operators in the way. Another advantage is that we can format in arguments that aren&rsquo;t of type <code>str</code>, like <code>"I have {} apples".format(5)</code>. The downside is that we have to remember to give all the data <strong>in the right order</strong>!</p>
 <h4 id="formatting-with-keyword-arguments"><a name="user-content-formatting-with-keyword-arguments" href="#formatting-with-keyword-arguments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Formatting with Keyword Arguments</h4>
 <p>We can also use <code>format</code> with <strong>keyword arguments</strong>. The concepts of <strong>arguments</strong> and of keyword arguments will become more clear as soon as we cover functions. For now, just know that you can give arguments in any order, as long as you clearly label which argument means what.</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/strformat-with-Keyword-Arguments?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>

@@ -265,13 +265,23 @@ If we know which parts of a string we'd want to insert another string into, we c
 'Hi, Zach'
 ```
 
+Let's get just a bit more complicated:
+
+```python
+>>> myname = "Zach"
+>>> friendname = "Samuel"
+>>> "Hi, {}! My name is {}".format(friendname, myname)
+'Hi, Samuel! My name is Zach'
+```
+
+
 It may not seem like a big deal, but this can save a lot of work. Observe the example from before, and try to understand how to use `format`:
 
 
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/strformat?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 
-It is easier to read and manage a template without all those `+` operators in the way. The downside is that we have to remember to give all the data **in the right order**!
+It is easier to read and manage a template without all those `+` operators in the way. Another advantage is that we can format in arguments that aren't of type `str`, like `"I have {} apples".format(5)`. The downside is that we have to remember to give all the data **in the right order**!
 
 #### Formatting with Keyword Arguments
 
