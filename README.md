@@ -5,7 +5,7 @@
 * [Lesson 2: Variables and Conditionals](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_2_Variables_and_Conditionals/Python2.html)
 * [Lesson 3: Loops](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_3_Loops/Python3.html)
 * [Lesson 4: Strings](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_4_Strings/Python4.html)
-
+* [Lesson 5: Functions](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_5_Functions/Python5.html)
 
 
 # Getting Started with the "Webapp" Project: Navigating The Terminal
