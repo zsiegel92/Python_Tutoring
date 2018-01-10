@@ -1,41 +1,39 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAzUABAAAAAAFNgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABbAAAABwAAAAcZMzaOEdERUYAAAGIAAAAHQAAACAAOQAET1MvMgAAAagAAAA+AAAAYHqhde9jbWFwAAAB6AAAAFIAAAFa4azkLWN2dCAAAAI8AAAAKAAAACgFgwioZnBnbQAAAmQAAAGxAAACZVO0L6dnYXNwAAAEGAAAAAgAAAAIAAAAEGdseWYAAAQgAAAFDgAACMz7eroHaGVhZAAACTAAAAAwAAAANgWEOEloaGVhAAAJYAAAAB0AAAAkDGEGa2htdHgAAAmAAAAAEwAAADBEgAAQbG9jYQAACZQAAAAaAAAAGgsICJBtYXhwAAAJsAAAACAAAAAgASgBD25hbWUAAAnQAAACZwAABOD4no+3cG9zdAAADDgAAABsAAAAmF+yXM9wcmVwAAAMpAAAAC4AAAAusPIrFAAAAAEAAAAAyYlvMQAAAADLVHQgAAAAAM/u9uZ4nGNgZGBg4ANiCQYQYGJgBEJuIGYB8xgABMMAPgAAAHicY2Bm42OcwMDKwMLSw2LMwMDQBqGZihmiwHycoKCyqJjB4YPDh4NsDP+BfNb3DIuAFCOSEgUGRgAKDgt4AAB4nGNgYGBmgGAZBkYGEAgB8hjBfBYGCyDNxcDBwMTA9MHhQ9SHrA8H//9nYACyQyFs/sP86/kX8HtB9UIBIxsDXICRCUgwMaACRoZhDwA3fxKSAAAAAAHyAHABJQB/AIEAdAFGAOsBIwC/ALgAxACGAGYAugBNACcA/wCIeJxdUbtOW0EQ3Q0PA4HE2CA52hSzmZDGe6EFCcTVjWJkO4XlCGk3cpGLcQEfQIFEDdqvGaChpEibBiEXSHxCPiESM2uIojQ7O7NzzpkzS8qRqnfpa89T5ySQwt0GzTb9Tki1swD3pOvrjYy0gwdabGb0ynX7/gsGm9GUO2oA5T1vKQ8ZTTuBWrSn/tH8Cob7/B/zOxi0NNP01DoJ6SEE5ptxS4PvGc26yw/6gtXhYjAwpJim4i4/plL+tzTnasuwtZHRvIMzEfnJNEBTa20Emv7UIdXzcRRLkMumsTaYmLL+JBPBhcl0VVO1zPjawV2ys+hggyrNgQfYw1Z5DB4ODyYU0rckyiwNEfZiq8QIEZMcCjnl3Mn+pED5SBLGvElKO+OGtQbGkdfAoDZPs/88m01tbx3C+FkcwXe/GUs6+MiG2hgRYjtiKYAJREJGVfmGGs+9LAbkUvvPQJSA5fGPf50ItO7YRDyXtXUOMVYIen7b3PLLirtWuc6LQndvqmqo0inN+17OvscDnh4Lw0FjwZvP+/5Kgfo8LK40aA4EQ3o3ev+iteqIq7wXPrIn07+xWgAAAAABAAH//wAPeJyFlctvG1UUh+/12DPN1B7P3JnYjj2Ox4/MuDHxJH5N3UdaEUQLqBIkfQQioJWQ6AMEQkIqsPGCPwA1otuWSmTBhjtps2ADWbJg3EpIXbGouqSbCraJw7kzNo2dRN1cnXN1ZvT7zuuiMEI7ncizyA0URofRBJpCdbQuIFShYY+GZRrxMDVtih5TwQPHtXDFFSIKoWIbuREBjLH27Ny4MsbVx+uOJThavebgVrNRLAiYx06rXsvhxLgWx9xpfHdrs/ekc2Pl2cpPCVEITQpwbj8VQhfXSq2m+Wxqaq2D73Kne5e3NjHqQNj3CRYlJlgUl/jRNP+2Gs2pNYRQiOnmUaQDqm30KqKiTTWPWjboxnTWpvgxjXo0KrtZXAHt7hwIz0YVcj88JnKlJKi3NPAwLyDwZudSmJSMMJFDYaOkaol6XtESx3Gt1VTytdZJ3DCLeaVhVnCBH1fycHTxFXwPX+l2e3d6H/TufGGmMTLTnbSJUdo00zuBswMO/nl3YLeL/wnu9/limCuD3vC54h5NBVz6Li414AI8Vx3iiosKcQXUbrvhFFiYb++HN4DaF4XzFW0fIN4XDWJ3a3XQoq9V8WiyRmdsatV9xUcHims1JloH0YUa090G3Tro3mC6c01f+YwCPquINr1PTaCP6rVTOOmf0GE2dBc7zWIhji3/5MchSuBHgDbU99RMWt3YUNMZMJmx92YP6NsHx/5/M1yvInpnkIOM3Z8fA3JQ2lW1RFC1KaBPDFXNAHYYvGy73aYZZZ3HifbeuiVZCpwA3oQBs0wGPYJbJfg60xrKEbKiNtTe1adwrpBRwlAuQ3q3VRaX0QmQ9a49BTSCuF1MLfQ6+tinOubRBZuWPNoMevGMT+V41KitO1is3D/tpMcq1JHZqDHGs8DoYGDkxJgKjHROeTCmhZvzPm9pod+ltKm4PN7Dyvvldlpsg8D+4AUJZ3F/JBstZz7cbFRxsaAGV6yX/dkcycWf8eS3QlQea+YLjdm3yrOnrhFpUyKVvFE4lpv4bO3Svx/6F/4xmiDu/RT5iI++lko18mY1oX+5UGKR6kmVjM/Zb76yfHtxy+h/SyQ0lLdpdKy/lWB6szatetQJ8nZ80A2Qt6ift6gJeavU3BO4gtxs/KCtNPVibCtYCWY3SIlSBPKXZALXiIR9oZeJ1AuMyxLpHIy/yO7vSiSE+kZvk0ihJ30HgHfzZtEMmvV58x6dtqns0XTAW7Vdm4HJ04OCp/crOO7rd9SGxQAE/mVA9xRN+kVSMRFF6S9JFGUtthkjBA5tFCWc2l4V43Ex9GmUP3SI37Jjmir9KqlaDJ4S4JB3vuM/jzyH1+8MuoZ+QGzfnvPoJb96cZlWjMcKLfgDwB7E634JTY+asjsPzS5CiVnEWY+KsrsIN5rn3mAPjqmQBxGjcGKB9f9ZxY3mYC2L85CJ2FXIxKKyHk+dg0FHbuEc7D5NzWUX32WxFcWNGRAbvwSx0RmIXVDuYySafluQBmzA/ssqJAMLnli+WIC90Gw4lm85wcp0qjArEDPJJV/sSx4P9ungTpgMw5gVC1XO4uULq0s3v1rqLi0vX/z65vlH50f8T/RHmSPTk5xxWBWOluMT6WiOy+tdvWxlV/XQb3o3c6Ssr+r6I708GsX9/nzp1tKFh0s3v7m4vAy/Hnb/KMOvc1wump6Il48K6mGDy02X9Yd65pa+nQIjk76lWxCkG8NBCP0HQS9IpAAAeJxjYGRgYGBhcCrq214Qz2/zlUGenQEEzr/77oug/zewFbB+AHI5GJhAogBwKQ0qeJxjYGRgYH3/P46BgZ0BBNgKGBgZUAEPAE/7At0AAAB4nGNngAB2IGYjhBsYBAAIYADVAAAAAAAAAAAAAFwAyAEeAaACCgKmAx4DggRmAAAAAQAAAAwAagAEAAAAAAACAAEAAgAWAAABAAChAAAAAHiclZI7bxQxFIWPd/JkUYQChEhIyAVKgdBMskm1QkKrRETpQiLRUczueB/K7HhlOxttg8LvoKPgP9DxFxANDR0tHRWi4NjrPIBEgh1p/dm+vufcawNYFWsQmP6e4jSyQB2fI9cwj++RE9wTjyPP4LYoI89iWbyLPIe6+Bh5Hs9rryMv4GbtW+RF3EhuRa7jbrIbeQkPkjdUETOLnL0Kip4FVvAhco1RXyMnSPEz8gzWxE7kWTwUp5HnsCLeR57HW/El8gJWa58iL+JO7UfkOh4l9yMv4UnyEtvQGGECgwF66MNBooF1bGCL1ELB/TYU+ZBRlvsKQ44Se6jQ4a7hef+fh72Crv25kp+8lNWGmeKoOI5jJLb1aGIGvb6TjfWNLdkqdFvJw4l1amjlXtXRZqRN7lSRylZZyhBqpVFWmTEXgWfUrpi/hZOQXdOd4rKuXOtEWT3k5IArPRzTUU5tHKjecZkTpnVbNOnt6jzN8240GD4xtikvZW56043rPMg/dS+dlOceXoR+WPbJ55Dsekq1lJpnypsMUsYOdCW30o103Ytu/lvh+5RWFLfBjm9/N8hJntPhvx92rnoE/kyHdGasGy754kw36vsVf/lFeBi+0COu+cfgQr42G3CRpeLoZ53gmfe3X6rcKt5oVxnptHR9JS8ehVUd5wvvahN2uqxOOpMXapibI5k7Zwbt4xBSaTfoKBufhAnO/uqNcfK8OTs0OQ6l7JIqFjDhYj5WcjevCnI/1DDiI8j4ndWb/5YzDZWh79yomWXeXj7Nnw70/2TIeFPTrlSh89k1ObOSRVZWZfgF0r/zJQB4nG2JUQuCQBCEd07TTg36fb2IyBaLd3vWaUh/vmSJnvpgmG8YcmS8X3Shf3R7QA4OBUocUKHGER5NNbOOEvwc1txnuWkTRb/aPjimJ5vXabI+3VfOiyS15UWvyezM2xiGOPyuMohOH8O8JiO4Af+FsAGNAEuwCFBYsQEBjlmxRgYrWCGwEFlLsBRSWCGwgFkdsAYrXFhZsBQrAAA=) format('woff');
+}
+
+@font-face {
   font-family: octicons-anchor;
   src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
 }
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    width: 980px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-body .markdown-body {
-    padding: 45px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    word-wrap: break-word;
-}
-
-pre {
-    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-}
-
 .markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  color: #333;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   word-wrap: break-word;
 }
 
 .markdown-body a {
-  background-color: transparent;
+  background: transparent;
 }
 
 .markdown-body a:active,
@@ -43,8 +41,30 @@ pre {
   outline: 0;
 }
 
+.markdown-body b,
 .markdown-body strong {
   font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
 }
 
 .markdown-body h1 {
@@ -57,6 +77,7 @@ pre {
 }
 
 .markdown-body hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -67,7 +88,8 @@ pre {
 
 .markdown-body code,
 .markdown-body kbd,
-.markdown-body pre {
+.markdown-body pre,
+.markdown-body samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
@@ -101,16 +123,81 @@ pre {
   padding: 0;
 }
 
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .markdown-body input {
-  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
 }
 
 .markdown-body a {
-  color: #4078c0;
+  color: #4183c4;
   text-decoration: none;
 }
 
 .markdown-body a:hover,
+.markdown-body a:focus,
 .markdown-body a:active {
   text-decoration: underline;
 }
@@ -124,15 +211,14 @@ pre {
   border-bottom: 1px solid #ddd;
 }
 
-.markdown-body hr:before {
+.markdown-body hr:before,
+.markdown-body hr:after {
   display: table;
-  content: "";
+  content: " ";
 }
 
 .markdown-body hr:after {
-  display: table;
   clear: both;
-  content: "";
 }
 
 .markdown-body h1,
@@ -197,7 +283,9 @@ pre {
   margin-left: 0;
 }
 
-.markdown-body code {
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 12px;
 }
@@ -205,39 +293,21 @@ pre {
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
-  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
-.markdown-body .select::-ms-expand {
-  opacity: 0;
-}
-
-.markdown-body .octicon {
-  font: normal normal normal 16px/1 octicons-anchor;
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
   display: inline-block;
-  text-decoration: none;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.markdown-body .octicon-link:before {
-  content: '\f05c';
-}
-
-.markdown-body:before {
-  display: table;
-  content: "";
-}
-
-.markdown-body:after {
-  display: table;
-  clear: both;
-  content: "";
 }
 
 .markdown-body>*:first-child {
@@ -248,18 +318,18 @@ pre {
   margin-bottom: 0 !important;
 }
 
-.markdown-body a:not([href]) {
-  color: inherit;
-  text-decoration: none;
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
 }
 
-.markdown-body .anchor {
-  display: inline-block;
-  padding-right: 2px;
-  margin-left: -18px;
-}
-
-.markdown-body .anchor:focus {
+.markdown-body .headeranchor-link:focus {
   outline: none;
 }
 
@@ -269,39 +339,44 @@ pre {
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
+  position: relative;
   margin-top: 1em;
   margin-bottom: 16px;
   font-weight: bold;
   line-height: 1.4;
 }
 
-.markdown-body h1 .octicon-link,
-.markdown-body h2 .octicon-link,
-.markdown-body h3 .octicon-link,
-.markdown-body h4 .octicon-link,
-.markdown-body h5 .octicon-link,
-.markdown-body h6 .octicon-link {
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
   color: #000;
   vertical-align: middle;
-  visibility: hidden;
 }
 
-.markdown-body h1:hover .anchor,
-.markdown-body h2:hover .anchor,
-.markdown-body h3:hover .anchor,
-.markdown-body h4:hover .anchor,
-.markdown-body h5:hover .anchor,
-.markdown-body h6:hover .anchor {
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
   text-decoration: none;
 }
 
-.markdown-body h1:hover .anchor .octicon-link,
-.markdown-body h2:hover .anchor .octicon-link,
-.markdown-body h3:hover .anchor .octicon-link,
-.markdown-body h4:hover .anchor .octicon-link,
-.markdown-body h5:hover .anchor .octicon-link,
-.markdown-body h6:hover .anchor .octicon-link {
-  visibility: visible;
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
 }
 
 .markdown-body h1 {
@@ -311,10 +386,6 @@ pre {
   border-bottom: 1px solid #eee;
 }
 
-.markdown-body h1 .anchor {
-  line-height: 1;
-}
-
 .markdown-body h2 {
   padding-bottom: 0.3em;
   font-size: 1.75em;
@@ -322,42 +393,22 @@ pre {
   border-bottom: 1px solid #eee;
 }
 
-.markdown-body h2 .anchor {
-  line-height: 1;
-}
-
 .markdown-body h3 {
   font-size: 1.5em;
   line-height: 1.43;
-}
-
-.markdown-body h3 .anchor {
-  line-height: 1.2;
 }
 
 .markdown-body h4 {
   font-size: 1.25em;
 }
 
-.markdown-body h4 .anchor {
-  line-height: 1.2;
-}
-
 .markdown-body h5 {
   font-size: 1em;
-}
-
-.markdown-body h5 .anchor {
-  line-height: 1.1;
 }
 
 .markdown-body h6 {
   font-size: 1em;
   color: #777;
-}
-
-.markdown-body h6 .anchor {
-  line-height: 1.1;
 }
 
 .markdown-body p,
@@ -366,7 +417,8 @@ pre {
 .markdown-body ol,
 .markdown-body dl,
 .markdown-body table,
-.markdown-body pre {
+.markdown-body pre,
+.markdown-body .admonition {
   margin-top: 0;
   margin-bottom: 16px;
 }
@@ -456,11 +508,12 @@ pre {
 
 .markdown-body img {
   max-width: 100%;
-  box-sizing: content-box;
-  background-color: #fff;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.markdown-body code {
+.markdown-body code,
+.markdown-body samp {
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -486,11 +539,11 @@ pre {
   border: 0;
 }
 
-.markdown-body .highlight {
+.markdown-body .codehilite {
   margin-bottom: 16px;
 }
 
-.markdown-body .highlight pre,
+.markdown-body .codehilite pre,
 .markdown-body pre {
   padding: 16px;
   overflow: auto;
@@ -500,7 +553,7 @@ pre {
   border-radius: 3px;
 }
 
-.markdown-body .highlight pre {
+.markdown-body .codehilite pre {
   margin-bottom: 0;
   word-break: normal;
 }
@@ -526,136 +579,325 @@ pre {
   content: normal;
 }
 
-.markdown-body kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
   border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
 }
 
-.markdown-body .pl-c {
-  color: #969896;
-}
-
-.markdown-body .pl-c1,
-.markdown-body .pl-s .pl-v {
-  color: #0086b3;
-}
-
-.markdown-body .pl-e,
-.markdown-body .pl-en {
-  color: #795da3;
-}
-
-.markdown-body .pl-s .pl-s1,
-.markdown-body .pl-smi {
+.markdown-body .admonition table {
   color: #333;
 }
 
-.markdown-body .pl-ent {
-  color: #63a35c;
+.markdown-body .admonition p {
+  padding: 0;
 }
 
-.markdown-body .pl-k {
-  color: #a71d5d;
-}
-
-.markdown-body .pl-pds,
-.markdown-body .pl-s,
-.markdown-body .pl-s .pl-pse .pl-s1,
-.markdown-body .pl-sr,
-.markdown-body .pl-sr .pl-cce,
-.markdown-body .pl-sr .pl-sra,
-.markdown-body .pl-sr .pl-sre {
-  color: #183691;
-}
-
-.markdown-body .pl-v {
-  color: #ed6a43;
-}
-
-.markdown-body .pl-id {
-  color: #b52a1d;
-}
-
-.markdown-body .pl-ii {
-  background-color: #b52a1d;
-  color: #f8f8f8;
-}
-
-.markdown-body .pl-sr .pl-cce {
-  color: #63a35c;
+.markdown-body .admonition-title {
   font-weight: bold;
+  margin: 0;
 }
 
-.markdown-body .pl-ml {
-  color: #693a17;
-}
-
-.markdown-body .pl-mh,
-.markdown-body .pl-mh .pl-en,
-.markdown-body .pl-ms {
-  color: #1d3e81;
-  font-weight: bold;
-}
-
-.markdown-body .pl-mq {
-  color: #008080;
-}
-
-.markdown-body .pl-mi {
+.markdown-body .admonition>.admonition-title {
   color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
   font-style: italic;
 }
 
-.markdown-body .pl-mb {
-  color: #333;
-  font-weight: bold;
-}
-
-.markdown-body .pl-md {
-  background-color: #ffecec;
-  color: #bd2c00;
-}
-
-.markdown-body .pl-mi1 {
-  background-color: #eaffea;
-  color: #55a532;
-}
-
-.markdown-body .pl-mdr {
-  color: #795da3;
-  font-weight: bold;
-}
-
-.markdown-body .pl-mo {
-  color: #1d3e81;
-}
-
-.markdown-body kbd {
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
   display: inline-block;
-  padding: 3px 5px;
-  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.markdown-body .plan-price-unit {
-  color: #767676;
-  font-weight: normal;
+.headeranchor:before {
+  content: '\f05c';
 }
 
 .markdown-body .task-list-item {
@@ -667,202 +909,247 @@ pre {
 }
 
 .markdown-body .task-list-item input {
-  margin: 0 0.35em 0.25em -1.6em;
+  margin: 0 4px 0.25em -20px;
   vertical-align: middle;
 }
 
-.markdown-body .plan-choice {
-  padding: 15px;
-  padding-left: 40px;
-  display: block;
-  border: 1px solid #e0e0e0;
-  position: relative;
-  font-weight: normal;
-  background-color: #fafafa;
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
 }
 
-.markdown-body .plan-choice.open {
-  background-color: #fff;
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
 }
 
-.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
-  display: block;
-}
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
 
-.markdown-body .plan-choice-free {
-  border-radius: 3px 3px 0 0;
-}
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
 
-.markdown-body .plan-choice-paid {
-  border-radius: 0 0 3px 3px;
-  border-top: 0;
-  margin-bottom: 20px;
-}
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
 
-.markdown-body .plan-choice-radio {
-  position: absolute;
-  left: 15px;
-  top: 18px;
-}
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
 
-.markdown-body .plan-choice-exp {
-  color: #999;
-  font-size: 12px;
-  margin-top: 5px;
-}
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
 
-.markdown-body .plan-choice-seat-breakdown {
-  margin-top: 10px;
-  display: none;
-}
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
 
-.markdown-body :checked+.radio-label {
-  z-index: 1;
-  position: relative;
-  border-color: #4078c0;
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
 }
-</style><title>Python5</title></head><body><article class="markdown-body"><h1>
-<a id="user-content-python-lesson-5---functions-def" class="anchor" href="#python-lesson-5---functions-def" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python Lesson 5 - Functions (<code>def</code>)</h1>
-<h2>
-<a id="user-content-review-of-lesson-4" class="anchor" href="#review-of-lesson-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Review of Lesson 4</h2>
-<h3>
-<a id="user-content-string-indexing-slicing-concatenating-and-format" class="anchor" href="#string-indexing-slicing-concatenating-and-format" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>String Indexing, Slicing, Concatenating, and <code>.format</code>
-</h3>
+</style><title>Python5</title></head><body><article class="markdown-body"><h1 id="python-lesson-5-functions-def"><a name="user-content-python-lesson-5-functions-def" href="#python-lesson-5-functions-def" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 5 - Functions (<code>def</code>)</h1>
+<h2 id="review-of-lesson-4"><a name="user-content-review-of-lesson-4" href="#review-of-lesson-4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Review of Lesson 4</h2>
+<h3 id="string-indexing-slicing-concatenating-and-format"><a name="user-content-string-indexing-slicing-concatenating-and-format" href="#string-indexing-slicing-concatenating-and-format" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>String Indexing, Slicing, Concatenating, and <code>.format</code></h3>
 <blockquote>
 <p>You should understand all the code in the following snippet</p>
 </blockquote>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/StringReview?lite=true" rel="nofollow">https://repl.it/@ZSiegel/StringReview?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
-<h2>
-<a id="user-content-python-functions-def" class="anchor" href="#python-functions-def" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python Functions: <code>def</code>
-</h2>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/StringReview?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<h2 id="python-functions-def"><a name="user-content-python-functions-def" href="#python-functions-def" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Functions: <code>def</code></h2>
 <p>We have seen functions before:</p>
 <ul>
-<li>
-<code>len</code> tells us the <strong>length</strong> of a <code>list</code> or <code>str</code> variable.</li>
-<li>
-<code>print</code> writes stuff onscreen</li>
+<li><code>len</code> tells us the <strong>length</strong> of a <code>list</code> or <code>str</code> variable.</li>
+<li><code>print</code> writes stuff onscreen</li>
 </ul>
-<p>Let's create our own functions! We use the <code>def</code> keyword to signal that we're defining a function:</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions1?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions1?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
+<p>Let&rsquo;s create our own functions! We use the <code>def</code> keyword to signal that we&rsquo;re defining a function:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 <p>What happens when we run this code? Seemingly nothing! Why? We have to <strong>call</strong> the function we created to execute the code we used in its definition:</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions2?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions2?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
-<h3>
-<a id="user-content-dont-repeat-yourself-the-dry-principle" class="anchor" href="#dont-repeat-yourself-the-dry-principle" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>"<strong>Don't Repeat Yourself</strong>" (the <strong>DRY</strong> Principle)</h3>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<h3 id="dont-repeat-yourself-the-dry-principle"><a name="user-content-dont-repeat-yourself-the-dry-principle" href="#dont-repeat-yourself-the-dry-principle" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>&ldquo;<strong>Don&rsquo;t Repeat Yourself</strong>&rdquo; (the <strong>DRY</strong> Principle)</h3>
 <p>We have seen how concatenation makes code re-usable. Functions are all about re-usability.</p>
 <p>Think about how much code the following function saves us:</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions3?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions3?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
-<h3>
-<a id="user-content-function-arguments-and-parameters" class="anchor" href="#function-arguments-and-parameters" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Function Arguments and Parameters</h3>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<h3 id="function-arguments-and-parameters"><a name="user-content-function-arguments-and-parameters" href="#function-arguments-and-parameters" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Function Arguments and Parameters</h3>
 <p>What if we want a function to behave differently at different times? We can give a function <strong>arguments</strong> that it will use as <strong>parameters</strong> to perform its functions.</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions4?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions4?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions4?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 <blockquote>
-<p>Note that we were able to call <code>feet_and_a_half(5)</code> or <code>feet_and_a_half('five')</code> with no errors! That's because our function worked fine with either <code>int</code> or <code>str</code> input. Python is a language that uses what's called <strong>Duck Typing</strong>, meaning "if the input works, it doesn't matter what <strong>type</strong> it is". The term "Duck Typing" comes from the phrase "if it walks like a duck and quacks like a duck, it's probably a duck".</p>
+<p>Note that we were able to call <code>feet_and_a_half(5)</code> or <code>feet_and_a_half('five')</code> with no errors! That&rsquo;s because our function worked fine with either <code>int</code> or <code>str</code> input. Python is a language that uses what&rsquo;s called <strong>Duck Typing</strong>, meaning &ldquo;if the input works, it doesn&rsquo;t matter what <strong>type</strong> it is&rdquo;. The term &ldquo;Duck Typing&rdquo; comes from the phrase &ldquo;if it walks like a duck and quacks like a duck, it&rsquo;s probably a duck&rdquo;.</p>
 </blockquote>
-<h4>
-<a id="user-content-positional-arguments-and-parameters" class="anchor" href="#positional-arguments-and-parameters" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Positional Arguments and Parameters</h4>
+<h4 id="positional-arguments-and-parameters"><a name="user-content-positional-arguments-and-parameters" href="#positional-arguments-and-parameters" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Positional Arguments and Parameters</h4>
 <p>If a function has multiple parameters, the order the arguments are written in parentheses when you <strong>call</strong> the function is the order they will be matched with parameters in a function definition:</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions5positionalarguments?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions5positionalarguments?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
-<p>But what if our arguments are variables with names - don't they get matched to the correct arguments?</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions5positionalarguments2?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions5positionalarguments2?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions5positionalarguments?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>But what if our arguments are variables with names - don&rsquo;t they get matched to the correct arguments?</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions5positionalarguments2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 <p><strong>NOPE</strong>! The order in which arguments are given is the only thing that affects which argument is assigned to which function parameter:</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions5positionalarguments3?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions5positionalarguments3?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions5positionalarguments3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 <p>When a Python function receives arguments, each <strong>argument</strong> takes on the <strong>name</strong> of the <strong>parameter</strong> corresponding to the position in which it was given. Within the function, that parameter has its own variable name. Taking on a different name inside a function versus outside the function is called <strong>scope</strong>.</p>
 <blockquote>
-<p>The <strong>scope</strong> of a variable is the environment in which its name refers to that variable. So far, we have seen variables <strong>outside</strong> functions, and variables given as arguments to functions, which stand in as the function's paramaters <strong>inside</strong> functions. The word <strong>scope</strong> will come up again and again!</p>
+<p>The <strong>scope</strong> of a variable is the environment in which its name refers to that variable. So far, we have seen variables <strong>outside</strong> functions, and variables given as arguments to functions, which stand in as the function&rsquo;s paramaters <strong>inside</strong> functions. The word <strong>scope</strong> will come up again and again!</p>
 </blockquote>
-<h4>
-<a id="user-content-keyword-arguments-and-parameters" class="anchor" href="#keyword-arguments-and-parameters" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Keyword Arguments and Parameters</h4>
+<h4 id="keyword-arguments-and-parameters"><a name="user-content-keyword-arguments-and-parameters" href="#keyword-arguments-and-parameters" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Keyword Arguments and Parameters</h4>
 <blockquote>
 <p>What if we want to <strong>name</strong> which argument gets assigned to which parameter?</p>
 </blockquote>
 <p>We can specify which argument gets matched with which function parameter if we know the names of the function parameters.</p>
 <p>When we write <code>a_inside = a_outside</code> we are saying that the function parameter <code>a_inside</code> should be assigned the value of the argument <code>a_outside</code>.</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions5keywordarguments?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions5keywordarguments?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions5keywordarguments?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 <blockquote>
-<p>Try switching the last line to
-<code>python print_two_things(a_inside=1,b_inside=2)</code>
-Notice that the order doesn't matter!</p>
+<p>Try switching the last line to<br />
+    <pre><code class="python">print_two_things(a_inside=1,b_inside=2)
+</code></pre><br />
+    Notice that the order doesn&rsquo;t matter!</p>
 </blockquote>
-<h4>
-<a id="user-content-default-arguments-and-parameters" class="anchor" href="#default-arguments-and-parameters" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Default Arguments and Parameters</h4>
+<h4 id="default-arguments-and-parameters"><a name="user-content-default-arguments-and-parameters" href="#default-arguments-and-parameters" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Default Arguments and Parameters</h4>
 <p>Suppose we want to create a function that prints <code>10</code> every time we call it, unless we specify something else? In that case, <code>10</code> could be a <strong>default parameter</strong>.</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions6defaultarguments?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions6defaultarguments?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions6defaultarguments?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 <p>We can always <strong>override</strong> default function parameters by supplying our own values.</p>
-<h4>
-<a id="user-content-mixture-of-positional-keyword-and-default-arguments" class="anchor" href="#mixture-of-positional-keyword-and-default-arguments" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mixture of Positional, Keyword, and Default Arguments</h4>
+<h4 id="mixture-of-positional-keyword-and-default-arguments"><a name="user-content-mixture-of-positional-keyword-and-default-arguments" href="#mixture-of-positional-keyword-and-default-arguments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mixture of Positional, Keyword, and Default Arguments</h4>
 <p>When a function is taking some positional arguments and some keyword arguments, there are a few things to be careful of. Python needs to clearly know which argument should be assigned to which function parameter.</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Function6positionalandkeyword?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Function6positionalandkeyword?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Function6positionalandkeyword?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 <p><strong>Positional arguments and parameters always come <em>before</em> keyword arguments and parameters</strong>.</p>
-<p>When you're calling a function, positional arguments and parameters always have to be written before keyword arguments and parameters. When you're defining a function, parameters with default values have to be written before parameters without default values.</p>
-<p>THIS DOESN'T WORK:</p>
-<div class="highlight highlight-source-python"><pre><span class="pl-k">def</span> <span class="pl-en">print_two_things</span>(<span class="pl-smi">a</span>,<span class="pl-smi">b</span><span class="pl-k">=</span><span class="pl-c1">2</span>):
-	<span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>a is: <span class="pl-c1">{}</span><span class="pl-pds">"</span></span>.format(a))
-	<span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>b is: <span class="pl-c1">{}</span><span class="pl-pds">"</span></span>.format(b))</pre></div>
-<h3>
-<a id="user-content-functions-are-defined-only-once" class="anchor" href="#functions-are-defined-only-once" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Functions are Defined Only <strong>Once</strong>
-</h3>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions7defaultdynamicargument?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions7defaultdynamicargument?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
+<p>When you&rsquo;re calling a function, positional arguments and parameters always have to be written before keyword arguments and parameters. When you&rsquo;re defining a function, parameters with default values have to be written before parameters without default values.</p>
+<p>THIS DOESN&rsquo;T WORK:<br />
+<pre><code class="python">def print_two_things(a,b=2):
+    print(&quot;a is: {}&quot;.format(a))
+    print(&quot;b is: {}&quot;.format(b))
+</code></pre></p>
+<h3 id="functions-are-defined-only-once"><a name="user-content-functions-are-defined-only-once" href="#functions-are-defined-only-once" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Functions are Defined Only <strong>Once</strong></h3>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions7defaultdynamicargument?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 <p>If we give a function a <strong>dynamic</strong> default parameter, meaning one that is generated rather than pre-set, it will be evaluated when the function is defined, not every time the function is called.</p>
-<h3>
-<a id="user-content-return-statements-return" class="anchor" href="#return-statements-return" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Return Statements: <code>return</code>
-</h3>
-<p>When we call <code>len</code>, we <em>get something</em> out of it. We can even assign the output of <code>len</code> to a variable: <code>x = len(y)</code> and store whatever value <code>len</code> produces in a variable. Would <code>x=print(y)</code> make sense, though? No, because <code>print</code> doesn't <strong>return</strong> anything.</p>
-<p>So far each of our functions has done some calculation, then executed a <code>print</code> statement. But functions don't have to <code>print</code> anything in order to be useful!</p>
-<p>If a function includes a <code>return</code> statement, then when we call the function, we can store the value of whatever expression follows the keyword <code>return</code> in some other variable, and then access it outside the function. This is how we pass values from one "scope" to another.</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions8return?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions8return?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
-<h3>
-<a id="user-content-functions-are-first-class-citizens" class="anchor" href="#functions-are-first-class-citizens" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>"Functions are First Class Citizens"</h3>
+<h3 id="return-statements-return"><a name="user-content-return-statements-return" href="#return-statements-return" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Return Statements: <code>return</code></h3>
+<p>When we call <code>len</code>, we <em>get something</em> out of it. We can even assign the output of <code>len</code> to a variable: <code>x = len(y)</code> and store whatever value <code>len</code> produces in a variable. Would <code>x=print(y)</code> make sense, though? No, because <code>print</code> doesn&rsquo;t <strong>return</strong> anything.</p>
+<p>So far each of our functions has done some calculation, then executed a <code>print</code> statement. But functions don&rsquo;t have to <code>print</code> anything in order to be useful!</p>
+<p>If a function includes a <code>return</code> statement, then when we call the function, we can store the value of whatever expression follows the keyword <code>return</code> in some other variable, and then access it outside the function. This is how we pass values from one &ldquo;scope&rdquo; to another.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions8return?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<h3 id="functions-are-first-class-citizens"><a name="user-content-functions-are-first-class-citizens" href="#functions-are-first-class-citizens" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>&ldquo;Functions are First Class Citizens&rdquo;</h3>
 <p>Why does this work?</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions9firstclasscitizens?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions9firstclasscitizens?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
-<p>It works because <strong>functions are "first class citizens"</strong>.</p>
-<p>Python can interpret <code>'hello ' + 'dude'</code> and <code>5 + 6</code>, even though <code>+</code> is doing very different things in both cases. In the case of <code>yourfunction = myfunction</code>, Python is doing slightly more than when we type <code>x = 5</code>, but the idea is the same: Python creates a "name" and makes sure it refers to the correct thing, stored somewhere in memory. In this case the correct "thing" is the definition of a function.</p>
-<h3>
-<a id="user-content-recursion-functions-calling-themselves" class="anchor" href="#recursion-functions-calling-themselves" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Recursion: Functions Calling Themselves</h3>
-<p>We saw that a <code>while</code> loop executes over and over until some "stopping condition" is met:</p>
-<div class="highlight highlight-source-python"><pre>counter <span class="pl-k">=</span> <span class="pl-c1">1</span>
-<span class="pl-k">while</span> (counter <span class="pl-k">&lt;</span> <span class="pl-c1">10</span>):
-	<span class="pl-c1">print</span>(counter)
-	counter <span class="pl-k">=</span> counter <span class="pl-k">+</span> <span class="pl-c1">1</span></pre></div>
-<p>Note that on each iteration we needed to <em>increase</em> <code>counter</code> by <code>1</code> and <em>test</em> whether <code>counter &lt; 10</code>. If we didn't increase <code>counter</code> on each iteration, the loop would never end; if we didn't <em>test</em> counter on every iteration, the loop would never end (<code>while</code> takes care of that for us).</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions9firstclasscitizens?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>It works because <strong>functions are &ldquo;first class citizens&rdquo;</strong>.</p>
+<p>Python can interpret <code>'hello ' + 'dude'</code> and <code>5 + 6</code>, even though <code>+</code> is doing very different things in both cases. In the case of <code>yourfunction = myfunction</code>, Python is doing slightly more than when we type <code>x = 5</code>, but the idea is the same: Python creates a &ldquo;name&rdquo; and makes sure it refers to the correct thing, stored somewhere in memory. In this case the correct &ldquo;thing&rdquo; is the definition of a function.</p>
+<h3 id="recursion-functions-calling-themselves"><a name="user-content-recursion-functions-calling-themselves" href="#recursion-functions-calling-themselves" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Recursion: Functions Calling Themselves</h3>
+<p>We saw that a <code>while</code> loop executes over and over until some &ldquo;stopping condition&rdquo; is met:</p>
+<pre><code class="python">counter = 1
+while (counter &lt; 10):
+    print(counter)
+    counter = counter + 1
+</code></pre>
+
+<p>Note that on each iteration we needed to <em>increase</em> <code>counter</code> by <code>1</code> and <em>test</em> whether <code>counter &lt; 10</code>. If we didn&rsquo;t increase <code>counter</code> on each iteration, the loop would never end; if we didn&rsquo;t <em>test</em> counter on every iteration, the loop would never end (<code>while</code> takes care of that for us).</p>
 <p>Another way we can achieve iteration is <strong>recursion</strong>. That is the term we use for <em>a function calling itself</em>.</p>
 <p>Just like a <code>while</code> loop, successful recursion needs a <strong>stopping condition</strong>, and it needs to be met. Otherwise, like an <strong>infinite loop</strong>, we can create <strong>infinite recursion</strong>, which never ends and fails to achieve our goals.</p>
-&lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Functions9recursion?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Functions9recursion?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
-<h2>
-<a id="user-content-assignment" class="anchor" href="#assignment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assignment</h2>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions9recursion?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<h2 id="assignment"><a name="user-content-assignment" href="#assignment" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignment</h2>
 <ol>
 <li>
 <p>Create a function that returns the maximum of two numbers.</p>
-<div class="highlight highlight-source-python"><pre><span class="pl-k">def</span> <span class="pl-c1">max</span>(<span class="pl-smi">a</span>,<span class="pl-smi">b</span>):
-	<span class="pl-c"><span class="pl-c">#</span>your code here</span></pre></div>
-<p>Your code should satisfy the following:
-* <code>max(1,2)</code> returns  <code>2</code>
-* <code>max(2,1)</code> returns <code>2</code>
-* <code>max(2,2)</code> returns <code>2</code></p>
+<p><pre><code class="python">def max(a,b):
+    #your code here
+</code></pre><br />
+Your code should satisfy the following:<br />
+    * <code>max(1,2)</code> returns  <code>2</code><br />
+    * <code>max(2,1)</code> returns <code>2</code><br />
+    * <code>max(2,2)</code> returns <code>2</code></p>
 <p>Save your work in a file called <code>max.py</code>.</p>
 </li>
 <li>
 <p>Factorials! The <strong>factorial</strong> of an integer is the product of all the positive integers less than or equal to that integer:</p>
 <ul>
-<li>1!									= 1</li>
-<li>2! = 1 * 2					= 2</li>
-<li>3! = 1 * 2 * 3			= 6</li>
-<li>4! = 1 * 2 * 3 * 4 	= 24</li>
-<li>n! = 1 * 2 * 3 * ... * (n-1) * n</li>
+<li>1!                                    = 1</li>
+<li>2! = 1 * 2                    = 2</li>
+<li>3! = 1 * 2 * 3            = 6</li>
+<li>4! = 1 * 2 * 3 * 4    = 24</li>
+<li>n! = 1 * 2 * 3 * &hellip; * (n-1) * n</li>
 </ul>
-<p>Create a recursive function that returns the factorial of a number. It's started for you.</p>
- &lt;iframe height="400px" width="100%" src="<a href="https://repl.it/@ZSiegel/Factorial?lite=true" rel="nofollow">https://repl.it/@ZSiegel/Factorial?lite=true</a>" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;
+<p>Create a recursive function that returns the factorial of a number. It&rsquo;s started for you.</p>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Factorial?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
 <ul>
-<li>
-<code>factorial(5)</code> should return <code>120</code>
-</li>
-<li>
-<code>factorial(6)</code> should return <code>720</code>
-</li>
+<li><code>factorial(5)</code> should return <code>120</code></li>
+<li><code>factorial(6)</code> should return <code>720</code></li>
 </ul>
 <blockquote>
 <p>HINT: You know n! is the product of 1 through n. Similarly, (n-1)! is the product of 1 through (n-1). Another way to think about this is that n! is n times (n-1)!.</p>
 </blockquote>
 <p>Save your work in a file called <code>factorials.py</code>.</p>
 </li>
-</ol>
-</article></body></html>
+</ol></article></body></html>
