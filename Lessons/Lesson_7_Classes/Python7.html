@@ -1014,54 +1014,112 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>README</title></head><body><article class="markdown-body"><h2 id="hi-eitan"><a name="user-content-hi-eitan" href="#hi-eitan" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hi, Eitan,</h2>
+</style><title>Python7</title></head><body><article class="markdown-body"><h1 id="python-lesson-7-object-classes-class"><a name="user-content-python-lesson-7-object-classes-class" href="#python-lesson-7-object-classes-class" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 7 - Object Classes (<code>class</code>)</h1>
+<h2 id="review-of-lesson-6"><a name="user-content-review-of-lesson-6" href="#review-of-lesson-6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Review of Lesson 6</h2>
+<h3 id="lists-iteration"><a name="user-content-lists-iteration" href="#lists-iteration" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Lists, Iteration</h3>
+<p>You should understand all the code in the following snippet</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/ListsReview?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>If you don&rsquo;t understand <strong>for loops</strong>, <strong><code>append</code></strong>, <strong><code>join</code></strong>, or <strong>string multiplication</strong>, please refer to <a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_6_Lists/Python6.html"><strong>Lesson 6</strong></a>.</p>
+<h2 id="python-classes-class"><a name="user-content-python-classes-class" href="#python-classes-class" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Classes: <code>class</code></h2>
+<p>In Python, we have seen variables of several <strong>types</strong>:</p>
 <ul>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_1/Python1.html">Lesson 1: Python</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_1/HTML1.html">Lesson 1: HTML</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_2_Variables_and_Conditionals/Python2.html">Lesson 2: Variables and Conditionals</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_3_Loops/Python3.html">Lesson 3: Loops</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_4_Strings/Python4.html">Lesson 4: Strings</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_5_Functions/Python5.html">Lesson 5: Functions</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_6_Lists/Python6.html">Lesson 6: Lists</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_7_Classes/Python7.html">Lesson 7: Classes</a></li>
+<li><strong>Variables</strong>, each of which has a <em>type</em><ul>
+<li>We create variables just by declaring a variable name and assigning it using the assignment operator <code>=</code></li>
+<li>Example: <code>int</code> variables<br />
+    <pre><code class="python">&gt;&gt;&gt; x=5
+&gt;&gt;&gt; type(x)
+&lt;class 'int'&gt;
+</code></pre></li>
+<li>Example: <em>functions are variables</em> with a <strong>type</strong><br />
+    <pre><code class="python">&gt;&gt;&gt; def my_function(a,b):
+...     return a + b
+...
+&gt;&gt;&gt; type(my_function)
+&lt;class 'function'&gt;
+</code></pre></li>
 </ul>
-<h1 id="getting-started-with-the-webapp-project-navigating-the-terminal"><a name="user-content-getting-started-with-the-webapp-project-navigating-the-terminal" href="#getting-started-with-the-webapp-project-navigating-the-terminal" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Getting Started with the &ldquo;Webapp&rdquo; Project: Navigating The Terminal</h1>
-<p>Before getting started, you have to take care of a few things:</p>
+</li>
+</ul>
+<p><strong>What if we want to create <em>our own <code>type</code></em> of variable?</strong></p>
+<p>We can define a new type of variable using the <code>class</code> keyword:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Class?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Note that we the variables we created have type <code>Dog</code>!</p>
+<p>We have created a new <strong>class</strong> called <code>Dog</code>. The variables we created, like all Python variables, are <strong>objects</strong> of type <code>Dog</code>, which just means that all Python variables come from some <code>class</code> definition, which the <code>type</code> function tells us about.</p>
+<h3 id="initializing-object-variables-by-calling-the-class"><a name="user-content-initializing-object-variables-by-calling-the-class" href="#initializing-object-variables-by-calling-the-class" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Initializing Object Variables by &ldquo;Calling&rdquo; the Class</h3>
+<p>When we create <code>int</code> or <code>str</code> variables, we just write <code>x = 5</code> or <code>x = 'hey'</code>. When we typed <code>my_dog = Dog()</code>, why did we need the <code>()</code>?</p>
+<p>The answer is that <code>int</code> and <code>str</code> variables are so common that Python has special ways of dealing with them. However, the ability to create your own variable types is the  defining feature of <strong>Object-Oriented Programming</strong>, which is what we do in Python.</p>
+<p>Normally, when we define a <strong>class</strong>, <em>we get a freebie function with the same name as the class, which <strong>returns</strong> a variable whose <strong>type</strong> is the class name</em>.</p>
+<p>If we want to create a <code>Dog</code> object variable, we can call the function <code>Dog()</code> (which takes no arguments).</p>
+<p>We can create custom initialization behavior by defining a function called <code>__init__</code>. More on that later.</p>
+<h3 id="object-variables-fields"><a name="user-content-object-variables-fields" href="#object-variables-fields" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Object Variables: Fields</h3>
+<p>Notice that our class definition included some variables:</p>
+<pre><code class="python">class Dog:
+    number_legs = 4
+    number_eyes = 2
+    smell = &quot;good&quot;
+</code></pre>
+
+<p>We were able to access these by creating a <code>Dog</code> variable <code>my_dog = Dog()</code>, and then using a <code>.</code> such as <code>my_dog.number_legs</code> (returned <code>4</code>).</p>
+<p>Variables that are &ldquo;part of&rdquo; an object variable are called the object&rsquo;s <strong>fields</strong>.</p>
+<p>Once we create an object, <em>we can change its fields</em>.</p>
+<pre><code class="python">class Dog:
+    number_legs = 4
+your_dog = Dog()
+your_dog.number_legs = 3
+print(your_dog.number_legs) # prints 3
+</code></pre>
+
+<p>Incredibly, we can also access fields that aren&rsquo;t associated with a <code>Dog</code> <em>variable</em>, but are associated with the <code>Dog</code> <em>class</em>:</p>
+<pre><code class="python">&gt;&gt;&gt; class Dog:
+...     number_legs = 4
+...
+&gt;&gt;&gt; print(Dog.number_legs)
+4
+</code></pre>
+
+<h3 id="object-functions-methods-and-self"><a name="user-content-object-functions-methods-and-self" href="#object-functions-methods-and-self" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Object Functions: Methods and <code>self</code></h3>
+<p>We can give objects their own functions, just like we can give them their own variables. These are called <strong>object methods</strong>.</p>
+<p>Just like <strong>object fields</strong>, <strong>object methods</strong> can be associated with object variables, which we call <em><strong>instances</strong> of an object</em> (like <code>my_dog.bark()</code> and <code>your_dog.bark()</code>), or they can be associated with the class itself (like <code>Dog.bark()</code>).</p>
+<p><em>Fields and methods associated with a <strong>class</strong> (and not an <strong>instance</strong>) are called <strong>static</strong>.</em></p>
+<p><em>Fields and methods associated with an <strong>instance</strong> of an object are called <strong>instance methods</strong> and <strong>instance fields</strong> (sometimes <strong>dynamic methods</strong> and <strong>dynamic fields</strong>).</em></p>
+<p>In this snippet, there is a <strong>static method</strong> called <code>static_bark</code> and an <strong>instance method</strong> called <code>instance_bark</code>.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Classmethods?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p><strong>What is with the <code>self</code> parameter in <code>instance_bark</code>?</strong> We didn&rsquo;t use the parameter <code>self</code> in the function <code>instance_bark</code>, and we didn&rsquo;t provide an argument <code>self</code> when we called <code>my_dog.instance_bark()</code>. For now, just think of the <code>self</code> parameter as a way to tell Python that this method can only be called from an <strong>instance</strong> of the <code>Dog</code> object, rather than that <strong>class</strong> <code>Dog</code>.</p>
+<h3 id="accessing-the-fields-of-an-instance-of-an-object"><a name="user-content-accessing-the-fields-of-an-instance-of-an-object" href="#accessing-the-fields-of-an-instance-of-an-object" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Accessing the Fields of an Instance of an Object</h3>
+<h4 id="accessing-fields-inside-object-methods-self"><a name="user-content-accessing-fields-inside-object-methods-self" href="#accessing-fields-inside-object-methods-self" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Accessing Fields Inside Object Methods: <code>self</code></h4>
+<p>We&rsquo;ve seen that we can create <code>Dog</code> instances, and each instance can have different <strong>fields</strong> (like <code>number_legs</code>). We can give <code>Dog</code> an <strong>instance method</strong> to tell us about itself:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Classinstancevariablesself?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Notice that when we accessed the <code>smell</code> field from <em>outside</em> the class <code>Dog</code>, we used <code>my_dog.smell</code>, but when we accessed it from <em>inside</em> the class <code>Dog</code> (in <code>smart_bark</code>) we used <code>self.smell</code>. That&rsquo;s because <strong><code>self</code> refers to the object instance</strong>.</p>
+<h4 id="accessing-fields-outside-the-class-definition"><a name="user-content-accessing-fields-outside-the-class-definition" href="#accessing-fields-outside-the-class-definition" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Accessing Fields Outside the Class Definition</h4>
+<p>We have already talked about the <strong>scope</strong> of variables <em>inside</em> and <em>outside</em> functions (sometimes those can be called <strong>global scope</strong> and <strong>local scope</strong>).</p>
+<p>Similarly, each object instance gets its own <strong>scope</strong>.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Classinstancevariablesexternal?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>We were able to create a variable <code>my_dog.breed</code> even though the <code>Dog</code> object has no field called <code>breed</code>. In the <strong>scope</strong> of the <strong>object instance</strong> <code>mydog</code>, we created a variable called <code>breed</code>. This becomes an <strong>object field</strong> of <code>mydog</code>, but not of <code>Dog</code> variables elsewhere.</p>
+<p>If we try to access a field that an object instance does not have, like <code>your_dog.breed</code>, we get an <code>AttributeError</code>.</p>
+<h4 id="dynamic-fields-vs-static-fields"><a name="user-content-dynamic-fields-vs-static-fields" href="#dynamic-fields-vs-static-fields" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dynamic Fields vs Static Fields</h4>
+<p>We know how to access <strong>static</strong> fields (associated with a <strong>class</strong>) and <strong>dynamic fields</strong> (associated with an <strong>instance</strong>), but if we change these fields, which one takes precedence?</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Classinstanceclasscollission?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Notice that we changed <code>my_dog.smell</code> as though <code>smell</code> were a <strong>dynamic field</strong>, but then we changed <code>Dog.smell</code> as though <code>smell</code> were a <strong>static field</strong>. When we changed <code>Dog.smell</code>, somehow the instance field <code>yourdog.smell</code> was changed along with it!</p>
+<p><em><strong>Question</strong>:</em> When we changed <code>Dog.smell</code>, why didn&rsquo;t <code>my_dog.smell</code> get changed as well?</p>
+<p><em><strong>Answer</strong>:</em> When we alter a dynamic field, the field we altered on an object instance replaces the class field, and we can no longer access the class field. If we leave the instance&rsquo;s fields alone, they refer to the class&rsquo;s fields.</p>
+<p>Sometimes this becomes confusing, so define your classes with care.</p>
+<h3 id="objects-interact-with-each-other"><a name="user-content-objects-interact-with-each-other" href="#objects-interact-with-each-other" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Objects Interact with Each Other</h3>
+<p>Consider two <code>Dog</code> instances getting in a fight. How would we simulate this? Observe:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Classobjectsinteracting?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<h2 id="assignment"><a name="user-content-assignment" href="#assignment" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignment</h2>
 <ol>
 <li>
-<p>Download our project from <a href="https://github.com/zsiegel92/Eitan_S">the GitHub repository I made</a></p>
-<ul>
-<li>Click the green &ldquo;Clone or download&rdquo; button and &ldquo;Download Zip&rdquo;</li>
-</ul>
+<p>Create a <code>cat</code> class and a <code>human</code> class. Give both classes a field called <code>happiness</code>. Create dynamic methods in the <code>cat</code> class called <code>snuggle</code> and <code>scratch</code> that take a <code>human</code> parameter. Create dynamic methods in the <code>human</code> class called <code>snuggle</code> and <code>scold</code> that take a <code>cat</code> parameter.</p>
+<p>After calling <code>snuggle</code> from either class, the <code>happiness</code> field of both the <code>human</code> and the <code>cat</code> instance involved should increase by 1. After calling <code>scratch</code> and <code>scold</code>, the happiness field of both the <code>human</code> and the <code>cat</code> instance involved should decrease by 1.</p>
+<p>Your script should create two <code>Human</code> instances and two <code>Cat</code> instances. They should <code>snuggle</code>, <code>scold</code>, and <code>scratch</code> each other and at the end, both <code>Human</code> instances should have <code>happiness</code> equal to <code>0</code>, but one <code>Cat</code> should have <code>happiness</code> equal to <code>2</code>, and one should have <code>happiness</code> equal to <code>-2</code>.</p>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Classhumancat?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<p>Save your work in a file called <code>humans_and_cats.py</code> or fork the repl.it script above.</p>
 </li>
-<li>
-<p>Navigate to the the folder with the download, &ldquo;unzip&rdquo; the .zip file, and go into the folder. These are the commands you will need to navigate using the command line (press <kbd>Enter</kbd> after typing each command):</p>
-<ul>
-<li>Type <code>cd</code> to see what folder you are in.</li>
-<li>Type <code>cd [folder name]</code> to navigate to a specific folder.</li>
-<li>Type <code>cd ..</code> to navigate up one folder (into the condaining folder)</li>
-<li>Type <code>ls</code> to list all the files and folders in the folder you are in.</li>
-<li>Type <code>ls -AL</code> to list all the files and folders in the folder you are in, INCLUDING the hidden folders, which begin with a dot (such as <code>.env</code>).</li>
-</ul>
-</li>
-<li>
-<p>When you are in the folder called <code>webapp</code>, type the command<br />
-<code>venv\Scripts\activate.bat</code><br />
-This command tells your computer &ldquo;hey, I&rsquo;m working on the <code>webapp</code> project, so if I install anything, please don&rsquo;t let it affect the rest of my computer.&rdquo;</p>
-</li>
-</ol>
-<h1 id="important-info"><a name="user-content-important-info" href="#important-info" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Important Info</h1>
-<p>This will be your first website. This will also be your first time running code from the command line. There are a few things to keep in mind:</p>
-<ol>
-<li>NEVER delete files from the command line unless they are files you created. If you delete a file that Windows needs, Windows may start malfunctioning.</li>
-<li>Only use commands that you have learned from me (Zach) or from sources that I have introduced myself.</li>
-<li>Feel free to ask questions about anything that you don&rsquo;t understand! There is a very good reason why everything is the way it is, and if I don&rsquo;t know, I will do my best to find out for you. If you are with your parents and not me, please ask them to ask me - I will respond to messages from them within a few hours.</li>
-</ol>
-<h1 id="suggested-download-sublimetext"><a name="user-content-suggested-download-sublimetext" href="#suggested-download-sublimetext" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Suggested Download: Sublimetext</h1>
-<p>I suggest that you download SublimeText 2, a text editor (like Microsoft Word or Google Docs) designed for writing code. Other good options are Emacs, Aquamacs, and Atom.</p>
-<h1 id="resources"><a name="user-content-resources" href="#resources" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Resources:</h1>
-<p><a href="https://www.khanacademy.org/computing/computer-programming/html-css">Khan Academy HTML Lessons</a></p>
-<p><a href="https://www.w3schools.com/html/html_elements.asp">HTML Guide</a></p>
-<p><a href="https://codepen.io/zsiegel/">codepen.com</a></p>
-<p><a href="https://jsfiddle.net/">jsfiddle.net</a></p>
-<p><a href="https://github.com/zsiegel92">Zach&rsquo;s Github Page</a></p></article></body></html>
+</ol></article></body></html>
