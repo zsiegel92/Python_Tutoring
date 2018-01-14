@@ -1014,7 +1014,55 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>Python2</title></head><body><article class="markdown-body"><h1 id="python-lesson-2"><a name="user-content-python-lesson-2" href="#python-lesson-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 2</h1>
+</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX"],
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: false
+  },
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"],
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    equationNumbers: {
+      autoNumber: "AMS",
+    },
+    unicode: {
+      fonts: "STIXGeneral,'Arial Unicode MS'"
+    }
+  },
+  showProcessingMessages: false
+});
+</script>
+<title>Python2</title></head><body><article class="markdown-body"><h1 id="python-lesson-2"><a name="user-content-python-lesson-2" href="#python-lesson-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 2</h1>
+<div class="toc">
+<ul>
+<li><a href="#python-lesson-2">Python Lesson 2</a><ul>
+<li><a href="#running-python">Running Python</a><ul>
+<li><a href="#running-python-scripts-somethingpy">Running Python Scripts (something.py)</a></li>
+<li><a href="#running-the-python-interactive-console-repl">Running the Python Interactive Console (REPL)</a></li>
+</ul>
+</li>
+<li><a href="#variable-types-and-the-type-keyword">Variable &ldquo;Types&rdquo; and the type Keyword</a><ul>
+<li><a href="#boolean-variables-of-type-bool-true-and-false">Boolean Variables of Type bool: True and False</a></li>
+<li><a href="#comparison-operators-and">Comparison Operators: &lt;, &gt;, &lt;=, &gt;=, and ==</a></li>
+</ul>
+</li>
+<li><a href="#conditionals-and-tacos-the-if-else-and-elif-keywords">Conditionals and Tacos: The if, else, and elif Keywords</a><ul>
+<li><a href="#the-pass-command">The pass Command</a></li>
+</ul>
+</li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <h2 id="running-python"><a name="user-content-running-python" href="#running-python" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Running Python</h2>
 <h4 id="running-python-scripts-somethingpy"><a name="user-content-running-python-scripts-somethingpy" href="#running-python-scripts-somethingpy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Running Python Scripts (<code>something.py</code>)</h4>
 <p>Use <code>cd</code> and <code>dir</code> to navigate to the folder containing a Python file with the <code>.py</code> extension. Type <code>python filename.py</code> to execute all the Python commands in the <code>.py</code> file.</p>

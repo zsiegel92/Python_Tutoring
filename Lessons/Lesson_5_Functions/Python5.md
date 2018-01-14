@@ -1,5 +1,6 @@
 # Python Lesson 5 - Functions (`def`)
 
+[TOC]
 
 ## Review of Lesson 4
 

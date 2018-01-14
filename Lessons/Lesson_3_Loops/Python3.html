@@ -1014,7 +1014,65 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>Python3</title></head><body><article class="markdown-body"><h1 id="python-lesson-3"><a name="user-content-python-lesson-3" href="#python-lesson-3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 3</h1>
+</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX"],
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: false
+  },
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"],
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    equationNumbers: {
+      autoNumber: "AMS",
+    },
+    unicode: {
+      fonts: "STIXGeneral,'Arial Unicode MS'"
+    }
+  },
+  showProcessingMessages: false
+});
+</script>
+<title>Python3</title></head><body><article class="markdown-body"><h1 id="python-lesson-3"><a name="user-content-python-lesson-3" href="#python-lesson-3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 3</h1>
+<div class="toc">
+<ul>
+<li><a href="#python-lesson-3">Python Lesson 3</a><ul>
+<li><a href="#review-of-lesson-2">Review of Lesson 2</a><ul>
+<li><a href="#variable-types-int-str-list-bool">Variable Types: int, str, list, bool</a></li>
+<li><a href="#conditionals-if-else-and-elif">Conditionals: if, else, and elif</a><ul>
+<li><a href="#the-pass-command">The pass Command</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#loops-while">Loops: while</a><ul>
+<li><a href="#parts-of-a-loop">Parts of a Loop</a></li>
+<li><a href="#termination-of-loops">Termination of Loops</a><ul>
+<li><a href="#a-non-terminating-loop">A non-Terminating Loop</a></li>
+<li><a href="#how-to-ensure-loops-terminate">How to Ensure Loops Terminate</a></li>
+<li><a href="#loops-inside-loops">Loops Inside Loops</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#assignment">Assignment</a><ul>
+<li><a href="#printing-sequences-of-numbers">Printing Sequences of Numbers</a></li>
+<li><a href="#printing-without-skipping-lines">Printing without Skipping Lines</a></li>
+<li><a href="#printing-with-conditionals">Printing with Conditionals</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <h2 id="review-of-lesson-2"><a name="user-content-review-of-lesson-2" href="#review-of-lesson-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Review of Lesson 2</h2>
 <h3 id="variable-types-int-str-list-bool"><a name="user-content-variable-types-int-str-list-bool" href="#variable-types-int-str-list-bool" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Variable Types: <code>int</code>, <code>str</code>, <code>list</code>, <code>bool</code></h3>
 <p>We can view the <strong>type</strong> of a variable using the <code>type</code> keyword. The type of a variable has to do with what kind of data that variable stores.</p>

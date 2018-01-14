@@ -1014,7 +1014,65 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>Python6</title></head><body><article class="markdown-body"><h1 id="python-lesson-6-lists-syntactic-sugar-casting-and-mutability"><a name="user-content-python-lesson-6-lists-syntactic-sugar-casting-and-mutability" href="#python-lesson-6-lists-syntactic-sugar-casting-and-mutability" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 6 - Lists, Syntactic Sugar, Casting, and Mutability</h1>
+</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX"],
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: false
+  },
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"],
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    equationNumbers: {
+      autoNumber: "AMS",
+    },
+    unicode: {
+      fonts: "STIXGeneral,'Arial Unicode MS'"
+    }
+  },
+  showProcessingMessages: false
+});
+</script>
+<title>Python6</title></head><body><article class="markdown-body"><h1 id="python-lesson-6-lists-syntactic-sugar-casting-and-mutability"><a name="user-content-python-lesson-6-lists-syntactic-sugar-casting-and-mutability" href="#python-lesson-6-lists-syntactic-sugar-casting-and-mutability" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 6 - Lists, Syntactic Sugar, Casting, and Mutability</h1>
+<div class="toc">
+<ul>
+<li><a href="#python-lesson-6-lists-syntactic-sugar-casting-and-mutability">Python Lesson 6 - Lists, Syntactic Sugar, Casting, and Mutability</a><ul>
+<li><a href="#review-of-lesson-5">Review of Lesson 5</a><ul>
+<li><a href="#functions-def-return-parameters-and-arguments">Functions: def, return, Parameters and Arguments</a></li>
+</ul>
+</li>
+<li><a href="#pythons-syntactic-sugar">Python&rsquo;s Syntactic Sugar</a><ul>
+<li><a href="#pythons-syntactic-sugar-weve-already-covered">Python&rsquo;s Syntactic Sugar We&rsquo;ve Already Covered</a></li>
+<li><a href="#some-new-syntactic-sugar-in-python">Some New Syntactic Sugar in Python</a><ul>
+<li><a href="#incrementing-and-decrementing-and-operators">Incrementing and Decrementing: += and -= Operators</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#python-list-variables">Python list Variables</a><ul>
+<li><a href="#indexing-and-slicing">Indexing and Slicing</a></li>
+<li><a href="#appending-and-extending-append-extend-and-concatenation-using-the-operator">Appending and Extending: .append, .extend, and Concatenation Using the + Operator</a></li>
+<li><a href="#automatically-creating-a-list-using-while">Automatically Creating a List Using while</a></li>
+<li><a href="#for-loops-for">For Loops: for</a></li>
+<li><a href="#list-multiplication-more-syntactic-sugar">List &ldquo;Multiplication&rdquo; (more syntactic sugar)</a></li>
+<li><a href="#strings-are-like-lists">Strings are Like Lists!</a></li>
+<li><a href="#two-dimensional-lists">Two-Dimensional Lists</a></li>
+</ul>
+</li>
+<li><a href="#type-casting">Type Casting</a></li>
+<li><a href="#mutability-of-data-types">Mutability of Data Types</a></li>
+<li><a href="#assignment">Assignment</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <h2 id="review-of-lesson-5"><a name="user-content-review-of-lesson-5" href="#review-of-lesson-5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Review of Lesson 5</h2>
 <h3 id="functions-def-return-parameters-and-arguments"><a name="user-content-functions-def-return-parameters-and-arguments" href="#functions-def-return-parameters-and-arguments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Functions: <code>def</code>, <code>return</code>, Parameters and Arguments</h3>
 <blockquote>

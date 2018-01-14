@@ -1014,7 +1014,80 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>Python4</title></head><body><article class="markdown-body"><h1 id="python-lesson-4-strings-str"><a name="user-content-python-lesson-4-strings-str" href="#python-lesson-4-strings-str" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 4 - Strings (<code>str</code>)</h1>
+</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX"],
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: false
+  },
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"],
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    equationNumbers: {
+      autoNumber: "AMS",
+    },
+    unicode: {
+      fonts: "STIXGeneral,'Arial Unicode MS'"
+    }
+  },
+  showProcessingMessages: false
+});
+</script>
+<title>Python4</title></head><body><article class="markdown-body"><h1 id="python-lesson-4-strings-str"><a name="user-content-python-lesson-4-strings-str" href="#python-lesson-4-strings-str" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 4 - Strings (<code>str</code>)</h1>
+<div class="toc">
+<ul>
+<li><a href="#python-lesson-4-strings-str">Python Lesson 4 - Strings (str)</a><ul>
+<li><a href="#review-of-lesson-3">Review of Lesson 3</a><ul>
+<li><a href="#loops-while">Loops: while</a></li>
+<li><a href="#types">Types</a></li>
+</ul>
+</li>
+<li><a href="#python-strings-str">Python Strings: str</a><ul>
+<li><a href="#concatenation">Concatenation</a><ul>
+<li><a href="#concatenation-is-exact">Concatenation is Exact</a></li>
+<li><a href="#concatenation-makes-code-re-usable">Concatenation Makes Code Re-Usable</a></li>
+<li><a href="#concatenation-is-fun">Concatenation is Fun</a></li>
+</ul>
+</li>
+<li><a href="#substrings">Substrings</a><ul>
+<li><a href="#the-in-keyword">The in Keyword</a></li>
+<li><a href="#string-indexing-and-slicing">String Indexing and Slicing</a></li>
+</ul>
+</li>
+<li><a href="#finding-the-length-of-a-string-the-len-keyword">Finding the Length of a String: The len Keyword</a></li>
+<li><a href="#accessing-the-last-element-the-1-shortcut">Accessing the Last Element: the [-1] Shortcut</a><ul>
+<li><a href="#indexing-with-1">Indexing with [-1]</a></li>
+<li><a href="#slicing-with-1">Slicing with :-1</a></li>
+</ul>
+</li>
+<li><a href="#splitting-substrings-at-delimiters-strsplit-and-strjoin">Splitting Substrings at Delimiters: str.split and str.join</a><ul>
+<li><a href="#meet-split">Meet split!</a></li>
+<li><a href="#meet-join">Meet join</a></li>
+<li><a href="#combining-split-and-join">Combining split and join</a></li>
+</ul>
+</li>
+<li><a href="#formatting-strings-format">Formatting Strings: .format</a><ul>
+<li><a href="#formatting-with-positional-arguments">Formatting with Positional Arguments</a></li>
+<li><a href="#formatting-with-keyword-arguments">Formatting with Keyword Arguments</a></li>
+<li><a href="#formatting-with-format-string-literals">Formatting with Format String Literals</a></li>
+</ul>
+</li>
+<li><a href="#automatically-upper-casing-and-lower-casing-strupper-strlower-and-strcapitalize">Automatically Upper-Casing and Lower-Casing: str.upper, str.lower, and str.capitalize</a></li>
+<li><a href="#line-breaks-in-python-the-newline-character-n">Line Breaks in Python: The Newline Character \n</a></li>
+</ul>
+</li>
+<li><a href="#assignment">Assignment</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <blockquote>
 <p>This lesson contains embedded code snippets! This uses a tool called <strong>repl.it</strong>, and we will use embedded REPL environments frequently from now on. To run any of these code snippets, hit the triangular &ldquo;play button&rdquo; in the repl.it window.</p>
 <p>You will still have to use the <code>python</code> command in your command prompt for assignments, though.</p>

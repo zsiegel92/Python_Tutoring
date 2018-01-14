@@ -1,5 +1,6 @@
 # Python Lesson 7 - Object Classes (`class`)
 
+[TOC]
 
 ## Review of Lesson 6
 

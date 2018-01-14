@@ -1,5 +1,7 @@
 # Python Lesson 2
 
+[TOC]
+
 ## Running Python
 
 #### Running Python Scripts (`something.py`)

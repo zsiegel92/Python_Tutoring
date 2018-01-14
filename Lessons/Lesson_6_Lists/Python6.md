@@ -1,5 +1,6 @@
 # Python Lesson 6 - Lists, Syntactic Sugar, Casting, and Mutability
 
+[TOC]
 
 ## Review of Lesson 5
 

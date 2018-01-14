@@ -1,5 +1,7 @@
 # Python Lesson 3
 
+[TOC]
+
 ## Review of Lesson 2
 
 ### Variable Types: `int`, `str`, `list`, `bool`
