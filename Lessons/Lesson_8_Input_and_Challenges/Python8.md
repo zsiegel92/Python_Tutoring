@@ -4,6 +4,13 @@
 
 ## Input: `input()`
 
+So far we have interacted with Python in the following two ways:
+
+1. We execute code line-by-line in a **REPL** (**R**ead **E**valuate **P**rint **L**oop) environment by typing `python` from the *command prompt*.
+2. We Execute every line of code in a `.py` file by typing `python <filename>.py` from the *command prompt*.
+
+The REPL environment allows us to *interact* with our code. But we should
+
 There are some functions that we can always access: `len`, `type`,
 
 ## Assignment
