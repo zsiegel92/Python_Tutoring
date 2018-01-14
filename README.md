@@ -6,7 +6,7 @@
 * [Lesson 3: Loops](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_3_Loops/Python3.html)
 * [Lesson 4: Strings](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_4_Strings/Python4.html)
 * [Lesson 5: Functions](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_5_Functions/Python5.html)
-
+* [Lesson 6: Lists](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_5_Lists/Python6.html)
 
 # Getting Started with the "Webapp" Project: Navigating The Terminal
 Before getting started, you have to take care of a few things:

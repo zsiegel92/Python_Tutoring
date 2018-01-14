@@ -1014,53 +1014,290 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>README</title></head><body><article class="markdown-body"><h2 id="hi-eitan"><a name="user-content-hi-eitan" href="#hi-eitan" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hi, Eitan,</h2>
+</style><title>Python6</title></head><body><article class="markdown-body"><h1 id="python-lesson-6-lists-syntactic-sugar-casting-and-mutability"><a name="user-content-python-lesson-6-lists-syntactic-sugar-casting-and-mutability" href="#python-lesson-6-lists-syntactic-sugar-casting-and-mutability" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 6 - Lists, Syntactic Sugar, Casting, and Mutability</h1>
+<h2 id="review-of-lesson-5"><a name="user-content-review-of-lesson-5" href="#review-of-lesson-5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Review of Lesson 5</h2>
+<h3 id="functions-def-return-parameters-and-arguments"><a name="user-content-functions-def-return-parameters-and-arguments" href="#functions-def-return-parameters-and-arguments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Functions: <code>def</code>, <code>return</code>, Parameters and Arguments</h3>
+<blockquote>
+<p>You should understand all the code in the following snippet</p>
+</blockquote>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functionsreview?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<h2 id="pythons-syntactic-sugar"><a name="user-content-pythons-syntactic-sugar" href="#pythons-syntactic-sugar" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python&rsquo;s <strong>Syntactic Sugar</strong></h2>
+<p>The words and phrases that make the structure of a language is called its <strong>syntax</strong>. English evolved over thousands of years, whereas <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> was created in 1991. English <strong>syntax</strong> <em>came to be accepted</em> over time as people started to use words and phrases. Python&rsquo;s <strong>syntax</strong> is <em>designed</em> by programmers who decide how Python code should be executed by a computer.</p>
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Syntax_(programming_languages)">Wikipedia gives a definition</a> of <strong>syntax</strong>: &ldquo;the syntax of a computer language is the set of rules that defines the combinations of symbols that are considered to be a correctly structured document or fragment in that language.&rdquo;</p>
+</blockquote>
+<p>The syntax that is acepted in spoken languages and designed in computer languages often is <em>easy and convenient</em>. There is no real <em>need</em> for contractions like &ldquo;gonna&rdquo;, &ldquo;wanna&rdquo;, and &ldquo;I&rsquo;d&rdquo;, but they&rsquo;re great, and save us lots of time; many spoken languages have contractions.</p>
+<p><em>Designed languages also have shortcuts, and we call those <strong>syntactic sugar</strong>.</em> Like sugar, they&rsquo;re not really necessary for survival, but we like them.</p>
+<p>Much of this lesson is about how to use Python&rsquo;s <strong>syntactic sugar</strong>, so be prepared for some time-saving shortcuts!</p>
+<p><strong><em> Python&rsquo;s </em>*Syntactic Sugar</strong> We&rsquo;ve Already Covered</p>
 <ul>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_1/Python1.html">Lesson 1: Python</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_1/HTML1.html">Lesson 1: HTML</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_2_Variables_and_Conditionals/Python2.html">Lesson 2: Variables and Conditionals</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_3_Loops/Python3.html">Lesson 3: Loops</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_4_Strings/Python4.html">Lesson 4: Strings</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_5_Functions/Python5.html">Lesson 5: Functions</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_5_Lists/Python6.html">Lesson 6: Lists</a></li>
+<li>Suppose <code>mylist</code> is <code>[1,2,3,4]</code>. We know <code>len(mylist)</code> will be <code>4</code>, so we can access the last element using <code>mylist[len(mylist)]</code>. So we don&rsquo;t really need the ability to access the last element using <code>mylist[-1]</code>, but it&rsquo;s much clearer. <strong><em>That&rsquo;s syntactic sugar.</em></strong></li>
+<li>When we concatenate <code>"my " + "friend"</code> we are &ldquo;adding&rdquo; words, which is <em>not</em> something people think about in everyday life. We could achieve the same thing using <code>.format</code> as so:<br />
+    <pre><code class="python">&gt;&gt;&gt; &quot;{} {}&quot;.format(&quot;my&quot;,&quot;friend&quot;)
+'my friend'
+</code></pre><br />
+    but using the <code>+</code> operator for concatenation is often much easier to read, so Python&rsquo;s designers decided that that syntax is valid. <strong><em>That&rsquo;s syntactic sugar.</em></strong></li>
 </ul>
-<h1 id="getting-started-with-the-webapp-project-navigating-the-terminal"><a name="user-content-getting-started-with-the-webapp-project-navigating-the-terminal" href="#getting-started-with-the-webapp-project-navigating-the-terminal" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Getting Started with the &ldquo;Webapp&rdquo; Project: Navigating The Terminal</h1>
-<p>Before getting started, you have to take care of a few things:</p>
+<p><strong><em> Some New </em>*Syntactic Sugar</strong> in Python</p>
+<h4 id="incrementing-and-decrementing-and-operators"><strong>Incrementing</strong> and <strong>Decrementing</strong>: <code>+=</code> and <code>-=</code> Operators</h4>
+<p>When we write <code>while</code> loops, we usually start with a counter<br />
+<pre><code class="python">mylist = [1,2,3,4]
+i = 0
+while i &lt; len(mylist):
+    print(mylist[i])
+    i = i + 1
+</code></pre></p>
+<p>When we write <code>i = i + 1</code>, we are <strong>incrementing</strong> our counter. It is also common to <strong>decrement</strong> a counter by subtracting a constant.</p>
+<p>Python has shortcuts for incrementing and decrementing:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/incrementshortcut?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Explanation:</p>
+<table>
+<thead>
+<tr>
+<th>Statement (Syntactic Sugar)</th>
+<th>Equivalent Statement</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x+=5</code></td>
+<td><code>x = x + 5</code></td>
+<td><code>+=</code> is the <strong>increment</strong> operator also called the <strong>Add AND</strong> operator</td>
+</tr>
+<tr>
+<td><code>x-=5</code></td>
+<td><code>x = x - 5</code></td>
+<td><code>-=</code> is the <strong>decrement</strong> operator also called the <strong>Subtract AND</strong> operator</td>
+</tr>
+<tr>
+<td><code>x*=5</code></td>
+<td><code>x = x * 5</code></td>
+<td><code>*=</code> is the <strong>Multiply AND</strong> operator</td>
+</tr>
+<tr>
+<td><code>x/=5</code></td>
+<td><code>x = x / 5</code></td>
+<td><code>\=</code> is the <strong>Divide AND</strong> operator</td>
+</tr>
+</tbody>
+</table>
+<h2 id="python-list-variables"><a name="user-content-python-list-variables" href="#python-list-variables" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python <code>list</code> Variables</h2>
+<p>We have seen Python <code>list</code> variables:</p>
+<pre><code class="python">&gt;&gt;&gt; a = [1,2,3]
+&gt;&gt;&gt; print(a)
+[1, 2, 3]
+&gt;&gt;&gt; type(a)
+&lt;class 'list'&gt;
+</code></pre>
+
+<p>We know how to declare lists, and even how to access elements of lists, but not much more.</p>
+<h3 id="indexing-and-slicing"><a name="user-content-indexing-and-slicing" href="#indexing-and-slicing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Indexing and Slicing</h3>
+<p>The following snippet should all make sense to you:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listsindexingslicing?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Note that if we try to access list elements that do not exist, we get an <code>IndexError</code>:</p>
+<pre><code class="python">&gt;&gt;&gt; a = [1,2,3]
+&gt;&gt;&gt; print(a[3])
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+IndexError: list index out of range
+</code></pre>
+
+<p>Even if we attempt to assign values to non-existing indices, we get an <code>IndexError</code>:</p>
+<pre><code class="python">&gt;&gt;&gt; a = [1,2,3]
+&gt;&gt;&gt; a[3] = 4
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+IndexError: list assignment index out of range
+</code></pre>
+
+<h3 id="appending-and-extending-append-extend-and-concatenation-using-the-operator"><a name="user-content-appending-and-extending-append-extend-and-concatenation-using-the-operator" href="#appending-and-extending-append-extend-and-concatenation-using-the-operator" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Appending and Extending: <code>.append</code>, <code>.extend</code>, and Concatenation Using the <code>+</code> Operator</h3>
+<p>We seem to get an <code>IndexError</code> when we try to access list indices that do not exist. So: <em>can we change the length of a list</em>? Yes.</p>
+<p>The <code>.append</code> function takes one argument, which it makes into the last element of a list:</p>
+<blockquote>
+<p>We have seen <code>str</code> functions like <code>.format</code> that have to be called from a <code>str</code> variable (like <code>"hello {}".format("friend")</code>). We will learn more about <strong>object methods</strong> soon.</p>
+</blockquote>
+<pre><code class="python">&gt;&gt;&gt; a = [1,2,3]
+&gt;&gt;&gt; a.append(4)
+&gt;&gt;&gt; print(a)
+[1, 2, 3, 4]
+</code></pre>
+
+<p>The <code>.extend</code> function takes one argument, <em>which has to be a <code>list</code></em>, whose elements it adds onto the end of a list:</p>
+<pre><code class="python">&gt;&gt;&gt; a = [1,2,3]
+&gt;&gt;&gt; a.extend([4,5,6])
+&gt;&gt;&gt; print(a)
+[1, 2, 3, 4, 5, 6]
+</code></pre>
+
+<p>We have seen that we can <strong>concatenat</strong> <code>str</code> variables using the <code>+</code> operator. We can do the same with <code>list</code> variables:</p>
+<pre><code class="python">&gt;&gt;&gt; a = [1,2,3] + [4,5,6]
+&gt;&gt;&gt; print(a)
+[1, 2, 3, 4, 5, 6]
+</code></pre>
+
+<p>Be careful about the difference between <code>append</code> and <code>extend</code>!</p>
+<pre><code class="python">&gt;&gt;&gt; x = [1,2,3]
+&gt;&gt;&gt; y = [4,5,6]
+&gt;&gt;&gt; x.append(y)
+&gt;&gt;&gt; print(x)
+[1, 2, 3, [4, 5, 6]]
+</code></pre>
+
+<p>Now a <code>list</code> is an element of a <code>list</code>! This isn&rsquo;t a problem if it&rsquo;s intentional.</p>
+<h3 id="automatically-creating-a-list-using-while"><a name="user-content-automatically-creating-a-list-using-while" href="#automatically-creating-a-list-using-while" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Automatically Creating a List Using <code>while</code></h3>
+<p>We can combine our knowledge of <code>while</code> loops with <code>append</code> to automatically create long lists!</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listswhileiteration?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>Note the use of <code>+=</code> in these examples! We will use that operator from now on.</p>
+</blockquote>
+<h3 id="for-loops-for"><strong>For</strong> Loops: <code>for</code></h3>
+<p>We have seen how to loop using <code>while</code>, and we always have to create a counter, which we increment on each loop iteration. Python has the keyword <code>for</code>, which allows us to access each element in a data structure:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listsaccessingfor?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>The line <code>for thing in mylist:</code> assures that the indented code is executed once for each element of <code>mylist</code>, and on each iteration an element of <code>mylist</code> is assigned to the variable <code>thing</code>.</p>
+<blockquote>
+<p>The <code>for</code> loop syntax is definitely <strong>syntactic sugar</strong>, but it is extremely common and useful!</p>
+</blockquote>
+<h3 id="list-multiplication-more-syntactic-sugar"><a name="user-content-list-multiplication-more-syntactic-sugar" href="#list-multiplication-more-syntactic-sugar" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>List &ldquo;Multiplication&rdquo; (more <strong>syntactic sugar</strong>)</h3>
+<p>Suppose we want a list that repeats the same values over and over. We can achieve this very easily using the <code>*</code> operator in Python:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listsmultiplication?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>We can even use the <code>*=</code> operators:</p>
+<pre><code class="python">&gt;&gt;&gt; mylist = [1,2,3,4]
+&gt;&gt;&gt; mylist *= 4
+&gt;&gt;&gt; print(mylist)
+[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
+</code></pre>
+
+<h3 id="strings-are-like-lists"><a name="user-content-strings-are-like-lists" href="#strings-are-like-lists" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Strings are Like Lists!</h3>
+<p>Note all the similarities between <code>list</code> variables and <code>str</code> variables:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listslikestrings?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<h3 id="two-dimensional-lists"><a name="user-content-two-dimensional-lists" href="#two-dimensional-lists" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Two-Dimensional Lists</h3>
+<p>We have seen that we can create <code>list</code> variables that contain <code>list</code> variables.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Lists2dimensions?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>In this case, <code>x[0]</code> is the list <code>[0,1,2]</code>, so <code>x[0][0]</code> is the first element of that list, which is <code>0</code>!</p>
+<p><em>Note that each <code>list</code> variable contained inside a <code>list</code> variable does not have to have the same <strong>length</strong></em>. However, if they each have the same length, we can create a nice grid:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Lists2dimensions2grid?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Note that we needed to print one row at a time (which we achieved using <code>for</code>) in order to see our grid!</p>
+<h2 id="type-casting"><a name="user-content-type-casting" href="#type-casting" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Type Casting</h2>
+<p>Often there&rsquo;s an obvious way that we would want to &ldquo;convert&rdquo; a variable of one <strong>type</strong> to a variable of another <strong>type</strong>. In computer science, we call this <strong>casting</strong>.</p>
+<p>It&rsquo;s fairly intuitive, but pay close attention to the following examples:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Casting?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>Most variables in Python are defined using a <code>class</code> definition (Lesson 7). When we call <code>str(7)</code>, Python calls the <code>__init__</code> method in the <code>class</code> definition of <code>str</code>. That method <strong>initializes</strong> a <code>str</code> variable, and has instructions on how to do so using an argument of type <code>int</code>. We are not &ldquo;converting&rdquo; so much as defining a new variable using another variable as a parameter!</p>
+</blockquote>
+<h2 id="mutability-of-data-types"><a name="user-content-mutability-of-data-types" href="#mutability-of-data-types" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mutability of Data Types</h2>
+<p>Some data types are <strong>mutable</strong>, which means that Python can edit them in the computer&rsquo;s memory. Other data types are <strong>immutable</strong>, which means Python cannot make changes to them without destroying them and creating a new version.</p>
+<p>In Python, <code>str</code> and <code>int</code> variables are <strong>immutable</strong> but <code>list</code> variables are <strong>mutable</strong>.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Mutability?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>In general, objects are mutable, but <strong>primitive data types</strong> are immutable. These are limited to <code>int</code> and <code>str</code> values.</p>
+</blockquote>
+<p>When we use <code>extend</code> or <code>+</code> to concatenate two <code>list</code> variables, the values from one list are copied to the other, and they are no longer part of the same variable:</p>
+<pre><code class="python">&gt;&gt;&gt; list1 = [1,2,3]
+&gt;&gt;&gt; list2 = []
+&gt;&gt;&gt; list2.extend(list1)
+&gt;&gt;&gt; print(list2)
+[1, 2, 3]
+&gt;&gt;&gt; list1[0]=5
+&gt;&gt;&gt; print(list1)
+[5, 2, 3]
+&gt;&gt;&gt; print(list2)
+[1, 2, 3]
+</code></pre>
+
+<blockquote>
+<p>Note that values in <code>list2</code> are not changed when we <em>mutate</em> <code>list1</code> because values were <em>copied</em> by the <code>extend</code> command, and <code>list2</code> no longer accesses the same values as <code>list1</code>.</p>
+</blockquote>
+<h2 id="assignment"><a name="user-content-assignment" href="#assignment" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignment</h2>
 <ol>
 <li>
-<p>Download our project from <a href="https://github.com/zsiegel92/Eitan_S">the GitHub repository I made</a></p>
+<p>Define a function called <code>flatten</code> that takes one parameter that is a <code>list</code> variable that contains only <code>list</code> variables and returns a <code>list</code> variable containing all the elements of all the <code>list</code> variables making up the input.</p>
 <ul>
-<li>Click the green &ldquo;Clone or download&rdquo; button and &ldquo;Download Zip&rdquo;</li>
+<li><code>flatten([[1,2],[3,4],[5,6]])</code> should return <code>[1,2,3,4,5,6]</code></li>
+<li><code>flatten([[1],[2],[3]])</code> should return <code>[1,2,3]</code></li>
+<li><code>flatten([[1],[2,3],[4,5,6]])</code> should return <code>[1,2,3,4,5,6]</code></li>
 </ul>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listflatten?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<p>Save your work in a file called <code>flatten.py</code> <strong>or</strong> fork the <em>repl.it</em> snippet above and do your work in repl.it.</p>
 </li>
 <li>
-<p>Navigate to the the folder with the download, &ldquo;unzip&rdquo; the .zip file, and go into the folder. These are the commands you will need to navigate using the command line (press <kbd>Enter</kbd> after typing each command):</p>
+<p>Define a function called <code>square_grid</code> that takes one parameter that is an <code>int</code> variable that determines the side length of a square 2-dimensional <code>list</code> containing all asterisks.</p>
+<p>The <code>pretty_print</code> function has been provided for you to print your &ldquo;square grids&rdquo; (2-dimensional <code>list</code> variables).</p>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listssquaregrid?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<p>The output displayed on screen should match the following:</p>
 <ul>
-<li>Type <code>cd</code> to see what folder you are in.</li>
-<li>Type <code>cd [folder name]</code> to navigate to a specific folder.</li>
-<li>Type <code>cd ..</code> to navigate up one folder (into the condaining folder)</li>
-<li>Type <code>ls</code> to list all the files and folders in the folder you are in.</li>
-<li>Type <code>ls -AL</code> to list all the files and folders in the folder you are in, INCLUDING the hidden folders, which begin with a dot (such as <code>.env</code>).</li>
+<li><code>pretty_print(square_grid(5))</code> should output<br />
+<pre><code class="python">['*','*','*','*','*']
+['*','*','*','*','*']
+['*','*','*','*','*']
+['*','*','*','*','*']
+['*','*','*','*','*']
+</code></pre></li>
 </ul>
+<blockquote>
+<p><strong>HINT</strong>: Remember that <code>[1,2,3]*3</code> returns <code>[1, 2, 3, 1, 2, 3, 1, 2, 3]</code> (see the <strong>List &ldquo;Multiplication&rdquo;</strong> section). Also note that <code>['*']*5</code> returns <code>['*', '*', '*', '*', '*']</code>.</p>
+</blockquote>
+<p>Save your work in a file called <code>square_list.py</code> <strong>or</strong> fork the <em>repl.it</em> snippet above and do your work in repl.it.</p>
 </li>
 <li>
-<p>When you are in the folder called <code>webapp</code>, type the command<br />
-<code>venv\Scripts\activate.bat</code><br />
-This command tells your computer &ldquo;hey, I&rsquo;m working on the <code>webapp</code> project, so if I install anything, please don&rsquo;t let it affect the rest of my computer.&rdquo;</p>
+<p>Define a function called <code>square_grid</code> that takes one parameter that is an <code>int</code> variable that determines the side length of a square 2-dimensional <code>str</code> containing all asterisks.</p>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listsstringsquaregrid?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<p>The output of <code>print(square_grid(20))</code> should be:<br />
+<pre><code class="python">********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+********************
+</code></pre></p>
+<blockquote>
+<p><strong>HINT</strong>: Remember that <code>'*'*5</code> returns <code>'*****'</code> (see the <strong>Strings are Like Lists!</strong> section).<br />
+<strong>HINT</strong>: Remember that the <code>'\n'</code> character sequence is a &ldquo;line break&rdquo;.<br />
+<pre><code class="python">&gt;&gt;&gt; print('hey\nmy\nfriend')
+hey
+my
+friend
+</code></pre><br />
+more specifically,<br />
+<pre><code class="python">&gt;&gt;&gt; print('***' + '\n' + '***' + '\n' + '***' + '\n')
+***
+***
+***
+
+</code></pre></p>
+</blockquote>
+<p>Save your work in a file called <code>square_string.py</code> <strong>or</strong> fork the <em>repl.it</em> snippet above and do your work in repl.it.</p>
 </li>
-</ol>
-<h1 id="important-info"><a name="user-content-important-info" href="#important-info" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Important Info</h1>
-<p>This will be your first website. This will also be your first time running code from the command line. There are a few things to keep in mind:</p>
-<ol>
-<li>NEVER delete files from the command line unless they are files you created. If you delete a file that Windows needs, Windows may start malfunctioning.</li>
-<li>Only use commands that you have learned from me (Zach) or from sources that I have introduced myself.</li>
-<li>Feel free to ask questions about anything that you don&rsquo;t understand! There is a very good reason why everything is the way it is, and if I don&rsquo;t know, I will do my best to find out for you. If you are with your parents and not me, please ask them to ask me - I will respond to messages from them within a few hours.</li>
-</ol>
-<h1 id="suggested-download-sublimetext"><a name="user-content-suggested-download-sublimetext" href="#suggested-download-sublimetext" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Suggested Download: Sublimetext</h1>
-<p>I suggest that you download SublimeText 2, a text editor (like Microsoft Word or Google Docs) designed for writing code. Other good options are Emacs, Aquamacs, and Atom.</p>
-<h1 id="resources"><a name="user-content-resources" href="#resources" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Resources:</h1>
-<p><a href="https://www.khanacademy.org/computing/computer-programming/html-css">Khan Academy HTML Lessons</a></p>
-<p><a href="https://www.w3schools.com/html/html_elements.asp">HTML Guide</a></p>
-<p><a href="https://codepen.io/zsiegel/">codepen.com</a></p>
-<p><a href="https://jsfiddle.net/">jsfiddle.net</a></p>
-<p><a href="https://github.com/zsiegel92">Zach&rsquo;s Github Page</a></p></article></body></html>
+<li>
+<p>Define a function called <code>square_grid</code> that takes <strong>two</strong> parameters. The first parameter should determine the size of the square (as in <strong>Assignment 2</strong>) and the second parameter should be a <code>str</code> that determines the symbol for the grid. The second parameter should have the default value <code>'*'</code>.</p>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listsstringsquaregridsymbol?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<p>The output described in the snippet should be achieved.</p>
+<p>The function should be almost identical to the function in <strong>Assignment 2</strong>, except <code>symbol</code> should be used in place of <code>'*'</code>.</p>
+<p>Save your work in a file called <code>square_symbol.py</code> <strong>or</strong> fork the <em>repl.it</em> snippet above and do your work in repl.it.</p>
+</li>
+</ol></article></body></html>
