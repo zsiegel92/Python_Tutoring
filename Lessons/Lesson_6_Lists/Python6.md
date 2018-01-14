@@ -22,7 +22,7 @@ The syntax that is acepted in spoken languages and designed in computer language
 
 Much of this lesson is about how to use Python's **syntactic sugar**, so be prepared for some time-saving shortcuts!
 
-*** Python's **Syntactic Sugar** We've Already Covered
+### Python's **Syntactic Sugar** We've Already Covered
 
 * Suppose `mylist` is `[1,2,3,4]`. We know `len(mylist)` will be `4`, so we can access the last element using `mylist[len(mylist)]`. So we don't really need the ability to access the last element using `mylist[-1]`, but it's much clearer. ***That's syntactic sugar.***
 * When we concatenate `"my " + "friend"` we are "adding" words, which is *not* something people think about in everyday life. We could achieve the same thing using `.format` as so:
@@ -32,7 +32,7 @@ Much of this lesson is about how to use Python's **syntactic sugar**, so be prep
 	```
 	but using the `+` operator for concatenation is often much easier to read, so Python's designers decided that that syntax is valid. ***That's syntactic sugar.***
 
-*** Some New **Syntactic Sugar** in Python
+### Some New **Syntactic Sugar** in Python
 
 #### **Incrementing** and **Decrementing**: `+=` and `-=` Operators
 
