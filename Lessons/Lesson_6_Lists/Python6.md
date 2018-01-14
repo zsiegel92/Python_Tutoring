@@ -127,7 +127,7 @@ The `.extend` function takes one argument, *which has to be a `list`*, whose ele
 [1, 2, 3, 4, 5, 6]
 ```
 
-We have seen that we can **concatenat** `str` variables using the `+` operator. We can do the same with `list` variables:
+We have seen that we can **concatenate** `str` variables using the `+` operator. We can do the same with `list` variables:
 
 ```python
 >>> a = [1,2,3] + [4,5,6]
