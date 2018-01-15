@@ -1,5 +1,7 @@
 # Python Lesson 5 - Functions (`def`)
 
+[All Lessons](https://zsiegel92.github.io/Eitan_S/)
+
 [TOC]
 
 ## Review of Lesson 4

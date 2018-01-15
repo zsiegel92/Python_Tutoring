@@ -1,5 +1,7 @@
 # Python Lesson 8 - Input and Challenges
 
+[All Lessons](https://zsiegel92.github.io/Eitan_S/)
+
 [TOC]
 
 ## Input: `input()`
