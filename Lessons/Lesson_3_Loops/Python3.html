@@ -1140,50 +1140,49 @@ MathJax.Hub.Config({
 <h2 id="review-of-lesson-2"><a name="user-content-review-of-lesson-2" href="#review-of-lesson-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Review of Lesson 2</h2>
 <h3 id="variable-types-int-str-list-bool"><a name="user-content-variable-types-int-str-list-bool" href="#variable-types-int-str-list-bool" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Variable Types: <code>int</code>, <code>str</code>, <code>list</code>, <code>bool</code></h3>
 <p>We can view the <strong>type</strong> of a variable using the <code>type</code> keyword. The type of a variable has to do with what kind of data that variable stores.</p>
-<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s">&#39;&gt;</span>
 </pre></div>
 
 
 <blockquote>
 <p><code>int</code> variables are "Integers", which are whole numbers like 1, 2, 3, ...</p>
 </blockquote>
-<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="s">&#39;hello&#39;</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;hello&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s">&#39;&gt;</span>
 </pre></div>
 
 
 <blockquote>
 <p><code>str</code> variables are "Strings", which are sequences of characters, like <code>'hello'</code> or <code>'taco'</code> or <code>'a'</code>. We can create them with double quotes (<code>"hello"</code>) or single quotes (<code>'hello'</code>).</p>
 </blockquote>
-<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bool</span><span class="s">&#39;&gt;</span>
 </pre></div>
 
 
 <blockquote>
 <p><code>bool</code> variables are "Booleans", which are either <code>True</code> or <code>False</code>. When we use a comparison operator, like <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, or <code>==</code>, we get a <code>bool</code> variable. These are used in <code>if</code> and <code>elif</code> statements.</p>
 </blockquote>
-<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">list</span><span class="s">&#39;&gt;</span>
 </pre></div>
 
 
 <blockquote>
 <p><code>list</code> variables are "Lists", which store other variables, in order. More on that later.</p>
 </blockquote>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Type-Check?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 <h3 id="conditionals-if-else-and-elif"><a name="user-content-conditionals-if-else-and-elif" href="#conditionals-if-else-and-elif" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Conditionals: <code>if</code>, <code>else</code>, and <code>elif</code></h3>
 <p>Refer to Lesson 2 for the behavior of the following code:</p>
-<div class="codehilite"><pre><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;I have enough money for a taco&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;I have exactly enough money for a taco&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;I don&#39;t have enough money for a taco&quot;</span><span class="p">)</span>
-</pre></div>
-
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Conditionals?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <h4 id="the-pass-command"><a name="user-content-the-pass-command" href="#the-pass-command" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>The <code>pass</code> Command</h4>
 <p>If we want to "Do Nothing" when we satisfy a condition, we can use the command <code>pass</code>:</p>
@@ -1197,18 +1196,13 @@ MathJax.Hub.Config({
 <h2 id="loops-while"><a name="user-content-loops-while" href="#loops-while" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Loops: <code>while</code></h2>
 <h3 id="parts-of-a-loop"><a name="user-content-parts-of-a-loop" href="#parts-of-a-loop" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Parts of a Loop</h3>
 <p>We have seen "conditional" expressions, which only execute if a conditional evaluates to <code>True</code>. What if we wanted to execute an expression over and over, as long as a conditional evaluated to <code>True</code>? We can do this with <code>while</code>.</p>
-<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span>
-</pre></div>
-
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Print-1-10?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p><strong>There are three main parts to a <code>while</code>  loop</strong>:</p>
 <ol>
 <li>
 <p>The <strong>initialization</strong> of the variables and environment:<br />
-<div class="codehilite"><pre><span class="n">x</span><span class="o">=</span><span class="mi">1</span>
+<div class="codehilite"><pre><span class="n">x</span><span class="o">=</span><span class="mi">0</span>
 </pre></div>
 </p>
 </li>

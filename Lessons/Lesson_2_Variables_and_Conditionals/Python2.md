@@ -170,16 +170,9 @@ else:
 
 Finally, we can create additional conditions using `elif`. The code after `else` will only be executed if our first conditions are `True`.
 
-```python
-if x > 5:
-	print("I have enough money for a taco")
-elif x == 5:
-	print("I have exactly enough money for a taco")
-else:
-	print("I don't have enough money for a taco")
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Conditionals?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Try executing `x=5`, then copying the above code into Python. What happened? Execute `x=4` and do the same. Execute `x=6` and do the same.
+Try changing the first line to `x=5`. What happened? Write `x=3` and do the same. Write `x=6` and do the same.
 
 ### The `pass` Command
 

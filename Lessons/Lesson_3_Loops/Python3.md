@@ -11,47 +11,47 @@
 We can view the **type** of a variable using the `type` keyword. The type of a variable has to do with what kind of data that variable stores.
 
 ```python
-x = 5
-print(type(x))
+>>> x = 5
+>>> print(type(x))
+<class 'int'>
 ```
 
 >`int` variables are "Integers", which are whole numbers like 1, 2, 3, ...
 
 ```python
-x = 'hello'
-print(type(x))
+>>> x = "hello"
+>>> print(type(x))
+<class 'str'>
 ```
 
 >`str` variables are "Strings", which are sequences of characters, like `'hello'` or `'taco'` or `'a'`. We can create them with double quotes (`"hello"`) or single quotes (`'hello'`).
 
 ```python
-x = (4 < 5)
-print(x)
-print(type(x))
+>>> x = (4 < 5)
+>>> print(type(x))
+<class 'bool'>
 ```
 
 >`bool` variables are "Booleans", which are either `True` or `False`. When we use a comparison operator, like `<`, `>`, `<=`, `>=`, or `==`, we get a `bool` variable. These are used in `if` and `elif` statements.
 
 ```python
-x = [1,2,3]
-print(x)
-print(type(x))
+>>> x = [1,2,3]
+>>> print(x)
+[1, 2, 3]
+>>> print(type(x))
+<class 'list'>
 ```
 
 >`list` variables are "Lists", which store other variables, in order. More on that later.
+
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Type-Check?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 
 ### Conditionals: `if`, `else`, and `elif`
 
 Refer to Lesson 2 for the behavior of the following code:
 
-```python
-if x > 5:
-	print("I have enough money for a taco")
-elif x == 5:
-	print("I have exactly enough money for a taco")
-else:
-	print("I don't have enough money for a taco")
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Conditionals?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 #### The `pass` Command
 
@@ -69,18 +69,13 @@ else:
 ### Parts of a Loop
 We have seen "conditional" expressions, which only execute if a conditional evaluates to `True`. What if we wanted to execute an expression over and over, as long as a conditional evaluated to `True`? We can do this with `while`.
 
-```python
-x = 1
-while x < 10:
-	print(x)
-	x=x+1
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Print-1-10?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 **There are three main parts to a `while`  loop**:
 
 1. The **initialization** of the variables and environment:
 ```python
-x=1
+x=0
 ```
 
 2. The **conditional** expression, which determines whether the loop should repeat:
