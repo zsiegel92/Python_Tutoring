@@ -176,11 +176,11 @@ Just like a `while` loop, successful recursion needs a **stopping condition**, a
 
 2. Factorials! The **factorial** of an integer is the product of all the positive integers less than or equal to that integer:
 
-	* 1!									= 1
-	* 2! = 1 * 2					= 2
-	* 3! = 1 * 2 * 3			= 6
-	* 4! = 1 * 2 * 3 * 4 	= 24
-	* n! = 1 * 2 * 3 * ... * (n-1) * n
+	* \\(1!										= 1\\)
+	* \\(2! = 1 \times 2						= 2\\)
+	* \\(3! = 1 \times 2 \times 3				= 6\\)
+	* \\(4! = 1 \times 2 \times 3 \times 4 	= 24\\)
+	* \\(n! = 1 \times 2 \times 3 \times \ldots \times (n-1) \times n\\)
 
 	Create a recursive function that returns the factorial of a number. It's started for you.
 

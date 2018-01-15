@@ -1014,6 +1014,69 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
+</style><style>/*github*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
 </style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
 MathJax.Hub.Config({
@@ -1049,7 +1112,7 @@ MathJax.Hub.Config({
 </ul>
 </li>
 <li><a href="#python-classes-class">Python Classes: class</a><ul>
-<li><a href="#initializing-object-variables-by-calling-the-class">Initializing Object Variables by &ldquo;Calling&rdquo; the Class</a></li>
+<li><a href="#initializing-object-variables-by-calling-the-class">Initializing Object Variables by "Calling" the Class</a></li>
 <li><a href="#object-variables-fields">Object Variables: Fields</a></li>
 <li><a href="#object-functions-methods-and-self">Object Functions: Methods and self</a></li>
 <li><a href="#accessing-the-fields-of-an-instance-of-an-object">Accessing the Fields of an Instance of an Object</a><ul>
@@ -1071,24 +1134,26 @@ MathJax.Hub.Config({
 <p>You should understand all the code in the following snippet</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/ListsReview?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-<p>If you don&rsquo;t understand <strong>for loops</strong>, <strong><code>append</code></strong>, <strong><code>join</code></strong>, or <strong>string multiplication</strong>, please refer to <a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_6_Lists/Python6.html"><strong>Lesson 6</strong></a>.</p>
+<p>If you don't understand <strong>for loops</strong>, <strong><code>append</code></strong>, <strong><code>join</code></strong>, or <strong>string multiplication</strong>, please refer to <a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_6_Lists/Python6.html"><strong>Lesson 6</strong></a>.</p>
 <h2 id="python-classes-class"><a name="user-content-python-classes-class" href="#python-classes-class" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Classes: <code>class</code></h2>
 <p>In Python, we have seen variables of several <strong>types</strong>:</p>
 <ul>
 <li><strong>Variables</strong>, each of which has a <em>type</em><ul>
 <li>We create variables just by declaring a variable name and assigning it using the assignment operator <code>=</code></li>
 <li>Example: <code>int</code> variables<br />
-    <pre><code class="python">&gt;&gt;&gt; x=5
-&gt;&gt;&gt; type(x)
-&lt;class 'int'&gt;
-</code></pre></li>
+    <div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="o">=</span><span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s">&#39;&gt;</span>
+</pre></div>
+</li>
 <li>Example: <em>functions are variables</em> with a <strong>type</strong><br />
-    <pre><code class="python">&gt;&gt;&gt; def my_function(a,b):
-...     return a + b
-...
-&gt;&gt;&gt; type(my_function)
-&lt;class 'function'&gt;
-</code></pre></li>
+    <div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_function</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">function</span><span class="s">&#39;&gt;</span>
+</pre></div>
+</li>
 </ul>
 </li>
 </ul>
@@ -1098,7 +1163,7 @@ MathJax.Hub.Config({
 
 <p>Note that we the variables we created have type <code>Dog</code>!</p>
 <p>We have created a new <strong>class</strong> called <code>Dog</code>. The variables we created, like all Python variables, are <strong>objects</strong> of type <code>Dog</code>, which just means that all Python variables come from some <code>class</code> definition, which the <code>type</code> function tells us about.</p>
-<h3 id="initializing-object-variables-by-calling-the-class"><a name="user-content-initializing-object-variables-by-calling-the-class" href="#initializing-object-variables-by-calling-the-class" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Initializing Object Variables by &ldquo;Calling&rdquo; the Class</h3>
+<h3 id="initializing-object-variables-by-calling-the-class"><a name="user-content-initializing-object-variables-by-calling-the-class" href="#initializing-object-variables-by-calling-the-class" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Initializing Object Variables by "Calling" the Class</h3>
 <p>When we create <code>int</code> or <code>str</code> variables, we just write <code>x = 5</code> or <code>x = 'hey'</code>. When we typed <code>my_dog = Dog()</code>, why did we need the <code>()</code>?</p>
 <p>The answer is that <code>int</code> and <code>str</code> variables are so common that Python has special ways of dealing with them. However, the ability to create your own variable types is the  defining feature of <strong>Object-Oriented Programming</strong>, which is what we do in Python.</p>
 <p>Normally, when we define a <strong>class</strong>, <em>we get a freebie function with the same name as the class, which <strong>returns</strong> a variable whose <strong>type</strong> is the class name</em>.</p>
@@ -1106,29 +1171,32 @@ MathJax.Hub.Config({
 <p>We can create custom initialization behavior by defining a function called <code>__init__</code>. More on that later.</p>
 <h3 id="object-variables-fields"><a name="user-content-object-variables-fields" href="#object-variables-fields" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Object Variables: Fields</h3>
 <p>Notice that our class definition included some variables:</p>
-<pre><code class="python">class Dog:
-    number_legs = 4
-    number_eyes = 2
-    smell = &quot;good&quot;
-</code></pre>
+<div class="codehilite"><pre><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+    <span class="n">number_legs</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">number_eyes</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">smell</span> <span class="o">=</span> <span class="s">&quot;good&quot;</span>
+</pre></div>
+
 
 <p>We were able to access these by creating a <code>Dog</code> variable <code>my_dog = Dog()</code>, and then using a <code>.</code> such as <code>my_dog.number_legs</code> (returned <code>4</code>).</p>
-<p>Variables that are &ldquo;part of&rdquo; an object variable are called the object&rsquo;s <strong>fields</strong>.</p>
+<p>Variables that are "part of" an object variable are called the object's <strong>fields</strong>.</p>
 <p>Once we create an object, <em>we can change its fields</em>.</p>
-<pre><code class="python">class Dog:
-    number_legs = 4
-your_dog = Dog()
-your_dog.number_legs = 3
-print(your_dog.number_legs) # prints 3
-</code></pre>
+<div class="codehilite"><pre><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+    <span class="n">number_legs</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">your_dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">()</span>
+<span class="n">your_dog</span><span class="o">.</span><span class="n">number_legs</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">print</span><span class="p">(</span><span class="n">your_dog</span><span class="o">.</span><span class="n">number_legs</span><span class="p">)</span> <span class="c1"># prints 3</span>
+</pre></div>
 
-<p>Incredibly, we can also access fields that aren&rsquo;t associated with a <code>Dog</code> <em>variable</em>, but are associated with the <code>Dog</code> <em>class</em>:</p>
-<pre><code class="python">&gt;&gt;&gt; class Dog:
-...     number_legs = 4
-...
-&gt;&gt;&gt; print(Dog.number_legs)
-4
-</code></pre>
+
+<p>Incredibly, we can also access fields that aren't associated with a <code>Dog</code> <em>variable</em>, but are associated with the <code>Dog</code> <em>class</em>:</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+<span class="o">...</span>     <span class="n">number_legs</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">Dog</span><span class="o">.</span><span class="n">number_legs</span><span class="p">)</span>
+<span class="mi">4</span>
+</pre></div>
+
 
 <h3 id="object-functions-methods-and-self"><a name="user-content-object-functions-methods-and-self" href="#object-functions-methods-and-self" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Object Functions: Methods and <code>self</code></h3>
 <p>We can give objects their own functions, just like we can give them their own variables. These are called <strong>object methods</strong>.</p>
@@ -1138,13 +1206,13 @@ print(your_dog.number_legs) # prints 3
 <p>In this snippet, there is a <strong>static method</strong> called <code>static_bark</code> and an <strong>instance method</strong> called <code>instance_bark</code>.</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Classmethods?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-<p><strong>What is with the <code>self</code> parameter in <code>instance_bark</code>?</strong> We didn&rsquo;t use the parameter <code>self</code> in the function <code>instance_bark</code>, and we didn&rsquo;t provide an argument <code>self</code> when we called <code>my_dog.instance_bark()</code>. For now, just think of the <code>self</code> parameter as a way to tell Python that this method can only be called from an <strong>instance</strong> of the <code>Dog</code> object, rather than that <strong>class</strong> <code>Dog</code>.</p>
+<p><strong>What is with the <code>self</code> parameter in <code>instance_bark</code>?</strong> We didn't use the parameter <code>self</code> in the function <code>instance_bark</code>, and we didn't provide an argument <code>self</code> when we called <code>my_dog.instance_bark()</code>. For now, just think of the <code>self</code> parameter as a way to tell Python that this method can only be called from an <strong>instance</strong> of the <code>Dog</code> object, rather than that <strong>class</strong> <code>Dog</code>.</p>
 <h3 id="accessing-the-fields-of-an-instance-of-an-object"><a name="user-content-accessing-the-fields-of-an-instance-of-an-object" href="#accessing-the-fields-of-an-instance-of-an-object" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Accessing the Fields of an Instance of an Object</h3>
 <h4 id="accessing-fields-inside-object-methods-self"><a name="user-content-accessing-fields-inside-object-methods-self" href="#accessing-fields-inside-object-methods-self" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Accessing Fields Inside Object Methods: <code>self</code></h4>
-<p>We&rsquo;ve seen that we can create <code>Dog</code> instances, and each instance can have different <strong>fields</strong> (like <code>number_legs</code>). We can give <code>Dog</code> an <strong>instance method</strong> to tell us about itself:</p>
+<p>We've seen that we can create <code>Dog</code> instances, and each instance can have different <strong>fields</strong> (like <code>number_legs</code>). We can give <code>Dog</code> an <strong>instance method</strong> to tell us about itself:</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Classinstancevariablesself?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-<p>Notice that when we accessed the <code>smell</code> field from <em>outside</em> the class <code>Dog</code>, we used <code>my_dog.smell</code>, but when we accessed it from <em>inside</em> the class <code>Dog</code> (in <code>smart_bark</code>) we used <code>self.smell</code>. That&rsquo;s because <strong><code>self</code> refers to the object instance</strong>.</p>
+<p>Notice that when we accessed the <code>smell</code> field from <em>outside</em> the class <code>Dog</code>, we used <code>my_dog.smell</code>, but when we accessed it from <em>inside</em> the class <code>Dog</code> (in <code>smart_bark</code>) we used <code>self.smell</code>. That's because <strong><code>self</code> refers to the object instance</strong>.</p>
 <h4 id="accessing-fields-outside-the-class-definition"><a name="user-content-accessing-fields-outside-the-class-definition" href="#accessing-fields-outside-the-class-definition" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Accessing Fields Outside the Class Definition</h4>
 <p>We have already talked about the <strong>scope</strong> of variables <em>inside</em> and <em>outside</em> functions (sometimes those can be called <strong>global scope</strong> and <strong>local scope</strong>).</p>
 <p>Similarly, each object instance gets its own <strong>scope</strong>.</p>
@@ -1157,8 +1225,8 @@ print(your_dog.number_legs) # prints 3
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Classinstanceclasscollission?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p>Notice that we changed <code>my_dog.smell</code> as though <code>smell</code> were a <strong>dynamic field</strong>, but then we changed <code>Dog.smell</code> as though <code>smell</code> were a <strong>static field</strong>. When we changed <code>Dog.smell</code>, somehow the instance field <code>yourdog.smell</code> was changed along with it!</p>
-<p><em><strong>Question</strong>:</em> When we changed <code>Dog.smell</code>, why didn&rsquo;t <code>my_dog.smell</code> get changed as well?</p>
-<p><em><strong>Answer</strong>:</em> When we alter a dynamic field, the field we altered on an object instance replaces the class field, and we can no longer access the class field. If we leave the instance&rsquo;s fields alone, they refer to the class&rsquo;s fields.</p>
+<p><em><strong>Question</strong>:</em> When we changed <code>Dog.smell</code>, why didn't <code>my_dog.smell</code> get changed as well?</p>
+<p><em><strong>Answer</strong>:</em> When we alter a dynamic field, the field we altered on an object instance replaces the class field, and we can no longer access the class field. If we leave the instance's fields alone, they refer to the class's fields.</p>
 <p>Sometimes this becomes confusing, so define your classes with care.</p>
 <h3 id="objects-interact-with-each-other"><a name="user-content-objects-interact-with-each-other" href="#objects-interact-with-each-other" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Objects Interact with Each Other</h3>
 <p>Consider two <code>Dog</code> instances getting in a fight. How would we simulate this? Observe:</p>

@@ -1014,6 +1014,69 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
+</style><style>/*github*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
 </style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
 MathJax.Hub.Config({
@@ -1049,7 +1112,7 @@ MathJax.Hub.Config({
 </ul>
 </li>
 <li><a href="#python-functions-def">Python Functions: def</a><ul>
-<li><a href="#dont-repeat-yourself-the-dry-principle">&ldquo;Don&rsquo;t Repeat Yourself&rdquo; (the DRY Principle)</a></li>
+<li><a href="#dont-repeat-yourself-the-dry-principle">"Don't Repeat Yourself" (the DRY Principle)</a></li>
 <li><a href="#function-arguments-and-parameters">Function Arguments and Parameters</a><ul>
 <li><a href="#positional-arguments-and-parameters">Positional Arguments and Parameters</a></li>
 <li><a href="#keyword-arguments-and-parameters">Keyword Arguments and Parameters</a></li>
@@ -1059,7 +1122,7 @@ MathJax.Hub.Config({
 </li>
 <li><a href="#functions-are-defined-only-once">Functions are Defined Only Once</a></li>
 <li><a href="#return-statements-return">Return Statements: return</a></li>
-<li><a href="#functions-are-first-class-citizens">&ldquo;Functions are First Class Citizens&rdquo;</a></li>
+<li><a href="#functions-are-first-class-citizens">"Functions are First Class Citizens"</a></li>
 <li><a href="#recursion-functions-calling-themselves">Recursion: Functions Calling Themselves</a></li>
 </ul>
 </li>
@@ -1081,13 +1144,13 @@ MathJax.Hub.Config({
 <li><code>len</code> tells us the <strong>length</strong> of a <code>list</code> or <code>str</code> variable.</li>
 <li><code>print</code> writes stuff onscreen</li>
 </ul>
-<p>Let&rsquo;s create our own functions! We use the <code>def</code> keyword to signal that we&rsquo;re defining a function:</p>
+<p>Let's create our own functions! We use the <code>def</code> keyword to signal that we're defining a function:</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p>What happens when we run this code? Seemingly nothing! Why? We have to <strong>call</strong> the function we created to execute the code we used in its definition:</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-<h3 id="dont-repeat-yourself-the-dry-principle"><a name="user-content-dont-repeat-yourself-the-dry-principle" href="#dont-repeat-yourself-the-dry-principle" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>&ldquo;<strong>Don&rsquo;t Repeat Yourself</strong>&rdquo; (the <strong>DRY</strong> Principle)</h3>
+<h3 id="dont-repeat-yourself-the-dry-principle"><a name="user-content-dont-repeat-yourself-the-dry-principle" href="#dont-repeat-yourself-the-dry-principle" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>"<strong>Don't Repeat Yourself</strong>" (the <strong>DRY</strong> Principle)</h3>
 <p>We have seen how concatenation makes code re-usable. Functions are all about re-usability.</p>
 <p>Think about how much code the following function saves us:</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
@@ -1097,13 +1160,13 @@ MathJax.Hub.Config({
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions4?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <blockquote>
-<p>Note that we were able to call <code>feet_and_a_half(5)</code> or <code>feet_and_a_half('five')</code> with no errors! That&rsquo;s because our function worked fine with either <code>int</code> or <code>str</code> input. Python is a language that uses what&rsquo;s called <strong>Duck Typing</strong>, meaning &ldquo;if the input works, it doesn&rsquo;t matter what <strong>type</strong> it is&rdquo;. The term &ldquo;Duck Typing&rdquo; comes from the phrase &ldquo;if it walks like a duck and quacks like a duck, it&rsquo;s probably a duck&rdquo;.</p>
+<p>Note that we were able to call <code>feet_and_a_half(5)</code> or <code>feet_and_a_half('five')</code> with no errors! That's because our function worked fine with either <code>int</code> or <code>str</code> input. Python is a language that uses what's called <strong>Duck Typing</strong>, meaning "if the input works, it doesn't matter what <strong>type</strong> it is". The term "Duck Typing" comes from the phrase "if it walks like a duck and quacks like a duck, it's probably a duck".</p>
 </blockquote>
 <h4 id="positional-arguments-and-parameters"><a name="user-content-positional-arguments-and-parameters" href="#positional-arguments-and-parameters" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Positional Arguments and Parameters</h4>
 <p>If a function has multiple parameters, the order the arguments are written in parentheses when you <strong>call</strong> the function is the order they will be matched with parameters in a function definition:</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions5positionalarguments?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-<p>But what if our arguments are variables with names - don&rsquo;t they get matched to the correct arguments?</p>
+<p>But what if our arguments are variables with names - don't they get matched to the correct arguments?</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions5positionalarguments2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p><strong>NOPE</strong>! The order in which arguments are given is the only thing that affects which argument is assigned to which function parameter:</p>
@@ -1111,7 +1174,7 @@ MathJax.Hub.Config({
 
 <p>When a Python function receives arguments, each <strong>argument</strong> takes on the <strong>name</strong> of the <strong>parameter</strong> corresponding to the position in which it was given. Within the function, that parameter has its own variable name. Taking on a different name inside a function versus outside the function is called <strong>scope</strong>.</p>
 <blockquote>
-<p>The <strong>scope</strong> of a variable is the environment in which its name refers to that variable. So far, we have seen variables <strong>outside</strong> functions, and variables given as arguments to functions, which stand in as the function&rsquo;s paramaters <strong>inside</strong> functions. The word <strong>scope</strong> will come up again and again!</p>
+<p>The <strong>scope</strong> of a variable is the environment in which its name refers to that variable. So far, we have seen variables <strong>outside</strong> functions, and variables given as arguments to functions, which stand in as the function's paramaters <strong>inside</strong> functions. The word <strong>scope</strong> will come up again and again!</p>
 </blockquote>
 <h4 id="keyword-arguments-and-parameters"><a name="user-content-keyword-arguments-and-parameters" href="#keyword-arguments-and-parameters" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Keyword Arguments and Parameters</h4>
 <blockquote>
@@ -1123,9 +1186,10 @@ MathJax.Hub.Config({
 
 <blockquote>
 <p>Try switching the last line to<br />
-    <pre><code class="python">print_two_things(a_inside=1,b_inside=2)
-</code></pre><br />
-    Notice that the order doesn&rsquo;t matter!</p>
+    <div class="codehilite"><pre><span class="n">print_two_things</span><span class="p">(</span><span class="n">a_inside</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">b_inside</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+<br />
+    Notice that the order doesn't matter!</p>
 </blockquote>
 <h4 id="default-arguments-and-parameters"><a name="user-content-default-arguments-and-parameters" href="#default-arguments-and-parameters" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Default Arguments and Parameters</h4>
 <p>Suppose we want to create a function that prints <code>10</code> every time we call it, unless we specify something else? In that case, <code>10</code> could be a <strong>default parameter</strong>.</p>
@@ -1137,37 +1201,39 @@ MathJax.Hub.Config({
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Function6positionalandkeyword?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p><strong>Positional arguments and parameters always come <em>before</em> keyword arguments and parameters</strong>.</p>
-<p>When you&rsquo;re calling a function, positional arguments and parameters always have to be written before keyword arguments and parameters. When you&rsquo;re defining a function, parameters with default values have to be written before parameters without default values.</p>
-<p>THIS DOESN&rsquo;T WORK:<br />
-<pre><code class="python">def print_two_things(a,b=2):
-    print(&quot;a is: {}&quot;.format(a))
-    print(&quot;b is: {}&quot;.format(b))
-</code></pre></p>
+<p>When you're calling a function, positional arguments and parameters always have to be written before keyword arguments and parameters. When you're defining a function, parameters with default values have to be written before parameters without default values.</p>
+<p>THIS DOESN'T WORK:<br />
+<div class="codehilite"><pre><span class="k">def</span> <span class="nf">print_two_things</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;a is: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;b is: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+</p>
 <h3 id="functions-are-defined-only-once"><a name="user-content-functions-are-defined-only-once" href="#functions-are-defined-only-once" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Functions are Defined Only <strong>Once</strong></h3>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions7defaultdynamicargument?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p>If we give a function a <strong>dynamic</strong> default parameter, meaning one that is generated rather than pre-set, it will be evaluated when the function is defined, not every time the function is called.</p>
 <h3 id="return-statements-return"><a name="user-content-return-statements-return" href="#return-statements-return" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Return Statements: <code>return</code></h3>
-<p>When we call <code>len</code>, we <em>get something</em> out of it. We can even assign the output of <code>len</code> to a variable: <code>x = len(y)</code> and store whatever value <code>len</code> produces in a variable. Would <code>x=print(y)</code> make sense, though? No, because <code>print</code> doesn&rsquo;t <strong>return</strong> anything.</p>
-<p>So far each of our functions has done some calculation, then executed a <code>print</code> statement. But functions don&rsquo;t have to <code>print</code> anything in order to be useful!</p>
-<p>If a function includes a <code>return</code> statement, then when we call the function, we can store the value of whatever expression follows the keyword <code>return</code> in some other variable, and then access it outside the function. This is how we pass values from one &ldquo;scope&rdquo; to another.</p>
+<p>When we call <code>len</code>, we <em>get something</em> out of it. We can even assign the output of <code>len</code> to a variable: <code>x = len(y)</code> and store whatever value <code>len</code> produces in a variable. Would <code>x=print(y)</code> make sense, though? No, because <code>print</code> doesn't <strong>return</strong> anything.</p>
+<p>So far each of our functions has done some calculation, then executed a <code>print</code> statement. But functions don't have to <code>print</code> anything in order to be useful!</p>
+<p>If a function includes a <code>return</code> statement, then when we call the function, we can store the value of whatever expression follows the keyword <code>return</code> in some other variable, and then access it outside the function. This is how we pass values from one "scope" to another.</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions8return?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-<h3 id="functions-are-first-class-citizens"><a name="user-content-functions-are-first-class-citizens" href="#functions-are-first-class-citizens" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>&ldquo;Functions are First Class Citizens&rdquo;</h3>
+<h3 id="functions-are-first-class-citizens"><a name="user-content-functions-are-first-class-citizens" href="#functions-are-first-class-citizens" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>"Functions are First Class Citizens"</h3>
 <p>Why does this work?</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions9firstclasscitizens?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-<p>It works because <strong>functions are &ldquo;first class citizens&rdquo;</strong>.</p>
-<p>Python can interpret <code>'hello ' + 'dude'</code> and <code>5 + 6</code>, even though <code>+</code> is doing very different things in both cases. In the case of <code>yourfunction = myfunction</code>, Python is doing slightly more than when we type <code>x = 5</code>, but the idea is the same: Python creates a &ldquo;name&rdquo; and makes sure it refers to the correct thing, stored somewhere in memory. In this case the correct &ldquo;thing&rdquo; is the definition of a function.</p>
+<p>It works because <strong>functions are "first class citizens"</strong>.</p>
+<p>Python can interpret <code>'hello ' + 'dude'</code> and <code>5 + 6</code>, even though <code>+</code> is doing very different things in both cases. In the case of <code>yourfunction = myfunction</code>, Python is doing slightly more than when we type <code>x = 5</code>, but the idea is the same: Python creates a "name" and makes sure it refers to the correct thing, stored somewhere in memory. In this case the correct "thing" is the definition of a function.</p>
 <h3 id="recursion-functions-calling-themselves"><a name="user-content-recursion-functions-calling-themselves" href="#recursion-functions-calling-themselves" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Recursion: Functions Calling Themselves</h3>
-<p>We saw that a <code>while</code> loop executes over and over until some &ldquo;stopping condition&rdquo; is met:</p>
-<pre><code class="python">counter = 1
-while (counter &lt; 10):
-    print(counter)
-    counter = counter + 1
-</code></pre>
+<p>We saw that a <code>while</code> loop executes over and over until some "stopping condition" is met:</p>
+<div class="codehilite"><pre><span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
 
-<p>Note that on each iteration we needed to <em>increase</em> <code>counter</code> by <code>1</code> and <em>test</em> whether <code>counter &lt; 10</code>. If we didn&rsquo;t increase <code>counter</code> on each iteration, the loop would never end; if we didn&rsquo;t <em>test</em> counter on every iteration, the loop would never end (<code>while</code> takes care of that for us).</p>
+
+<p>Note that on each iteration we needed to <em>increase</em> <code>counter</code> by <code>1</code> and <em>test</em> whether <code>counter &lt; 10</code>. If we didn't increase <code>counter</code> on each iteration, the loop would never end; if we didn't <em>test</em> counter on every iteration, the loop would never end (<code>while</code> takes care of that for us).</p>
 <p>Another way we can achieve iteration is <strong>recursion</strong>. That is the term we use for <em>a function calling itself</em>.</p>
 <p>Just like a <code>while</code> loop, successful recursion needs a <strong>stopping condition</strong>, and it needs to be met. Otherwise, like an <strong>infinite loop</strong>, we can create <strong>infinite recursion</strong>, which never ends and fails to achieve our goals.</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functions9recursion?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
@@ -1176,9 +1242,10 @@ while (counter &lt; 10):
 <ol>
 <li>
 <p>Create a function that returns the maximum of two numbers.</p>
-<p><pre><code class="python">def max(a,b):
-    #your code here
-</code></pre><br />
+<p><div class="codehilite"><pre><span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="c1">#your code here</span>
+</pre></div>
+<br />
 Your code should satisfy the following:<br />
     * <code>max(1,2)</code> returns  <code>2</code><br />
     * <code>max(2,1)</code> returns <code>2</code><br />
@@ -1188,13 +1255,13 @@ Your code should satisfy the following:<br />
 <li>
 <p>Factorials! The <strong>factorial</strong> of an integer is the product of all the positive integers less than or equal to that integer:</p>
 <ul>
-<li>1!                                    = 1</li>
-<li>2! = 1 * 2                    = 2</li>
-<li>3! = 1 * 2 * 3            = 6</li>
-<li>4! = 1 * 2 * 3 * 4    = 24</li>
-<li>n! = 1 * 2 * 3 * &hellip; * (n-1) * n</li>
+<li>\(1!                                     = 1\)</li>
+<li>\(2! = 1 \times 2                        = 2\)</li>
+<li>\(3! = 1 \times 2 \times 3               = 6\)</li>
+<li>\(4! = 1 \times 2 \times 3 \times 4  = 24\)</li>
+<li>\(n! = 1 \times 2 \times 3 \times \ldots \times (n-1) \times n\)</li>
 </ul>
-<p>Create a recursive function that returns the factorial of a number. It&rsquo;s started for you.</p>
+<p>Create a recursive function that returns the factorial of a number. It's started for you.</p>
 <p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Factorial?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
 <ul>
 <li><code>factorial(5)</code> should return <code>120</code></li>

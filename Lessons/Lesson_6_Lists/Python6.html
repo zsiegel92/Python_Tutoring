@@ -1014,6 +1014,69 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
+</style><style>/*github*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
 </style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
 MathJax.Hub.Config({
@@ -1048,8 +1111,8 @@ MathJax.Hub.Config({
 <li><a href="#functions-def-return-parameters-and-arguments">Functions: def, return, Parameters and Arguments</a></li>
 </ul>
 </li>
-<li><a href="#pythons-syntactic-sugar">Python&rsquo;s Syntactic Sugar</a><ul>
-<li><a href="#pythons-syntactic-sugar-weve-already-covered">Python&rsquo;s Syntactic Sugar We&rsquo;ve Already Covered</a></li>
+<li><a href="#pythons-syntactic-sugar">Python's Syntactic Sugar</a><ul>
+<li><a href="#pythons-syntactic-sugar-weve-already-covered">Python's Syntactic Sugar We've Already Covered</a></li>
 <li><a href="#some-new-syntactic-sugar-in-python">Some New Syntactic Sugar in Python</a><ul>
 <li><a href="#incrementing-and-decrementing-and-operators">Incrementing and Decrementing: += and -= Operators</a></li>
 </ul>
@@ -1061,7 +1124,7 @@ MathJax.Hub.Config({
 <li><a href="#appending-and-extending-append-extend-and-concatenation-using-the-operator">Appending and Extending: .append, .extend, and Concatenation Using the + Operator</a></li>
 <li><a href="#automatically-creating-a-list-using-while">Automatically Creating a List Using while</a></li>
 <li><a href="#for-loops-for">For Loops: for</a></li>
-<li><a href="#list-multiplication-more-syntactic-sugar">List &ldquo;Multiplication&rdquo; (more syntactic sugar)</a></li>
+<li><a href="#list-multiplication-more-syntactic-sugar">List "Multiplication" (more syntactic sugar)</a></li>
 <li><a href="#strings-are-like-lists">Strings are Like Lists!</a></li>
 <li><a href="#two-dimensional-lists">Two-Dimensional Lists</a></li>
 </ul>
@@ -1080,32 +1143,34 @@ MathJax.Hub.Config({
 </blockquote>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Functionsreview?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-<h2 id="pythons-syntactic-sugar"><a name="user-content-pythons-syntactic-sugar" href="#pythons-syntactic-sugar" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python&rsquo;s <strong>Syntactic Sugar</strong></h2>
-<p>The words and phrases that make the structure of a language is called its <strong>syntax</strong>. English evolved over thousands of years, whereas <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> was created in 1991. English <strong>syntax</strong> <em>came to be accepted</em> over time as people started to use words and phrases. Python&rsquo;s <strong>syntax</strong> is <em>designed</em> by programmers who decide how Python code should be executed by a computer.</p>
+<h2 id="pythons-syntactic-sugar"><a name="user-content-pythons-syntactic-sugar" href="#pythons-syntactic-sugar" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python's <strong>Syntactic Sugar</strong></h2>
+<p>The words and phrases that make the structure of a language is called its <strong>syntax</strong>. English evolved over thousands of years, whereas <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> was created in 1991. English <strong>syntax</strong> <em>came to be accepted</em> over time as people started to use words and phrases. Python's <strong>syntax</strong> is <em>designed</em> by programmers who decide how Python code should be executed by a computer.</p>
 <blockquote>
-<p><a href="https://en.wikipedia.org/wiki/Syntax_(programming_languages)">Wikipedia gives a definition</a> of <strong>syntax</strong>: &ldquo;the syntax of a computer language is the set of rules that defines the combinations of symbols that are considered to be a correctly structured document or fragment in that language.&rdquo;</p>
+<p><a href="https://en.wikipedia.org/wiki/Syntax_(programming_languages)">Wikipedia gives a definition</a> of <strong>syntax</strong>: "the syntax of a computer language is the set of rules that defines the combinations of symbols that are considered to be a correctly structured document or fragment in that language."</p>
 </blockquote>
-<p>The syntax that is acepted in spoken languages and designed in computer languages often is <em>easy and convenient</em>. There is no real <em>need</em> for contractions like &ldquo;gonna&rdquo;, &ldquo;wanna&rdquo;, and &ldquo;I&rsquo;d&rdquo;, but they&rsquo;re great, and save us lots of time; many spoken languages have contractions.</p>
-<p><em>Designed languages also have shortcuts, and we call those <strong>syntactic sugar</strong>.</em> Like sugar, they&rsquo;re not really necessary for survival, but we like them.</p>
-<p>Much of this lesson is about how to use Python&rsquo;s <strong>syntactic sugar</strong>, so be prepared for some time-saving shortcuts!</p>
-<h3 id="pythons-syntactic-sugar-weve-already-covered"><a name="user-content-pythons-syntactic-sugar-weve-already-covered" href="#pythons-syntactic-sugar-weve-already-covered" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python&rsquo;s <strong>Syntactic Sugar</strong> We&rsquo;ve Already Covered</h3>
+<p>The syntax that is acepted in spoken languages and designed in computer languages often is <em>easy and convenient</em>. There is no real <em>need</em> for contractions like "gonna", "wanna", and "I'd", but they're great, and save us lots of time; many spoken languages have contractions.</p>
+<p><em>Designed languages also have shortcuts, and we call those <strong>syntactic sugar</strong>.</em> Like sugar, they're not really necessary for survival, but we like them.</p>
+<p>Much of this lesson is about how to use Python's <strong>syntactic sugar</strong>, so be prepared for some time-saving shortcuts!</p>
+<h3 id="pythons-syntactic-sugar-weve-already-covered"><a name="user-content-pythons-syntactic-sugar-weve-already-covered" href="#pythons-syntactic-sugar-weve-already-covered" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python's <strong>Syntactic Sugar</strong> We've Already Covered</h3>
 <ul>
-<li>Suppose <code>mylist</code> is <code>[1,2,3,4]</code>. We know <code>len(mylist)</code> will be <code>4</code>, so we can access the last element using <code>mylist[len(mylist)]</code>. So we don&rsquo;t really need the ability to access the last element using <code>mylist[-1]</code>, but it&rsquo;s much clearer. <strong><em>That&rsquo;s syntactic sugar.</em></strong></li>
-<li>When we concatenate <code>"my " + "friend"</code> we are &ldquo;adding&rdquo; words, which is <em>not</em> something people think about in everyday life. We could achieve the same thing using <code>.format</code> as so:<br />
-    <pre><code class="python">&gt;&gt;&gt; &quot;{} {}&quot;.format(&quot;my&quot;,&quot;friend&quot;)
-'my friend'
-</code></pre><br />
-    but using the <code>+</code> operator for concatenation is often much easier to read, so Python&rsquo;s designers decided that that syntax is valid. <strong><em>That&rsquo;s syntactic sugar.</em></strong></li>
+<li>Suppose <code>mylist</code> is <code>[1,2,3,4]</code>. We know <code>len(mylist)</code> will be <code>4</code>, so we can access the last element using <code>mylist[len(mylist)]</code>. So we don't really need the ability to access the last element using <code>mylist[-1]</code>, but it's much clearer. <strong><em>That's syntactic sugar.</em></strong></li>
+<li>When we concatenate <code>"my " + "friend"</code> we are "adding" words, which is <em>not</em> something people think about in everyday life. We could achieve the same thing using <code>.format</code> as so:<br />
+    <div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;{} {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;my&quot;</span><span class="p">,</span><span class="s">&quot;friend&quot;</span><span class="p">)</span>
+<span class="s">&#39;my friend&#39;</span>
+</pre></div>
+<br />
+    but using the <code>+</code> operator for concatenation is often much easier to read, so Python's designers decided that that syntax is valid. <strong><em>That's syntactic sugar.</em></strong></li>
 </ul>
 <h3 id="some-new-syntactic-sugar-in-python"><a name="user-content-some-new-syntactic-sugar-in-python" href="#some-new-syntactic-sugar-in-python" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Some New <strong>Syntactic Sugar</strong> in Python</h3>
 <h4 id="incrementing-and-decrementing-and-operators"><strong>Incrementing</strong> and <strong>Decrementing</strong>: <code>+=</code> and <code>-=</code> Operators</h4>
 <p>When we write <code>while</code> loops, we usually start with a counter<br />
-<pre><code class="python">mylist = [1,2,3,4]
-i = 0
-while i &lt; len(mylist):
-    print(mylist[i])
-    i = i + 1
-</code></pre></p>
+<div class="codehilite"><pre><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">mylist</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</p>
 <p>When we write <code>i = i + 1</code>, we are <strong>incrementing</strong> our counter. It is also common to <strong>decrement</strong> a counter by subtracting a constant.</p>
 <p>Python has shortcuts for incrementing and decrementing:</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/incrementshortcut?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
@@ -1144,12 +1209,13 @@ while i &lt; len(mylist):
 </table>
 <h2 id="python-list-variables"><a name="user-content-python-list-variables" href="#python-list-variables" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python <code>list</code> Variables</h2>
 <p>We have seen Python <code>list</code> variables:</p>
-<pre><code class="python">&gt;&gt;&gt; a = [1,2,3]
-&gt;&gt;&gt; print(a)
-[1, 2, 3]
-&gt;&gt;&gt; type(a)
-&lt;class 'list'&gt;
-</code></pre>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">list</span><span class="s">&#39;&gt;</span>
+</pre></div>
+
 
 <p>We know how to declare lists, and even how to access elements of lists, but not much more.</p>
 <h3 id="indexing-and-slicing"><a name="user-content-indexing-and-slicing" href="#indexing-and-slicing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Indexing and Slicing</h3>
@@ -1157,20 +1223,22 @@ while i &lt; len(mylist):
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listsindexingslicing?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p>Note that if we try to access list elements that do not exist, we get an <code>IndexError</code>:</p>
-<pre><code class="python">&gt;&gt;&gt; a = [1,2,3]
-&gt;&gt;&gt; print(a[3])
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-IndexError: list index out of range
-</code></pre>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">IndexError</span><span class="p">:</span> <span class="nb">list</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
+</pre></div>
+
 
 <p>Even if we attempt to assign values to non-existing indices, we get an <code>IndexError</code>:</p>
-<pre><code class="python">&gt;&gt;&gt; a = [1,2,3]
-&gt;&gt;&gt; a[3] = 4
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-IndexError: list assignment index out of range
-</code></pre>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">IndexError</span><span class="p">:</span> <span class="nb">list</span> <span class="n">assignment</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
+</pre></div>
+
 
 <h3 id="appending-and-extending-append-extend-and-concatenation-using-the-operator"><a name="user-content-appending-and-extending-append-extend-and-concatenation-using-the-operator" href="#appending-and-extending-append-extend-and-concatenation-using-the-operator" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Appending and Extending: <code>.append</code>, <code>.extend</code>, and Concatenation Using the <code>+</code> Operator</h3>
 <p>We seem to get an <code>IndexError</code> when we try to access list indices that do not exist. So: <em>can we change the length of a list</em>? Yes.</p>
@@ -1178,34 +1246,38 @@ IndexError: list assignment index out of range
 <blockquote>
 <p>We have seen <code>str</code> functions like <code>.format</code> that have to be called from a <code>str</code> variable (like <code>"hello {}".format("friend")</code>). We will learn more about <strong>object methods</strong> soon.</p>
 </blockquote>
-<pre><code class="python">&gt;&gt;&gt; a = [1,2,3]
-&gt;&gt;&gt; a.append(4)
-&gt;&gt;&gt; print(a)
-[1, 2, 3, 4]
-</code></pre>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
 
 <p>The <code>.extend</code> function takes one argument, <em>which has to be a <code>list</code></em>, whose elements it adds onto the end of a list:</p>
-<pre><code class="python">&gt;&gt;&gt; a = [1,2,3]
-&gt;&gt;&gt; a.extend([4,5,6])
-&gt;&gt;&gt; print(a)
-[1, 2, 3, 4, 5, 6]
-</code></pre>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</pre></div>
+
 
 <p>We have seen that we can <strong>concatenate</strong> <code>str</code> variables using the <code>+</code> operator. We can do the same with <code>list</code> variables:</p>
-<pre><code class="python">&gt;&gt;&gt; a = [1,2,3] + [4,5,6]
-&gt;&gt;&gt; print(a)
-[1, 2, 3, 4, 5, 6]
-</code></pre>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</pre></div>
+
 
 <p>Be careful about the difference between <code>append</code> and <code>extend</code>!</p>
-<pre><code class="python">&gt;&gt;&gt; x = [1,2,3]
-&gt;&gt;&gt; y = [4,5,6]
-&gt;&gt;&gt; x.append(y)
-&gt;&gt;&gt; print(x)
-[1, 2, 3, [4, 5, 6]]
-</code></pre>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+</pre></div>
 
-<p>Now a <code>list</code> is an element of a <code>list</code>! This isn&rsquo;t a problem if it&rsquo;s intentional.</p>
+
+<p>Now a <code>list</code> is an element of a <code>list</code>! This isn't a problem if it's intentional.</p>
 <h3 id="automatically-creating-a-list-using-while"><a name="user-content-automatically-creating-a-list-using-while" href="#automatically-creating-a-list-using-while" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Automatically Creating a List Using <code>while</code></h3>
 <p>We can combine our knowledge of <code>while</code> loops with <code>append</code> to automatically create long lists!</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listswhileiteration?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
@@ -1221,16 +1293,17 @@ IndexError: list assignment index out of range
 <blockquote>
 <p>The <code>for</code> loop syntax is definitely <strong>syntactic sugar</strong>, but it is extremely common and useful!</p>
 </blockquote>
-<h3 id="list-multiplication-more-syntactic-sugar"><a name="user-content-list-multiplication-more-syntactic-sugar" href="#list-multiplication-more-syntactic-sugar" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>List &ldquo;Multiplication&rdquo; (more <strong>syntactic sugar</strong>)</h3>
+<h3 id="list-multiplication-more-syntactic-sugar"><a name="user-content-list-multiplication-more-syntactic-sugar" href="#list-multiplication-more-syntactic-sugar" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>List "Multiplication" (more <strong>syntactic sugar</strong>)</h3>
 <p>Suppose we want a list that repeats the same values over and over. We can achieve this very easily using the <code>*</code> operator in Python:</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listsmultiplication?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p>We can even use the <code>*=</code> operators:</p>
-<pre><code class="python">&gt;&gt;&gt; mylist = [1,2,3,4]
-&gt;&gt;&gt; mylist *= 4
-&gt;&gt;&gt; print(mylist)
-[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
-</code></pre>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mylist</span> <span class="o">*=</span> <span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
 
 <h3 id="strings-are-like-lists"><a name="user-content-strings-are-like-lists" href="#strings-are-like-lists" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Strings are Like Lists!</h3>
 <p>Note all the similarities between <code>list</code> variables and <code>str</code> variables:</p>
@@ -1246,15 +1319,15 @@ IndexError: list assignment index out of range
 
 <p>Note that we needed to print one row at a time (which we achieved using <code>for</code>) in order to see our grid!</p>
 <h2 id="type-casting"><a name="user-content-type-casting" href="#type-casting" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Type Casting</h2>
-<p>Often there&rsquo;s an obvious way that we would want to &ldquo;convert&rdquo; a variable of one <strong>type</strong> to a variable of another <strong>type</strong>. In computer science, we call this <strong>casting</strong>.</p>
-<p>It&rsquo;s fairly intuitive, but pay close attention to the following examples:</p>
+<p>Often there's an obvious way that we would want to "convert" a variable of one <strong>type</strong> to a variable of another <strong>type</strong>. In computer science, we call this <strong>casting</strong>.</p>
+<p>It's fairly intuitive, but pay close attention to the following examples:</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Casting?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <blockquote>
-<p>Most variables in Python are defined using a <code>class</code> definition (Lesson 7). When we call <code>str(7)</code>, Python calls the <code>__init__</code> method in the <code>class</code> definition of <code>str</code>. That method <strong>initializes</strong> a <code>str</code> variable, and has instructions on how to do so using an argument of type <code>int</code>. We are not &ldquo;converting&rdquo; so much as defining a new variable using another variable as a parameter!</p>
+<p>Most variables in Python are defined using a <code>class</code> definition (Lesson 7). When we call <code>str(7)</code>, Python calls the <code>__init__</code> method in the <code>class</code> definition of <code>str</code>. That method <strong>initializes</strong> a <code>str</code> variable, and has instructions on how to do so using an argument of type <code>int</code>. We are not "converting" so much as defining a new variable using another variable as a parameter!</p>
 </blockquote>
 <h2 id="mutability-of-data-types"><a name="user-content-mutability-of-data-types" href="#mutability-of-data-types" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mutability of Data Types</h2>
-<p>Some data types are <strong>mutable</strong>, which means that Python can edit them in the computer&rsquo;s memory. Other data types are <strong>immutable</strong>, which means Python cannot make changes to them without destroying them and creating a new version.</p>
+<p>Some data types are <strong>mutable</strong>, which means that Python can edit them in the computer's memory. Other data types are <strong>immutable</strong>, which means Python cannot make changes to them without destroying them and creating a new version.</p>
 <p>In Python, <code>str</code> and <code>int</code> variables are <strong>immutable</strong> but <code>list</code> variables are <strong>mutable</strong>.</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Mutability?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
@@ -1262,17 +1335,18 @@ IndexError: list assignment index out of range
 <p>In general, objects are mutable, but <strong>primitive data types</strong> are immutable. These are limited to <code>int</code> and <code>str</code> values.</p>
 </blockquote>
 <p>When we use <code>extend</code> or <code>+</code> to concatenate two <code>list</code> variables, the values from one list are copied to the other, and they are no longer part of the same variable:</p>
-<pre><code class="python">&gt;&gt;&gt; list1 = [1,2,3]
-&gt;&gt;&gt; list2 = []
-&gt;&gt;&gt; list2.extend(list1)
-&gt;&gt;&gt; print(list2)
-[1, 2, 3]
-&gt;&gt;&gt; list1[0]=5
-&gt;&gt;&gt; print(list1)
-[5, 2, 3]
-&gt;&gt;&gt; print(list2)
-[1, 2, 3]
-</code></pre>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">list2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">list2</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">list1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
 
 <blockquote>
 <p>Note that values in <code>list2</code> are not changed when we <em>mutate</em> <code>list1</code> because values were <em>copied</em> by the <code>extend</code> command, and <code>list2</code> no longer accesses the same values as <code>list1</code>.</p>
@@ -1291,20 +1365,21 @@ IndexError: list assignment index out of range
 </li>
 <li>
 <p>Define a function called <code>square_grid</code> that takes one parameter that is an <code>int</code> variable that determines the side length of a square 2-dimensional <code>list</code> containing all asterisks.</p>
-<p>The <code>pretty_print</code> function has been provided for you to print your &ldquo;square grids&rdquo; (2-dimensional <code>list</code> variables).</p>
+<p>The <code>pretty_print</code> function has been provided for you to print your "square grids" (2-dimensional <code>list</code> variables).</p>
 <p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listssquaregrid?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
 <p>The output displayed on screen should match the following:</p>
 <ul>
 <li><code>pretty_print(square_grid(5))</code> should output<br />
-<pre><code class="python">['*','*','*','*','*']
-['*','*','*','*','*']
-['*','*','*','*','*']
-['*','*','*','*','*']
-['*','*','*','*','*']
-</code></pre></li>
+<div class="codehilite"><pre><span class="p">[</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">,</span><span class="s">&#39;*&#39;</span><span class="p">]</span>
+</pre></div>
+</li>
 </ul>
 <blockquote>
-<p><strong>HINT</strong>: Remember that <code>[1,2,3]*3</code> returns <code>[1, 2, 3, 1, 2, 3, 1, 2, 3]</code> (see the <strong>List &ldquo;Multiplication&rdquo;</strong> section). Also note that <code>['*']*5</code> returns <code>['*', '*', '*', '*', '*']</code>.</p>
+<p><strong>HINT</strong>: Remember that <code>[1,2,3]*3</code> returns <code>[1, 2, 3, 1, 2, 3, 1, 2, 3]</code> (see the <strong>List "Multiplication"</strong> section). Also note that <code>['*']*5</code> returns <code>['*', '*', '*', '*', '*']</code>.</p>
 </blockquote>
 <p>Save your work in a file called <code>square_list.py</code> <strong>or</strong> fork the <em>repl.it</em> snippet above and do your work in repl.it.</p>
 </li>
@@ -1312,42 +1387,44 @@ IndexError: list assignment index out of range
 <p>Define a function called <code>square_grid</code> that takes one parameter that is an <code>int</code> variable that determines the side length of a square 2-dimensional <code>str</code> containing all asterisks.</p>
 <p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Listsstringsquaregrid?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
 <p>The output of <code>print(square_grid(20))</code> should be:<br />
-<pre><code class="python">********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-********************
-</code></pre></p>
+<div class="codehilite"><pre><span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+<span class="o">********************</span>
+</pre></div>
+</p>
 <blockquote>
 <p><strong>HINT</strong>: Remember that <code>'*'*5</code> returns <code>'*****'</code> (see the <strong>Strings are Like Lists!</strong> section).<br />
-<strong>HINT</strong>: Remember that the <code>'\n'</code> character sequence is a &ldquo;line break&rdquo;.<br />
-<pre><code class="python">&gt;&gt;&gt; print('hey\nmy\nfriend')
-hey
-my
-friend
-</code></pre><br />
+<strong>HINT</strong>: Remember that the <code>'\n'</code> character sequence is a "line break".<br />
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&#39;hey</span><span class="se">\n</span><span class="s">my</span><span class="se">\n</span><span class="s">friend&#39;</span><span class="p">)</span>
+<span class="n">hey</span>
+<span class="n">my</span>
+<span class="n">friend</span>
+</pre></div>
+<br />
 more specifically,<br />
-<pre><code class="python">&gt;&gt;&gt; print('***' + '\n' + '***' + '\n' + '***' + '\n')
-***
-***
-***
-
-</code></pre></p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&#39;***&#39;</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">+</span> <span class="s">&#39;***&#39;</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">+</span> <span class="s">&#39;***&#39;</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+<span class="o">***</span>
+<span class="o">***</span>
+<span class="o">***</span>
+</pre></div>
+</p>
 </blockquote>
 <p>Save your work in a file called <code>square_string.py</code> <strong>or</strong> fork the <em>repl.it</em> snippet above and do your work in repl.it.</p>
 </li>

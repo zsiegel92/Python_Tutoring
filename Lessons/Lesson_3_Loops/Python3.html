@@ -1014,6 +1014,69 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
+</style><style>/*github*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
 </style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
 MathJax.Hub.Config({
@@ -1076,184 +1139,200 @@ MathJax.Hub.Config({
 <h2 id="review-of-lesson-2"><a name="user-content-review-of-lesson-2" href="#review-of-lesson-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Review of Lesson 2</h2>
 <h3 id="variable-types-int-str-list-bool"><a name="user-content-variable-types-int-str-list-bool" href="#variable-types-int-str-list-bool" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Variable Types: <code>int</code>, <code>str</code>, <code>list</code>, <code>bool</code></h3>
 <p>We can view the <strong>type</strong> of a variable using the <code>type</code> keyword. The type of a variable has to do with what kind of data that variable stores.</p>
-<pre><code class="python">x = 5
-print(type(x))
-</code></pre>
+<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+
 
 <blockquote>
-<p><code>int</code> variables are &ldquo;Integers&rdquo;, which are whole numbers like 1, 2, 3, &hellip;</p>
+<p><code>int</code> variables are "Integers", which are whole numbers like 1, 2, 3, ...</p>
 </blockquote>
-<pre><code class="python">x = 'hello'
-print(type(x))
-</code></pre>
+<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="s">&#39;hello&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+
 
 <blockquote>
-<p><code>str</code> variables are &ldquo;Strings&rdquo;, which are sequences of characters, like <code>'hello'</code> or <code>'taco'</code> or <code>'a'</code>. We can create them with double quotes (<code>"hello"</code>) or single quotes (<code>'hello'</code>).</p>
+<p><code>str</code> variables are "Strings", which are sequences of characters, like <code>'hello'</code> or <code>'taco'</code> or <code>'a'</code>. We can create them with double quotes (<code>"hello"</code>) or single quotes (<code>'hello'</code>).</p>
 </blockquote>
-<pre><code class="python">x = (4 &lt; 5)
-print(x)
-print(type(x))
-</code></pre>
+<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+
 
 <blockquote>
-<p><code>bool</code> variables are &ldquo;Booleans&rdquo;, which are either <code>True</code> or <code>False</code>. When we use a comparison operator, like <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, or <code>==</code>, we get a <code>bool</code> variable. These are used in <code>if</code> and <code>elif</code> statements.</p>
+<p><code>bool</code> variables are "Booleans", which are either <code>True</code> or <code>False</code>. When we use a comparison operator, like <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, or <code>==</code>, we get a <code>bool</code> variable. These are used in <code>if</code> and <code>elif</code> statements.</p>
 </blockquote>
-<pre><code class="python">x = [1,2,3]
-print(x)
-print(type(x))
-</code></pre>
+<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+
 
 <blockquote>
-<p><code>list</code> variables are &ldquo;Lists&rdquo;, which store other variables, in order. More on that later.</p>
+<p><code>list</code> variables are "Lists", which store other variables, in order. More on that later.</p>
 </blockquote>
 <h3 id="conditionals-if-else-and-elif"><a name="user-content-conditionals-if-else-and-elif" href="#conditionals-if-else-and-elif" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Conditionals: <code>if</code>, <code>else</code>, and <code>elif</code></h3>
 <p>Refer to Lesson 2 for the behavior of the following code:</p>
-<pre><code class="python">if x &gt; 5:
-    print(&quot;I have enough money for a taco&quot;)
-elif x == 5:
-    print(&quot;I have exactly enough money for a taco&quot;)
-else:
-    print(&quot;I don't have enough money for a taco&quot;)
-</code></pre>
+<div class="codehilite"><pre><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;I have enough money for a taco&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;I have exactly enough money for a taco&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;I don&#39;t have enough money for a taco&quot;</span><span class="p">)</span>
+</pre></div>
+
 
 <h4 id="the-pass-command"><a name="user-content-the-pass-command" href="#the-pass-command" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>The <code>pass</code> Command</h4>
-<p>If we want to &ldquo;Do Nothing&rdquo; when we satisfy a condition, we can use the command <code>pass</code>:</p>
-<pre><code class="python">if x &lt; 5:
-    pass
-else:
-    print(&quot;Woohoo! I can buy a taco.&quot;)
-</code></pre>
+<p>If we want to "Do Nothing" when we satisfy a condition, we can use the command <code>pass</code>:</p>
+<div class="codehilite"><pre><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">pass</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Woohoo! I can buy a taco.&quot;</span><span class="p">)</span>
+</pre></div>
+
 
 <h2 id="loops-while"><a name="user-content-loops-while" href="#loops-while" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Loops: <code>while</code></h2>
 <h3 id="parts-of-a-loop"><a name="user-content-parts-of-a-loop" href="#parts-of-a-loop" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Parts of a Loop</h3>
-<p>We have seen &ldquo;conditional&rdquo; expressions, which only execute if a conditional evaluates to <code>True</code>. What if we wanted to execute an expression over and over, as long as a conditional evaluated to <code>True</code>? We can do this with <code>while</code>.</p>
-<pre><code class="python">x = 1
-while x &lt; 10:
-    print(x)
-    x=x+1
-</code></pre>
+<p>We have seen "conditional" expressions, which only execute if a conditional evaluates to <code>True</code>. What if we wanted to execute an expression over and over, as long as a conditional evaluated to <code>True</code>? We can do this with <code>while</code>.</p>
+<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+
 
 <p><strong>There are three main parts to a <code>while</code>  loop</strong>:</p>
 <ol>
 <li>
 <p>The <strong>initialization</strong> of the variables and environment:<br />
-<pre><code class="python">x=1
-</code></pre></p>
+<div class="codehilite"><pre><span class="n">x</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</p>
 </li>
 <li>
 <p>The <strong>conditional</strong> expression, which determines whether the loop should repeat:<br />
-<pre><code class="python">while x &lt; 10:
-</code></pre></p>
+<div class="codehilite"><pre><span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+</pre></div>
+</p>
 </li>
 <li>
 <p>The <strong>body</strong> of the loop, where the activity happens:<br />
-<pre><code class="python">    print(x)
-    x = x+1
-</code></pre></p>
+<div class="codehilite"><pre>    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</p>
 </li>
 </ol>
 <h3 id="termination-of-loops"><a name="user-content-termination-of-loops" href="#termination-of-loops" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Termination of Loops</h3>
 <p>The most important thing to consider when creating a loop is that it terminates!</p>
 <h4 id="a-non-terminating-loop"><a name="user-content-a-non-terminating-loop" href="#a-non-terminating-loop" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>A non-Terminating Loop</h4>
 <p>Try running this code:</p>
-<p><pre><code class="python">x = 1
-while x &lt; 10:
-    print(x)
-</code></pre><br />
+<p><div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+<br />
 Remember that you can press <kbd>ctrl</kbd>+<kbd>C</kbd> to stop Python code!</p>
 <h4 id="how-to-ensure-loops-terminate"><a name="user-content-how-to-ensure-loops-terminate" href="#how-to-ensure-loops-terminate" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How to Ensure Loops Terminate</h4>
 <p>If the activity in the <strong>body</strong> of the loop will eventually make the loop conditional evaluate to <code>False</code>, then the loop will terminate. In our loop above, the line <code>x = x + 1</code> always brought our conditional closer to evaluating the <code>False</code>.</p>
 <h4 id="loops-inside-loops"><a name="user-content-loops-inside-loops" href="#loops-inside-loops" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Loops Inside Loops</h4>
 <p>Say we wanted to print every consecutive sequence of numbers from 1 to 9 starting with 1. Try reading then executing this code:</p>
-<pre><code class="python">x = 0
-while x &lt; 10:
-    print()
-    x = x + 1
-    y = 0
-    while y &lt; x:
-        y = y + 1
-        print(y)
-</code></pre>
+<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">()</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
 
 <h1 id="assignment"><a name="user-content-assignment" href="#assignment" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignment</h1>
 <h2 id="printing-sequences-of-numbers"><a name="user-content-printing-sequences-of-numbers" href="#printing-sequences-of-numbers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Printing Sequences of Numbers</h2>
 <p>Write code that prints the following output:</p>
-<pre><code class="python">
-1
+<div class="codehilite"><pre><span class="mi">1</span>
 
-1
-2
+<span class="mi">1</span>
+<span class="mi">2</span>
 
-1
-2
-3
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
 
-1
-2
-3
-4
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
 
-1
-2
-3
-4
-5
-</code></pre>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+</pre></div>
+
 
 <h2 id="printing-without-skipping-lines"><a name="user-content-printing-without-skipping-lines" href="#printing-without-skipping-lines" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Printing without Skipping Lines</h2>
 <p>When we print, we can stay on the same line by putting <code>end=''</code> inside our <code>print()</code> statement. Try the following:</p>
-<p><pre><code class="python">print('x', end='')
-print('x',end='')
-</code></pre><br />
+<p><div class="codehilite"><pre><span class="k">print</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+<br />
 and compare it to</p>
-<pre><code class="python">print('x')
-print('x')
-</code></pre>
+<div class="codehilite"><pre><span class="k">print</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">)</span>
+</pre></div>
+
 
 <p>With that in mind, write code that produces the following output, and save it in a file called <code>assignment.py</code>:</p>
-<pre><code class="python">1
-12
-123
-1234
-12345
-123456
-1234567
-12345678
-123456789
-12345678910
-</code></pre>
+<div class="codehilite"><pre><span class="mi">1</span>
+<span class="mi">12</span>
+<span class="mi">123</span>
+<span class="mi">1234</span>
+<span class="mi">12345</span>
+<span class="mi">123456</span>
+<span class="mi">1234567</span>
+<span class="mi">12345678</span>
+<span class="mi">123456789</span>
+<span class="mi">12345678910</span>
+</pre></div>
+
 
 <h2 id="printing-with-conditionals"><a name="user-content-printing-with-conditionals" href="#printing-with-conditionals" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Printing with Conditionals</h2>
-<p>Produce the same sequence output as the &ldquo;Printing Sequences of Numbers&rdquo; assignment, but skip all the 5&rsquo;s:</p>
-<pre><code class="python">
-1
+<p>Produce the same sequence output as the "Printing Sequences of Numbers" assignment, but skip all the 5's:</p>
+<div class="codehilite"><pre><span class="mi">1</span>
 
-1
-2
+<span class="mi">1</span>
+<span class="mi">2</span>
 
-1
-2
-3
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
 
-1
-2
-3
-4
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
 
-1
-2
-3
-4
-</code></pre>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+</pre></div>
+
 
 <blockquote>
 <p><strong>Hint</strong>: Use<br />
-<pre><code class="python">if y == 5:
-    pass
-else:
-    print(y)
-</code></pre><br />
-somewhere in the code that produced the output for &ldquo;Printing Sequences of Numbers&rdquo;.</p>
+<div class="codehilite"><pre><span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">pass</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+<br />
+somewhere in the code that produced the output for "Printing Sequences of Numbers".</p>
 </blockquote>
 <h2 id="resources"><a name="user-content-resources" href="#resources" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Resources</h2>
 <p>Run the script <code>conditionals.py</code> using <code>python conditionals.py</code>.</p>

@@ -1014,6 +1014,69 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
+</style><style>/*github*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
 </style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
 MathJax.Hub.Config({
@@ -1044,21 +1107,102 @@ MathJax.Hub.Config({
 <div class="toc">
 <ul>
 <li><a href="#python-lesson-8-input-and-challenges">Python Lesson 8 - Input and Challenges</a><ul>
-<li><a href="#input-input">Input: input()</a></li>
+<li><a href="#input-input">Input: input()</a><ul>
+<li><a href="#more-input-examples">More input Examples</a></li>
+<li><a href="#casting-input-int-and-str">Casting Input: int() and str()</a></li>
+<li><a href="#infinite-input-loops-while-true">Infinite Input Loops: while True</a></li>
+</ul>
+</li>
 <li><a href="#assignment">Assignment</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <h2 id="input-input"><a name="user-content-input-input" href="#input-input" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Input: <code>input()</code></h2>
-<p>There are some functions that we can always access: <code>len</code>, <code>type</code>,</p>
+<p>So far we have interacted with Python in the following two ways:</p>
+<ol>
+<li>We execute code line-by-line in a <strong>REPL</strong> (<strong>R</strong>ead <strong>E</strong>valuate <strong>P</strong>rint <strong>L</strong>oop) environment by typing <code>python</code> from the <em>command prompt</em>.</li>
+<li>We Execute every line of code in a <code>.py</code> file by typing <code>python &lt;filename&gt;.py</code> from the <em>command prompt</em>.</li>
+</ol>
+<p>The REPL environment allows us to <em>interact</em> with Python code. <strong>We can <em>interact</em> with Python code in <code>.py</code> files by using <code>input()</code>!</strong></p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Input?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>Just like <code>len</code> and <code>type</code>, the <code>input</code> function can be called from any Python environment.</p>
+</blockquote>
+<h3 id="more-input-examples"><a name="user-content-more-input-examples" href="#more-input-examples" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>More <code>input</code> Examples</h3>
+<p>The function <code>input</code> returns a variable of type <code>str</code>. If <code>x = input()</code> is executed and <code>5</code> <kbd>Enter</kbd> is typed, then <code>type(x)</code> will yield <code>&lt;class 'str'&gt;</code>.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Input2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Notice that the variable <code>age</code> stores a number but its type is <code>str</code>.</p>
+<h3 id="casting-input-int-and-str"><a name="user-content-casting-input-int-and-str" href="#casting-input-int-and-str" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Casting Input: <code>int()</code> and <code>str()</code></h3>
+<p>Recall that we can <strong>cast</strong> variables to create variables with different <strong>type</strong> that store roughly the same information. This is common with with <code>input</code>.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Input3casting?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>If we have a <code>str</code> variable storing digits, like <code>"5"</code>, then we can cast with no problems:<br />
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s">&quot;5&quot;</span><span class="p">))</span>
+<span class="mi">5</span>
+</pre></div>
+</p>
+<p>However, sometimes, casting can cause problems.<br />
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s">&quot;five&quot;</span><span class="p">))</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">int</span><span class="p">()</span> <span class="k">with</span> <span class="n">base</span> <span class="mi">10</span><span class="p">:</span> <span class="s">&#39;five&#39;</span>
+</pre></div>
+</p>
+<p>Be careful!</p>
+<blockquote>
+<p>Soon, we will learn about <strong>handling exceptions</strong>. Just like <code>if</code>, <code>while</code>, and <code>for</code> statements, we have a code structure called <code>try</code>...<code>except</code> that allows us to execute code with exceptions without exiting. This is called <strong>handling exceptions</strong>. More on that later!</p>
+</blockquote>
+<h3 id="infinite-input-loops-while-true"><a name="user-content-infinite-input-loops-while-true" href="#infinite-input-loops-while-true" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Infinite Input Loops: <code>while True</code></h3>
+<p>Many programs (like <strong>games</strong>) keep running and accepting input until the user exits. We can create an <strong>infinite loop</strong> using <code>while</code> without terminating.</p>
+<p>Recall that <code>while</code> loops need a terminating condition:<br />
+<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># initializing x</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Executing the loop&quot;</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># incrementing x</span>
+</pre></div>
+</p>
+<p>Since <code>x += 1</code> increases <code>x</code> by <code>1</code> on each loop iteration, eventually the condition <code>x &lt; 5</code> will evaluate to <code>False</code> and the loop will stop executing!</p>
+<p>We can create an infinite loop easily, but it doesn't do us much good:</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">&quot;Executing the loop&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">Executing</span> <span class="n">the</span> <span class="n">loop</span>
+<span class="n">Executing</span> <span class="n">the</span> <span class="n">loop</span>
+<span class="n">Executing</span> <span class="n">the</span> <span class="n">loop</span>
+<span class="n">Executing</span> <span class="n">the</span> <span class="n">loop</span>
+<span class="n">Executing</span> <span class="n">the</span> <span class="n">loop</span>
+<span class="n">Executing</span> <span class="n">the</span> <span class="n">loop</span>
+<span class="n">Executing</span> <span class="n">the</span> <span class="n">loop</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+</pre></div>
+
+
+<p><strong>With <code>input()</code>, we can create infinite loops that are actually useful!</strong></p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Inputinfiniteloop?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 <h2 id="assignment"><a name="user-content-assignment" href="#assignment" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignment</h2>
 <ol>
 <li>
-<p>Create a <code>cat</code> class and a <code>human</code> class. Give both classes a field called <code>happiness</code>. Create dynamic methods in the <code>cat</code> class called <code>snuggle</code> and <code>scratch</code> that take a <code>human</code> parameter. Create dynamic methods in the <code>human</code> class called <code>snuggle</code> and <code>scold</code> that take a <code>cat</code> parameter.</p>
-<p>After calling <code>snuggle</code> from either class, the <code>happiness</code> field of both the <code>human</code> and the <code>cat</code> instance involved should increase by 1. After calling <code>scratch</code> and <code>scold</code>, the happiness field of both the <code>human</code> and the <code>cat</code> instance involved should decrease by 1.</p>
-<p>Your script should create two <code>Human</code> instances and two <code>Cat</code> instances. They should <code>snuggle</code>, <code>scold</code>, and <code>scratch</code> each other and at the end, both <code>Human</code> instances should have <code>happiness</code> equal to <code>0</code>, but one <code>Cat</code> should have <code>happiness</code> equal to <code>2</code>, and one should have <code>happiness</code> equal to <code>-2</code>.</p>
-<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Classhumancat?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
-<p>Save your work in a file called <code>humans_and_cats.py</code> or fork the repl.it script above.</p>
+<p><strong>Create a game</strong> that asks for a direction on an infinite loop and keeps track of your coordinates. Your coordinates should start at <code>x = 0</code> and <code>y = 0</code>, and you should use the following directions:</p>
+<ul>
+<li>If input is <code>a</code>, <strong>move left</strong> by decreasing your <code>x</code> coordinate using <code>x -= 1</code></li>
+<li>If input is <code>s</code>, <strong>move down</strong> by decreasing your <code>y</code> coordinate using <code>y -= 1</code></li>
+<li>If input is <code>d</code>, <strong>move right</strong> by increasing your <code>x</code> coordinate using <code>x += 1</code></li>
+<li>If input is <code>w</code>, <strong>move up</strong> by increasing your <code>y</code> coordinate using <code>y += 1</code></li>
+</ul>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/InputNavigationGame?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<p><strong><em>NOTE:</em></strong> An <strong>ordered pair</strong> is two numbers in parentheses that give coordinates. For example, <code>(1,2)</code> means "The point where \(x\) is \(1\) and \(y\) is \(2\)".</p>
+<p><div style="text-align: center;"><br />
+    <img src="/Users/Zach/Desktop/Eitan_S/webapp/Lessons/Lesson_8_Input_and_Challenges/coordinates.jpg" width="500" alt="coordinates"/><br />
+    Ordered Pairs<br />
+</div></p>
+</li>
+<li>
+<p>Another assignment.</p>
 </li>
 </ol></article></body></html>

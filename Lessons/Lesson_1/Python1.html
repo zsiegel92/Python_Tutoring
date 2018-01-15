@@ -1014,17 +1014,108 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>Python1</title></head><body><article class="markdown-body"><h1 id="python-lesson-1"><a name="user-content-python-lesson-1" href="#python-lesson-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 1</h1>
+</style><style>/*github*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
+</style><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX"],
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: false
+  },
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"],
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    equationNumbers: {
+      autoNumber: "AMS",
+    },
+    unicode: {
+      fonts: "STIXGeneral,'Arial Unicode MS'"
+    }
+  },
+  showProcessingMessages: false
+});
+</script>
+<title>Python1</title></head><body><article class="markdown-body"><h1 id="python-lesson-1"><a name="user-content-python-lesson-1" href="#python-lesson-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 1</h1>
 <h2 id="running-python"><a name="user-content-running-python" href="#running-python" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Running Python</h2>
-<p>You are ready to run Python! Your computer&rsquo;s Python installation can run in two important ways:</p>
+<p>You are ready to run Python! Your computer's Python installation can run in two important ways:</p>
 <h3 id="1-running-python-code-written-in-py-files"><a name="user-content-1-running-python-code-written-in-py-files" href="#1-running-python-code-written-in-py-files" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. Running Python Code Written in <code>.py</code> Files</h3>
 <p>Python can execute Python code, which is written in <code>.py</code> files, such as <code>app.py</code>. If you write code in a <code>.py</code> file called <code>app.py</code>, you can tell Python to run <strong>all</strong> the code with the following command (without typing <code>&gt;&gt;</code>):</p>
-<pre><code>        &gt;&gt; python app.py
-</code></pre>
+<div class="codehilite"><pre>        &gt;&gt; python app.py
+</pre></div>
+
+
 <p>This command tells Python to execute every line of code written in the <code>app.py</code> file. Try running this command and, if there are no error messages, navigate to <a href="localhost:5000">localhost</a>.</p>
 <h3 id="2-running-python-code-in-the-interactive-console"><a name="user-content-2-running-python-code-in-the-interactive-console" href="#2-running-python-code-in-the-interactive-console" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2. Running Python Code in the Interactive Console</h3>
-<p>Python has an &ldquo;Interactive Console&rdquo; called the &ldquo;Python Interactive Console&rdquo;.</p>
-<p>Any Python commands can be executed one at a time by writing them in the command prompt and hitting the <kbd>Enter</kbd> key. This is called a <strong>Read-Evaluate-Print-Loop (REPL)</strong> environment, because it &ldquo;reads&rdquo; your input, &ldquo;evaluates&rdquo; it, &ldquo;prints&rdquo; the output, and then &ldquo;loops&rdquo; by starting the process over again.</p>
+<p>Python has an "Interactive Console" called the "Python Interactive Console".</p>
+<p>Any Python commands can be executed one at a time by writing them in the command prompt and hitting the <kbd>Enter</kbd> key. This is called a <strong>Read-Evaluate-Print-Loop (REPL)</strong> environment, because it "reads" your input, "evaluates" it, "prints" the output, and then "loops" by starting the process over again.</p>
 <p><strong>Type <code>python</code> to start the Python interactive console.</strong> Then try the following Python commands:</p>
 <ul>
 <li><code>x=5</code> to create a variable named <code>x</code> with the value <code>5</code>.<ul>
@@ -1054,12 +1145,16 @@ body .markdown-body
 <h2 id="first-python-script"><a name="user-content-first-python-script" href="#first-python-script" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>First Python Script</h2>
 <p>Create a file called <strong>loops.py</strong> and open it in your favorite text editor (SublimeText is reccommended).</p>
 <p>In this file, add the following code:</p>
-<pre><code>x = 5
+<div class="codehilite"><pre>x = 5
 print(x)
-</code></pre>
+</pre></div>
+
+
 <p>Now, navigate to the folder containing this file and type in your command line</p>
-<pre><code>python loops.py
-</code></pre>
+<div class="codehilite"><pre>python loops.py
+</pre></div>
+
+
 <p>You should see the following output:</p>
-<pre><code>    &gt;&gt; 5
-</code></pre></article></body></html>
+<div class="codehilite"><pre>    &gt;&gt; 5
+</pre></div></article></body></html>
