@@ -1,4 +1,4 @@
-## Hi, Eitan,
+## Python Tutorial
 
 * [Lesson 1: Python](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_1/Python1.html)
 * [Lesson 1: HTML](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_1/HTML1.html)

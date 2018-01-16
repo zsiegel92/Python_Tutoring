@@ -20,10 +20,7 @@ Open the Python Interactive Console by typing `python`<kbd>enter</kbd> in the co
 
 To create a variable named `x` storing the value `5`, we write `x=5`. The `=` symbol is called the "assignment operator", because we use it to "assign" values to variables.
 
-```python
-x = 5
-print(x)
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Variables?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Now, change the value of `x` and print the new value.
 
@@ -36,12 +33,11 @@ Wouldn't you say that the value `'hello'` and the value `5` are fundamentally di
 
 Check the type of `x` with the keyword `type`.
 
-```python
-x = 5
-print(type(x))
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/VariablesType?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 >`int` is short for "Integer", which is what we call numbers like 0, 1, and 2. Some numbers are not integers, like "two and a half". Negative numbers are integers.
+
+**Change the code above to match each of the following snippets:**
 
 ```python
 x = 'hello'
@@ -84,10 +80,9 @@ print(type(x))
 
 We saw that the **type** of `True` was `bool`. Let's analyze some more `bool` data.
 
-```python
-print(4 < 5)
-type(4 < 5)
-```
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/VariablesBool?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+
 Note that `print(4 < 5)` printed `True`. That's because the `<` symbol is an "operator" that tells Python to compare what's on its left to what's on its right, and to "turn into" `True` if what's on the left **is less than** what's on the right, and `False` otherwise.
 
 ```python
@@ -101,23 +96,8 @@ We have seen that the operator `<` can be placed between two numbers, and the wh
 
 Think about what the output of each `print` statement will bebefore running these commands:
 
-```python
-print(4 < 4)
-print(4 < 5)
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Comparison?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-print(4 > 4)
-print(4 > 5)
-
-print(4 <= 4)
-print(4 >= 4)
-print(4 <= 5)
-print(4 >= 5)
-
-print(4 == 4)
-print(4 == 5)
-print(4 == 'hello')
-print('hello' == 'hello')
-```
 
 >**NOTE:** We call the double equals sign `==` the "**equality operator**", and it turns an expression into `True` or `False` (like `5 == 5`). Remember we call the single equals sign `=` the "**assignment operator**" and we use it to "assign" values to variables (like `x = 5`).
 

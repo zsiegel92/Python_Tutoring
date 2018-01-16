@@ -1135,10 +1135,7 @@ MathJax.Hub.Config({
 <h2 id="variable-types-and-the-type-keyword"><a name="user-content-variable-types-and-the-type-keyword" href="#variable-types-and-the-type-keyword" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Variable "Types" and the <code>type</code> Keyword</h2>
 <p>Open the Python Interactive Console by typing <code>python</code><kbd>enter</kbd> in the command prompt.</p>
 <p>To create a variable named <code>x</code> storing the value <code>5</code>, we write <code>x=5</code>. The <code>=</code> symbol is called the "assignment operator", because we use it to "assign" values to variables.</p>
-<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Variables?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <p>Now, change the value of <code>x</code> and print the new value.</p>
 <div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="s">&#39;hello&#39;</span>
@@ -1148,14 +1145,12 @@ MathJax.Hub.Config({
 
 <p>Wouldn't you say that the value <code>'hello'</code> and the value <code>5</code> are fundamentally different? That's because they have different <strong>type</strong>. Some variables hold numbers, others hold words or other data. The <strong>type</strong> keeps track of what a variable holds, and a computer treats different types differently.</p>
 <p>Check the type of <code>x</code> with the keyword <code>type</code>.</p>
-<div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/VariablesType?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <blockquote>
 <p><code>int</code> is short for "Integer", which is what we call numbers like 0, 1, and 2. Some numbers are not integers, like "two and a half". Negative numbers are integers.</p>
 </blockquote>
+<p><strong>Change the code above to match each of the following snippets:</strong></p>
 <div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="s">&#39;hello&#39;</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 </pre></div>
@@ -1200,11 +1195,9 @@ MathJax.Hub.Config({
 </blockquote>
 <h3 id="boolean-variables-of-type-bool-true-and-false"><a name="user-content-boolean-variables-of-type-bool-true-and-false" href="#boolean-variables-of-type-bool-true-and-false" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Boolean Variables of Type <code>bool</code>: <code>True</code> and <code>False</code></h3>
 <p>We saw that the <strong>type</strong> of <code>True</code> was <code>bool</code>. Let's analyze some more <code>bool</code> data.</p>
-<p><div class="codehilite"><pre><span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
-</pre></div>
-<br />
-Note that <code>print(4 &lt; 5)</code> printed <code>True</code>. That's because the <code>&lt;</code> symbol is an "operator" that tells Python to compare what's on its left to what's on its right, and to "turn into" <code>True</code> if what's on the left <strong>is less than</strong> what's on the right, and <code>False</code> otherwise.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/VariablesBool?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Note that <code>print(4 &lt; 5)</code> printed <code>True</code>. That's because the <code>&lt;</code> symbol is an "operator" that tells Python to compare what's on its left to what's on its right, and to "turn into" <code>True</code> if what's on the left <strong>is less than</strong> what's on the right, and <code>False</code> otherwise.</p>
 <div class="codehilite"><pre><span class="k">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span>
 <span class="nb">type</span><span class="p">(</span><span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
@@ -1213,23 +1206,7 @@ Note that <code>print(4 &lt; 5)</code> printed <code>True</code>. That's because
 <h3 id="comparison-operators-and"><a name="user-content-comparison-operators-and" href="#comparison-operators-and" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Comparison Operators: <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, and <code>==</code></h3>
 <p>We have seen that the operator <code>&lt;</code> can be placed between two numbers, and the whole expression will either "turn into" <code>True</code> or <code>False</code> depending on whether the number on the left is "less than" the number on the right.</p>
 <p>Think about what the output of each <code>print</code> statement will bebefore running these commands:</p>
-<div class="codehilite"><pre><span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">==</span> <span class="s">&#39;hello&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;hello&#39;</span> <span class="o">==</span> <span class="s">&#39;hello&#39;</span><span class="p">)</span>
-</pre></div>
-
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Comparison?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <blockquote>
 <p><strong>NOTE:</strong> We call the double equals sign <code>==</code> the "<strong>equality operator</strong>", and it turns an expression into <code>True</code> or <code>False</code> (like <code>5 == 5</code>). Remember we call the single equals sign <code>=</code> the "<strong>assignment operator</strong>" and we use it to "assign" values to variables (like <code>x = 5</code>).</p>
