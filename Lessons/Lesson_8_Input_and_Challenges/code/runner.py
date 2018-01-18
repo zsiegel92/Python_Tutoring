@@ -70,11 +70,9 @@ class Runner:
 			try:
 				direction = key.char # single-char keys
 			except:
-				return False
-
+				return True
 			if direction not in ['a', 's', 'd', 'w']: # keys interested
-				return False
-
+				return True
 			if not self.valid_move(direction) or (self.board[1][self.position]==self.wall):
 				return False
 			else:
@@ -93,5 +91,5 @@ class Runner:
 
 
 r=Runner() #must run sudo python treasure_snake.py
-# r.play()
+r.play()
 r.play_continuous()
