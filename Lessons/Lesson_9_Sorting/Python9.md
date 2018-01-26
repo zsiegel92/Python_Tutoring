@@ -6,7 +6,7 @@
 
 ## Random Functions in the `random` module: `randint`, `choice` and `shuffle`
 
-We have used Python's `random` module several times.
+We have used Python's `random` module several times. [Learn about the random module here](https://docs.python.org/3.6/library/random.html).
 
 * We usually use the `random.randint` function to generate a random integer betwen an upper and a lower bound.
 	```python
