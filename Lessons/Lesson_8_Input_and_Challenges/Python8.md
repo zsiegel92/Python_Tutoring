@@ -97,6 +97,8 @@ Executing the loop
 
 	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Guess-My-Number?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
+	Save your work in a file called `guess_my_number.py`.
+
 2. Create another version of "Guess My Number" that asks for a lower bound and an upper bound, then generates a random number called `secret` between those bounds, reminding the user of the bounds before each guess. The input-output stream should look approximately like this:
 	```python
 	Enter a lower bound for random numbers
@@ -136,6 +138,9 @@ Executing the loop
 		15
 		Guess a number between 10 and 15
 		```
+
+		Save your work in a file called `guess_my_number_custom.py`.
+
 3. **Create a game** called "Coin Flip" that fulfills the following requirements:
 
 	1. Asks for either `h` or `t` as input and generates a random string that is either `h` or `t`, over and over, until the input does not match the random string. The game should then tell the user how many "**coin flips**" they guessed correctly.
@@ -186,6 +191,7 @@ Executing the loop
 	hi
 	```
 
+	Save your work in a file called `coin_flip.py`.
 
 4. **Create a game** that asks for a direction on an infinite loop and keeps track of your coordinates. Your coordinates should start at `x = 0` and `y = 0`, and you should use the following directions:
 
