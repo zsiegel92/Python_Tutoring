@@ -86,7 +86,58 @@ Executing the loop
 
 ## Assignment
 
-1. **Create a game** that asks for a direction on an infinite loop and keeps track of your coordinates. Your coordinates should start at `x = 0` and `y = 0`, and you should use the following directions:
+1. **Create a game** called "Guess My Number" that satisfies the following requirements:
+
+	1. Generates a random number called `secret`
+	2. Asks the user for input between `1` and `10`, over and over, until the input matches the random number.
+	3. When the user enters input, if the input is equal to the random number (`== secret`), the game should print `You got it!`. **If the input is not a valid number, the game should throw a `ValueError`.**
+	4. If the user's guess is too low, the game should print `too low`, and if it's too high, the game should print `too high`.
+
+	Below is a version of "Guess My Number" that achieves requirements i, ii, and iii:
+
+	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Guess-My-Number?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+2. Create another version of "Guess My Number" that asks for a lower bound and an upper bound, then generates a random number called `secret` between those bounds, reminding the user of the bounds before each guess. The input-output stream should look approximately like this:
+	```python
+	Enter a lower bound for random numbers
+	10
+	Enter an upper bound for random numbers
+	16
+	Guess a number between 10 and 16
+	13
+	Too high!
+	Guess a number between 10 and 16
+	12
+	Too high!
+	Guess a number between 10 and 16
+	11
+	You got it!
+	```
+	If your lower bound is greater than your upper bound, your program should do one of the following:
+	1. Throw a `ValueError` as follows:
+		```python
+		Enter a lower bound for random numbers
+		10
+		Enter an upper bound for random numbers
+		5
+		Traceback (most recent call last):
+		 ...
+		ValueError: empty range for randrange()
+		```
+	2. Ask for another number as follows:
+		```python
+		Enter a lower bound for random numbers
+		10
+		Enter an upper bound for random numbers
+		5
+		Enter an upper bound for random numbers
+		6
+		Enter an upper bound for random numbers
+		15
+		Guess a number between 10 and 15
+		```
+
+3. **Create a game** that asks for a direction on an infinite loop and keeps track of your coordinates. Your coordinates should start at `x = 0` and `y = 0`, and you should use the following directions:
 
 	* If input is `a`, **move left** by decreasing your `x` coordinate using `x -= 1`
 	* If input is `s`, **move down** by decreasing your `y` coordinate using `y -= 1`
@@ -101,8 +152,6 @@ Executing the loop
 		<img src="coordinates.jpg" width="500" alt="coordinates"/>
 		Ordered Pairs
 	</div>
-
-2. Another assignment.
 
 
 

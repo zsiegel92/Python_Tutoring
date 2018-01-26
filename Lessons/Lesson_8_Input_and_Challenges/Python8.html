@@ -1189,6 +1189,60 @@ MathJax.Hub.Config({
 <h2 id="assignment"><a name="user-content-assignment" href="#assignment" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignment</h2>
 <ol>
 <li>
+<p><strong>Create a game</strong> called "Guess My Number" that satisfies the following requirements:</p>
+<ol>
+<li>Generates a random number called <code>secret</code></li>
+<li>Asks the user for input between <code>1</code> and <code>10</code>, over and over, until the input matches the random number.</li>
+<li>When the user enters input, if the input is equal to the random number (<code>== secret</code>), the game should print <code>You got it!</code>. <strong>If the input is not a valid number, the game should throw a <code>ValueError</code>.</strong></li>
+<li>If the user's guess is too low, the game should print <code>too low</code>, and if it's too high, the game should print <code>too high</code>.</li>
+</ol>
+<p>Below is a version of "Guess My Number" that achieves requirements i, ii, and iii:</p>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Guess-My-Number?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+</li>
+<li>
+<p>Create another version of "Guess My Number" that asks for a lower bound and an upper bound, then generates a random number called <code>secret</code> between those bounds, reminding the user of the bounds before each guess. The input-output stream should look approximately like this:<br />
+    <div class="codehilite"><pre><span class="n">Enter</span> <span class="n">a</span> <span class="n">lower</span> <span class="n">bound</span> <span class="k">for</span> <span class="n">random</span> <span class="n">numbers</span>
+<span class="mi">10</span>
+<span class="n">Enter</span> <span class="n">an</span> <span class="n">upper</span> <span class="n">bound</span> <span class="k">for</span> <span class="n">random</span> <span class="n">numbers</span>
+<span class="mi">16</span>
+<span class="n">Guess</span> <span class="n">a</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">10</span> <span class="ow">and</span> <span class="mi">16</span>
+<span class="mi">13</span>
+<span class="n">Too</span> <span class="n">high</span><span class="err">!</span>
+<span class="n">Guess</span> <span class="n">a</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">10</span> <span class="ow">and</span> <span class="mi">16</span>
+<span class="mi">12</span>
+<span class="n">Too</span> <span class="n">high</span><span class="err">!</span>
+<span class="n">Guess</span> <span class="n">a</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">10</span> <span class="ow">and</span> <span class="mi">16</span>
+<span class="mi">11</span>
+<span class="n">You</span> <span class="n">got</span> <span class="n">it</span><span class="err">!</span>
+</pre></div>
+<br />
+    If your lower bound is greater than your upper bound, your program should do one of the following:</p>
+<ol>
+<li>Throw a <code>ValueError</code> as follows:<br />
+    <div class="codehilite"><pre><span class="n">Enter</span> <span class="n">a</span> <span class="n">lower</span> <span class="n">bound</span> <span class="k">for</span> <span class="n">random</span> <span class="n">numbers</span>
+<span class="mi">10</span>
+<span class="n">Enter</span> <span class="n">an</span> <span class="n">upper</span> <span class="n">bound</span> <span class="k">for</span> <span class="n">random</span> <span class="n">numbers</span>
+<span class="mi">5</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+ <span class="o">...</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">empty</span> <span class="nb">range</span> <span class="k">for</span> <span class="n">randrange</span><span class="p">()</span>
+</pre></div>
+</li>
+<li>Ask for another number as follows:<br />
+    <div class="codehilite"><pre><span class="n">Enter</span> <span class="n">a</span> <span class="n">lower</span> <span class="n">bound</span> <span class="k">for</span> <span class="n">random</span> <span class="n">numbers</span>
+<span class="mi">10</span>
+<span class="n">Enter</span> <span class="n">an</span> <span class="n">upper</span> <span class="n">bound</span> <span class="k">for</span> <span class="n">random</span> <span class="n">numbers</span>
+<span class="mi">5</span>
+<span class="n">Enter</span> <span class="n">an</span> <span class="n">upper</span> <span class="n">bound</span> <span class="k">for</span> <span class="n">random</span> <span class="n">numbers</span>
+<span class="mi">6</span>
+<span class="n">Enter</span> <span class="n">an</span> <span class="n">upper</span> <span class="n">bound</span> <span class="k">for</span> <span class="n">random</span> <span class="n">numbers</span>
+<span class="mi">15</span>
+<span class="n">Guess</span> <span class="n">a</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">10</span> <span class="ow">and</span> <span class="mi">15</span>
+</pre></div>
+</li>
+</ol>
+</li>
+<li>
 <p><strong>Create a game</strong> that asks for a direction on an infinite loop and keeps track of your coordinates. Your coordinates should start at <code>x = 0</code> and <code>y = 0</code>, and you should use the following directions:</p>
 <ul>
 <li>If input is <code>a</code>, <strong>move left</strong> by decreasing your <code>x</code> coordinate using <code>x -= 1</code></li>
@@ -1202,8 +1256,5 @@ MathJax.Hub.Config({
     <img src="coordinates.jpg" width="500" alt="coordinates"/><br />
     Ordered Pairs<br />
 </div></p>
-</li>
-<li>
-<p>Another assignment.</p>
 </li>
 </ol></article></body></html>
