@@ -1243,6 +1243,54 @@ MathJax.Hub.Config({
 </ol>
 </li>
 <li>
+<p><strong>Create a game</strong> called "Coin Flip" that fulfills the following requirements:</p>
+<ol>
+<li>Asks for either <code>h</code> or <code>t</code> as input and generates a random string that is either <code>h</code> or <code>t</code>, over and over, until the input does not match the random string. The game should then tell the user how many "<strong>coin flips</strong>" they guessed correctly.</li>
+<li>Repeats the process for "Player 2", then prints which "Player" won the game by guessing more "coin flips" correctly.</li>
+</ol>
+<p>The input-output sequence should resemble the following:</p>
+<div class="codehilite"><pre><span class="p">(</span><span class="n">p1</span><span class="p">)</span> <span class="n">Enter</span> <span class="s">&#39;h&#39;</span> <span class="ow">or</span> <span class="s">&#39;t&#39;</span><span class="n">h</span>
+<span class="n">Player</span> <span class="mi">1</span> <span class="n">gets</span> <span class="n">a</span> <span class="n">point</span><span class="err">!</span>
+<span class="p">(</span><span class="n">p1</span><span class="p">)</span> <span class="n">Enter</span> <span class="s">&#39;h&#39;</span> <span class="ow">or</span> <span class="s">&#39;t&#39;</span><span class="n">t</span>
+<span class="n">Player</span> <span class="mi">1</span> <span class="n">gets</span> <span class="n">a</span> <span class="n">point</span><span class="err">!</span>
+<span class="p">(</span><span class="n">p1</span><span class="p">)</span> <span class="n">Enter</span> <span class="s">&#39;h&#39;</span> <span class="ow">or</span> <span class="s">&#39;t&#39;</span><span class="n">t</span>
+<span class="n">Player</span> <span class="mi">1</span> <span class="n">gets</span> <span class="n">a</span> <span class="n">point</span><span class="err">!</span>
+<span class="p">(</span><span class="n">p1</span><span class="p">)</span> <span class="n">Enter</span> <span class="s">&#39;h&#39;</span> <span class="ow">or</span> <span class="s">&#39;t&#39;</span><span class="n">t</span>
+<span class="n">Player</span> <span class="mi">1</span> <span class="n">gets</span> <span class="n">a</span> <span class="n">point</span><span class="err">!</span>
+<span class="p">(</span><span class="n">p1</span><span class="p">)</span> <span class="n">Enter</span> <span class="s">&#39;h&#39;</span> <span class="ow">or</span> <span class="s">&#39;t&#39;</span><span class="n">h</span>
+
+<span class="n">WRONG</span><span class="o">.</span> <span class="n">Player</span> <span class="mi">2</span><span class="s">&#39;s turn!</span>
+
+<span class="p">(</span><span class="n">p2</span><span class="p">)</span> <span class="n">Enter</span> <span class="s">&#39;h&#39;</span> <span class="ow">or</span> <span class="s">&#39;t&#39;</span><span class="n">h</span>
+
+
+<span class="n">Player</span> <span class="mi">1</span><span class="s">&#39;s score is 4. Player 2&#39;</span><span class="n">s</span> <span class="n">score</span> <span class="ow">is</span> <span class="mf">0.</span>
+
+
+<span class="n">Player</span> <span class="mi">1</span> <span class="n">wins</span><span class="err">!</span>
+</pre></div>
+
+
+<p>Below is a partially-completed version of this game:</p>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/CoinFlipStreak?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<p><strong>Note</strong> that the Python <code>random</code> library includes a function called <code>choice</code>. The function <code>choice</code> takes as an argument a <code>list</code> and returns a randomly-selected element of that <code>list</code>.</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s">&#39;hi&#39;</span><span class="p">,</span><span class="s">&#39;hello&#39;</span><span class="p">,</span><span class="s">&#39;hey&#39;</span><span class="p">]))</span>
+<span class="n">hey</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s">&#39;hi&#39;</span><span class="p">,</span><span class="s">&#39;hello&#39;</span><span class="p">,</span><span class="s">&#39;hey&#39;</span><span class="p">]))</span>
+<span class="n">hey</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s">&#39;hi&#39;</span><span class="p">,</span><span class="s">&#39;hello&#39;</span><span class="p">,</span><span class="s">&#39;hey&#39;</span><span class="p">]))</span>
+<span class="n">hello</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s">&#39;hi&#39;</span><span class="p">,</span><span class="s">&#39;hello&#39;</span><span class="p">,</span><span class="s">&#39;hey&#39;</span><span class="p">]))</span>
+<span class="n">hello</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s">&#39;hi&#39;</span><span class="p">,</span><span class="s">&#39;hello&#39;</span><span class="p">,</span><span class="s">&#39;hey&#39;</span><span class="p">]))</span>
+<span class="n">hello</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s">&#39;hi&#39;</span><span class="p">,</span><span class="s">&#39;hello&#39;</span><span class="p">,</span><span class="s">&#39;hey&#39;</span><span class="p">]))</span>
+<span class="n">hi</span>
+</pre></div>
+
+
+</li>
+<li>
 <p><strong>Create a game</strong> that asks for a direction on an infinite loop and keeps track of your coordinates. Your coordinates should start at <code>x = 0</code> and <code>y = 0</code>, and you should use the following directions:</p>
 <ul>
 <li>If input is <code>a</code>, <strong>move left</strong> by decreasing your <code>x</code> coordinate using <code>x -= 1</code></li>

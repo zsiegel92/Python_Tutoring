@@ -136,8 +136,58 @@ Executing the loop
 		15
 		Guess a number between 10 and 15
 		```
+3. **Create a game** called "Coin Flip" that fulfills the following requirements:
 
-3. **Create a game** that asks for a direction on an infinite loop and keeps track of your coordinates. Your coordinates should start at `x = 0` and `y = 0`, and you should use the following directions:
+	1. Asks for either `h` or `t` as input and generates a random string that is either `h` or `t`, over and over, until the input does not match the random string. The game should then tell the user how many "**coin flips**" they guessed correctly.
+	2. Repeats the process for "Player 2", then prints which "Player" won the game by guessing more "coin flips" correctly.
+
+	The input-output sequence should resemble the following:
+
+	```python
+	(p1) Enter 'h' or 't'h
+	Player 1 gets a point!
+	(p1) Enter 'h' or 't't
+	Player 1 gets a point!
+	(p1) Enter 'h' or 't't
+	Player 1 gets a point!
+	(p1) Enter 'h' or 't't
+	Player 1 gets a point!
+	(p1) Enter 'h' or 't'h
+
+	WRONG. Player 2's turn!
+
+	(p2) Enter 'h' or 't'h
+
+
+	Player 1's score is 4. Player 2's score is 0.
+
+
+	Player 1 wins!
+	```
+
+	Below is a partially-completed version of this game:
+
+	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/CoinFlipStreak?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+	**Note** that the Python `random` library includes a function called `choice`. The function `choice` takes as an argument a `list` and returns a randomly-selected element of that `list`.
+
+	```python
+	>>> print(random.choice(['hi','hello','hey']))
+	hey
+	>>> print(random.choice(['hi','hello','hey']))
+	hey
+	>>> print(random.choice(['hi','hello','hey']))
+	hello
+	>>> print(random.choice(['hi','hello','hey']))
+	hello
+	>>> print(random.choice(['hi','hello','hey']))
+	hello
+	>>> print(random.choice(['hi','hello','hey']))
+	hi
+	```
+
+
+4. **Create a game** that asks for a direction on an infinite loop and keeps track of your coordinates. Your coordinates should start at `x = 0` and `y = 0`, and you should use the following directions:
 
 	* If input is `a`, **move left** by decreasing your `x` coordinate using `x -= 1`
 	* If input is `s`, **move down** by decreasing your `y` coordinate using `y -= 1`
