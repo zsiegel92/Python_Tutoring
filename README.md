@@ -9,6 +9,7 @@
 * [Lesson 6: Lists](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_6_Lists/Python6.html)
 * [Lesson 7: Classes](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_7_Classes/Python7.html)
 * [Lesson 8: Input and Challenges](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_8_Input_and_Challenges/Python8.html)
+* [Lesson 9: Sorting](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_9_Sorting/Python9.html)
 
 # Getting Started with the "Webapp" Project: Navigating The Terminal
 Before getting started, you have to take care of a few things:
