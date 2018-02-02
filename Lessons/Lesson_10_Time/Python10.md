@@ -174,9 +174,9 @@ Using `random.choice` and `time.sleep`, we can turn our game into a movie:
 
 1. Logic test! Change `my_solution` so that this code prints `"All Correct!"`
 
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/LogicTest?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/LogicTest?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Save your assignment as `logic_test.py` or fork on repl.it.
+	Save your assignment as `logic_test.py` or fork on repl.it.
 
 2. **Edge Detection!** Make a change to the navigation game so that when a direction is entered, movement is only recorded if `x` and `y` would stay within a certain range.
 
@@ -187,8 +187,8 @@ Save your assignment as `logic_test.py` or fork on repl.it.
 	3. When you move **right**, make sure `x < size`
 	4. When you move **up**, make sure `y < size`
 
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/InputNavigationGameMovieBoundsAssignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/InputNavigationGameMovieBoundsAssignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
->If you have done your work correctly, then when you play this movie, the treasure will **always** be found, eventually!
+	>If you have done your work correctly, then when you play this movie, the treasure will **always** be found, eventually!
 
-Save your assignment as `navigation_movie_boundaries.py` or fork on repl.it.
+	Save your assignment as `navigation_movie_boundaries.py` or fork on repl.it.
