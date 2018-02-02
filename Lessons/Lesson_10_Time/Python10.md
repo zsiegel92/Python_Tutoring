@@ -178,7 +178,7 @@ Using `random.choice` and `time.sleep`, we can turn our game into a movie:
 
 Save your assignment as `logic_test.py` or fork on repl.it.
 
-2. Make a change to the navigation game so that when a direction is entered, movement is only recorded if `x` and `y` would stay within a certain range.
+2. **Edge Detection!** Make a change to the navigation game so that when a direction is entered, movement is only recorded if `x` and `y` would stay within a certain range.
 
 	Do this by creating a variable called `size`, and, when a direction is given, only change `x` or `y` if they stay between `-size` and `size`. For example, if `size` is `10`, then `x` and `y` would have to stay between `-10` and `10`. Whether the bounds (`size` and `-size`) are valid is up to you (meaning it's okay to restrict to `-9` to `9` when `size` is `10`).
 
