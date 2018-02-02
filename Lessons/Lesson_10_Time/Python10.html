@@ -1103,57 +1103,277 @@ MathJax.Hub.Config({
   showProcessingMessages: false
 });
 </script>
-<title>README</title></head><body><article class="markdown-body"><h2 id="python-tutorial"><a name="user-content-python-tutorial" href="#python-tutorial" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Tutorial</h2>
+<title>Python10</title></head><body><article class="markdown-body"><h1 id="python-lesson-10-logic-and-time"><a name="user-content-python-lesson-10-logic-and-time" href="#python-lesson-10-logic-and-time" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 10 - Logic and Time</h1>
+<p><a href="https://zsiegel92.github.io/Eitan_S/">All Lessons</a></p>
+<div class="toc">
 <ul>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_1/Python1.html">Lesson 1: Python</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_1/HTML1.html">Lesson 1: HTML</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_2_Variables_and_Conditionals/Python2.html">Lesson 2: Variables and Conditionals</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_3_Loops/Python3.html">Lesson 3: Loops</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_4_Strings/Python4.html">Lesson 4: Strings</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_5_Functions/Python5.html">Lesson 5: Functions</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_6_Lists/Python6.html">Lesson 6: Lists</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_7_Classes/Python7.html">Lesson 7: Classes</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_8_Input_and_Challenges/Python8.html">Lesson 8: Input and Challenges</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_9_Sorting/Python9.html">Lesson 9: Sorting</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_10_Time/Python10.html">Lesson 10: Logic and Time</a></li>
+<li><a href="#python-lesson-10-logic-and-time">Python Lesson 10 - Logic and Time</a><ul>
+<li><a href="#logic-and-and-or">Logic: and and or</a><ul>
+<li><a href="#conditional-expressions-and-conditional-constructs">Conditional Expressions and Conditional Constructs</a></li>
+<li><a href="#logical-operators-and-and-or">Logical Operators and and or</a><ul>
+<li><a href="#and-and-or-are-operators">and and or are "Operators"</a></li>
 </ul>
-<h1 id="getting-started-with-the-webapp-project-navigating-the-terminal"><a name="user-content-getting-started-with-the-webapp-project-navigating-the-terminal" href="#getting-started-with-the-webapp-project-navigating-the-terminal" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Getting Started with the "Webapp" Project: Navigating The Terminal</h1>
-<p>Before getting started, you have to take care of a few things:</p>
+</li>
+</ul>
+</li>
+<li><a href="#time-timesleep">Time: time.sleep</a></li>
+<li><a href="#games-that-use-input-can-be-made-into-movies-using-timesleep">Games that use input can be made into movies using time.sleep</a></li>
+<li><a href="#assignments">Assignments</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="logic-and-and-or"><a name="user-content-logic-and-and-or" href="#logic-and-and-or" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Logic: <code>and</code> and <code>or</code></h2>
+<h3 id="conditional-expressions-and-conditional-constructs"><a name="user-content-conditional-expressions-and-conditional-constructs" href="#conditional-expressions-and-conditional-constructs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Conditional Expressions and Conditional Constructs</h3>
+<p><strong>Conditional expressions</strong> are expressions that evaluate to \(True\) or \(False\). In Python, \(True\) statements evaluate to <code>True</code> and \(False\) statements evaluate to <code>False</code>. Variables that store the values <code>True</code> and <code>False</code> are called <strong>boolean variables</strong> and their <code>type</code> is <code>bool</code>.</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bool</span><span class="s">&#39;&gt;</span>
+</pre></div>
+
+
+<p>Here are some <strong>conditional expressions</strong> in Python using different operators (like <code>&lt;=</code>, <code>==</code>, and <code>in</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Evaluate to <code>True</code></th>
+<th>Evaluate to <code>False</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>4 &lt; 5</code></td>
+<td><code>5 &lt; 4</code></td>
+</tr>
+<tr>
+<td><code>6 &gt;= 4</code></td>
+<td><code>4 &gt;= 6</code></td>
+</tr>
+<tr>
+<td><code>'hello' == 'hello'</code></td>
+<td><code>'hello' == 'hi'</code></td>
+</tr>
+<tr>
+<td><code>2 in [1,2,3,4,5]</code></td>
+<td><code>2 in [5,6,7]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conditional constructs</strong> are commands that either execute or do not execute, based on the value of a <strong>conditional expression</strong>.</p>
+<p>We have seen <strong>conditional expressions</strong> in the following <strong>conditional constructs</strong>:</p>
+<ul>
+<li><code>if</code>-<code>elif</code>-<code>else</code>:<br />
+    <div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;I do not have enough money for a taco&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;I have exactly enough money for a taco&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;I do not have enough money for a taco&quot;</span><span class="p">)</span>
+</pre></div>
+</li>
+<li><code>while</code>:<br />
+    <div class="codehilite"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</li>
+</ul>
+<h3 id="logical-operators-and-and-or"><a name="user-content-logical-operators-and-and-or" href="#logical-operators-and-and-or" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Logical Operators <code>and</code> and <code>or</code></h3>
+<p><strong>Before making decisions, humans evaluate many, many different conditional statements.</strong> Sometimes, all the conditions have to be a certain way; other times, just some of the conditions have to be right.</p>
+<p>For example:</p>
+<div class="codehilite"><pre>if (I am hungry) and (I have enough money), or if (free tacos are provided at school),
+    I will eat a taco.
+Otherwise, if (I am hungry) and (I have an apple in my backpack),
+    I will eat an appple.
+Otherwise,
+    I will not eat anything.
+</pre></div>
+
+
+<blockquote>
+<p><strong>This is NOT Python code!!</strong> This is an attempt to represent human reasoning in English (plus some parentheses). Note that the word "if" serves the same purpose in English as it does in Python; the words "Otherwise, if" serve the same purpose as <code>elif</code> in Python; the word "Otherwise" on its own serves the same purpose as <code>else</code> in Python.</p>
+</blockquote>
+<p><em>Notice the use of <strong>and</strong> and <strong>or</strong> in our conditional construct!</em> We can achieve the same thing in Python:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Logicandor?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>Try changing the values of <code>hungry</code>, <code>money</code>, <code>free_tacos</code> and <code>backpack_apple</code>, and try to achieve each of the possible outcomes!</p>
+</blockquote>
+<h4 id="and-and-or-are-operators"><code>and</code> and <code>or</code> are "Operators"</h4>
+<p><em>The keywords <code>and</code> and <code>or</code> are <strong>operators</strong> in Python, meaning they transform expressions into a new expression.</em> Specifically, <code>and</code> and <code>or</code> combine two <code>bool</code> expressions into one <code>bool</code> expression:</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span>
+<span class="bp">False</span>
+</pre></div>
+
+
+<p>The most straightforward examples are the following:</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">and</span> <span class="bp">False</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">and</span> <span class="bp">True</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">True</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="bp">False</span> <span class="ow">or</span> <span class="bp">False</span>
+<span class="bp">False</span>
+</pre></div>
+
+
+<p>We have seen the following operators in Python (among a few others):</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Argument Types</th>
+<th>Expression using Operator</th>
+<th>Value of Evaluated Expression</th>
+<th>Type of Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Arithmetic Addition</td>
+<td><code>int</code> and <code>int</code> (or <code>float</code> and <code>float</code>)</td>
+<td><code>5 + 10</code></td>
+<td><code>15</code></td>
+<td><code>int</code> (or <code>float</code>)</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>String Concatenation</td>
+<td><code>str</code> and <code>str</code></td>
+<td><code>'hey' + ' my friend'</code></td>
+<td><code>'hey my friend'</code></td>
+<td><code>str</code></td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>List Concatenation</td>
+<td><code>list</code> and <code>list</code></td>
+<td><code>[1,2,3] + [4,5]</code></td>
+<td><code>[1,2,3,4,5]</code></td>
+<td><code>list</code></td>
+</tr>
+<tr>
+<td><code>in</code></td>
+<td>Substring Operator</td>
+<td><code>str</code> and <code>str</code></td>
+<td><code>'a' in 'blah blah'</code></td>
+<td><code>True</code></td>
+<td><code>bool</code></td>
+</tr>
+<tr>
+<td><code>in</code></td>
+<td>List Containment Operator</td>
+<td>(any type) and <code>list</code></td>
+<td><code>5 in [2,3,4,5]</code></td>
+<td><code>True</code></td>
+<td><code>bool</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Arithmetic Multiplication</td>
+<td><code>int</code> and <code>int</code> (or <code>float</code> and <code>float</code>)</td>
+<td><code>6*5</code></td>
+<td><code>30</code></td>
+<td><code>int</code> (or <code>float</code>)</td>
+</tr>
+<tr>
+<td><code>and</code></td>
+<td>Logical And</td>
+<td><code>bool</code> and <code>bool</code></td>
+<td><code>(4&lt;5) and (5&lt;6)</code></td>
+<td><code>True</code></td>
+<td><code>bool</code></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>Logical Or</td>
+<td><code>bool</code> and <code>bool</code></td>
+<td><code>(4&lt;5) or (4&gt;5)</code></td>
+<td><code>True</code></td>
+<td><code>bool</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note that some symbols (<code>+</code> and <code>in</code>, for example) correspond to different operators based on the <strong>type</strong> of the arguments! These are called "overloaded" operators, and in Python, we can further overload those operators with new functionality if we want to!</p>
+</blockquote>
+<h2 id="time-timesleep"><a name="user-content-time-timesleep" href="#time-timesleep" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Time: <code>time.sleep</code></h2>
+<p>Much of the technology around us deals with time in some way:</p>
+<ul>
+<li>digital clocks</li>
+<li>calendars</li>
+<li>movies: normal speed, fast-forward, and slow motion</li>
+<li>games: actions take a certain amount of time</li>
+</ul>
+<p>Let's build an app that counts to 100 for hide-and-seek players</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Countingnosleep?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Unfortunately, Python programs execute code much too quickly to allow us to count like this.</p>
+<blockquote>
+<p>Try changing <code>while i &lt; 100</code> to <code>while i &lt; 100000</code>. That will allow some time to pass, but it also will not run smoothly.</p>
+</blockquote>
+<p><strong>Python will pause for any specified amount of time if we call <code>time.sleep()</code> from the <code>time</code> module.</strong> We have to import the <code>time</code> module to use this command, and <code>time.sleep(x)</code> will cause Python to pause for <code>x</code> seconds.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Countingtimesleep?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<h2 id="games-that-use-input-can-be-made-into-movies-using-timesleep"><a name="user-content-games-that-use-input-can-be-made-into-movies-using-timesleep" href="#games-that-use-input-can-be-made-into-movies-using-timesleep" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Games that use <code>input</code> can be made into movies using <code>time.sleep</code></h2>
+<p><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_8_Input_and_Challenges/Python8.html">Lesson 8</a> asked you to take user input to give directions to a navigator. Here is what you produced:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/InputNavigationGameSolution?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_9_Sorting/Python9.html">Lesson 9</a> introduced the <code>random.choice</code> function, which produces a random value from the elements of a list:</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">random</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s">&#39;hi&#39;</span><span class="p">,</span><span class="s">&#39;hello&#39;</span><span class="p">,</span><span class="s">&#39;sup?&#39;</span><span class="p">])</span>
+<span class="s">&#39;hi&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s">&#39;hi&#39;</span><span class="p">,</span><span class="s">&#39;hello&#39;</span><span class="p">,</span><span class="s">&#39;sup?&#39;</span><span class="p">])</span>
+<span class="s">&#39;sup?&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s">&#39;hi&#39;</span><span class="p">,</span><span class="s">&#39;hello&#39;</span><span class="p">,</span><span class="s">&#39;sup?&#39;</span><span class="p">])</span>
+<span class="s">&#39;hello&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s">&#39;hi&#39;</span><span class="p">,</span><span class="s">&#39;hello&#39;</span><span class="p">,</span><span class="s">&#39;sup?&#39;</span><span class="p">])</span>
+<span class="s">&#39;sup?&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s">&#39;hi&#39;</span><span class="p">,</span><span class="s">&#39;hello&#39;</span><span class="p">,</span><span class="s">&#39;sup?&#39;</span><span class="p">])</span>
+<span class="s">&#39;hi&#39;</span>
+</pre></div>
+
+
+<p>Using <code>random.choice</code> and <code>time.sleep</code>, we can turn our game into a movie:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/InputNavigationGameMovie?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>Try changing <code>time.sleep(0.1)</code> to <code>time.sleep(0.001)</code> to see the game run faster!</p>
+<p>This game runs until the player reaches \((10,8)\), but with random directions, the player might or might not ever get there!</p>
+</blockquote>
+<h2 id="assignments"><a name="user-content-assignments" href="#assignments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignments</h2>
+<ol>
+<li>Logic test! Change <code>my_solution</code> so that this code prints <code>"All Correct!"</code></li>
+</ol>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/LogicTest?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Save your assignment as <code>logic_test.py</code> or fork on repl.it.</p>
 <ol>
 <li>
-<p>Download our project from <a href="https://github.com/zsiegel92/Eitan_S">the GitHub repository I made</a></p>
-<ul>
-<li>Click the green "Clone or download" button and "Download Zip"</li>
-</ul>
-</li>
-<li>
-<p>Navigate to the the folder with the download, "unzip" the .zip file, and go into the folder. These are the commands you will need to navigate using the command line (press <kbd>Enter</kbd> after typing each command):</p>
-<ul>
-<li>Type <code>cd</code> to see what folder you are in.</li>
-<li>Type <code>cd [folder name]</code> to navigate to a specific folder.</li>
-<li>Type <code>cd ..</code> to navigate up one folder (into the condaining folder)</li>
-<li>Type <code>ls</code> to list all the files and folders in the folder you are in.</li>
-<li>Type <code>ls -AL</code> to list all the files and folders in the folder you are in, INCLUDING the hidden folders, which begin with a dot (such as <code>.env</code>).</li>
-</ul>
-</li>
-<li>
-<p>When you are in the folder called <code>webapp</code>, type the command<br />
-<code>venv\Scripts\activate.bat</code><br />
-This command tells your computer "hey, I'm working on the <code>webapp</code> project, so if I install anything, please don't let it affect the rest of my computer."</p>
-</li>
-</ol>
-<h1 id="important-info"><a name="user-content-important-info" href="#important-info" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Important Info</h1>
-<p>This will be your first website. This will also be your first time running code from the command line. There are a few things to keep in mind:</p>
+<p>Make a change to the navigation game so that when a direction is entered, movement is only recorded if <code>x</code> and <code>y</code> would stay within a certain range.</p>
+<p>Do this by creating a variable called <code>size</code>, and, when a direction is given, only change <code>x</code> or <code>y</code> if they stay between <code>-size</code> and <code>size</code>. For example, if <code>size</code> is <code>10</code>, then <code>x</code> and <code>y</code> would have to stay between <code>-10</code> and <code>10</code>. Whether the bounds (<code>size</code> and <code>-size</code>) are valid is up to you (meaning it's okay to restrict to <code>-9</code> to <code>9</code> when <code>size</code> is <code>10</code>).</p>
 <ol>
-<li>NEVER delete files from the command line unless they are files you created. If you delete a file that Windows needs, Windows may start malfunctioning.</li>
-<li>Only use commands that you have learned from me (Zach) or from sources that I have introduced myself.</li>
-<li>Feel free to ask questions about anything that you don't understand! There is a very good reason why everything is the way it is, and if I don't know, I will do my best to find out for you. If you are with your parents and not me, please ask them to ask me - I will respond to messages from them within a few hours.</li>
+<li>When you move to the <strong>left</strong>, make sure <code>x &gt; -size</code> (<strong>This requirement is satisfied in the code below!</strong>)</li>
+<li>When you move <strong>down</strong>, make sure <code>y &gt; -size</code></li>
+<li>When you move <strong>right</strong>, make sure <code>x &lt; size</code></li>
+<li>When you move <strong>up</strong>, make sure <code>y &lt; size</code></li>
 </ol>
-<h1 id="suggested-download-sublimetext"><a name="user-content-suggested-download-sublimetext" href="#suggested-download-sublimetext" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Suggested Download: Sublimetext</h1>
-<p>I suggest that you download SublimeText 2, a text editor (like Microsoft Word or Google Docs) designed for writing code. Other good options are Emacs, Aquamacs, and Atom.</p>
-<h1 id="resources"><a name="user-content-resources" href="#resources" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Resources:</h1>
-<p><a href="https://www.khanacademy.org/computing/computer-programming/html-css">Khan Academy HTML Lessons</a></p>
-<p><a href="https://www.w3schools.com/html/html_elements.asp">HTML Guide</a></p>
-<p><a href="https://codepen.io/zsiegel/">codepen.com</a></p>
-<p><a href="https://jsfiddle.net/">jsfiddle.net</a></p>
-<p><a href="https://github.com/zsiegel92">Zach's Github Page</a></p></article></body></html>
+</li>
+</ol>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/InputNavigationGameMovieBoundsAssignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>If you have done your work correctly, then when you play this movie, the treasure will <strong>always</strong> be found, eventually!</p>
+</blockquote>
+<p>Save your assignment as <code>navigation_movie_boundaries.py</code> or fork on repl.it.</p></article></body></html>
