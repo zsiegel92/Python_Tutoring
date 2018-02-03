@@ -130,7 +130,7 @@ Unfortunately, Python programs execute code much too quickly to allow us to coun
 
 >Try changing `while i < 100` to `while i < 100000`. That will allow some time to pass, but it also will not run smoothly.
 
-**Python will pause for any specified amount of time if we call `time.sleep()` from the `time` module.** We have to import the `time` module to use this command, and `time.sleep(x)` will cause Python to pause for `x` seconds.
+**Python will pause for any specified amount of time if we call `time.sleep` from the `time` module.** We have to import the `time` module to use this command, and `time.sleep(x)` will cause Python to pause for `x` seconds.
 
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Countingtimesleep?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
@@ -172,7 +172,7 @@ Using `random.choice` and `time.sleep`, we can turn our game into a movie:
 
 ## Assignments
 
-1. Logic test! Change `my_solution` so that this code prints `"All Correct!"`
+1. **Logic test!** Change `my_solution` so that this code prints `"All Correct!"`
 
 	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/LogicTest?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
@@ -180,10 +180,10 @@ Using `random.choice` and `time.sleep`, we can turn our game into a movie:
 
 2. **Edge Detection!** Make a change to the navigation game so that when a direction is entered, movement is only recorded if `x` and `y` would stay within a certain range.
 
-	Do this by creating a variable called `size`, and, when a direction is given, only change `x` or `y` if they stay between `-size` and `size`. For example, if `size` is `10`, then `x` and `y` would have to stay between `-10` and `10`. Whether the bounds (`size` and `-size`) are valid is up to you (meaning it's okay to restrict to `-9` to `9` when `size` is `10`).
+	Do this by creating a variable called `size`, and, when a direction is given, only change `x` or `y` if they stay between `0` and `size`. For example, if `size` is `10`, then `x` and `y` would have to stay between `0` and `10`. Whether the bounds (`0` and `size`) are valid is up to you (meaning it's okay to restrict to `1` to `9` when `size` is `10`).
 
-	1. When you move to the **left**, make sure `x > -size` (**This requirement is satisfied in the code below!**)
-	2. When you move **down**, make sure `y > -size`
+	1. When you move to the **left**, make sure `x > 0` (**This requirement is satisfied in the code below!**)
+	2. When you move **down**, make sure `y > 0`
 	3. When you move **right**, make sure `x < size`
 	4. When you move **up**, make sure `y < size`
 
@@ -192,3 +192,21 @@ Using `random.choice` and `time.sleep`, we can turn our game into a movie:
 	>If you have done your work correctly, then when you play this movie, the treasure will **always** be found, eventually!
 
 	Save your assignment as `navigation_movie_boundaries.py` or fork on repl.it.
+
+3. **Visualization of Movement**
+
+	Below are a `create_board` function and a `pretty_print` function. When `pretty_print(create_board(size,x,y))` is called, a list of lists called `board` will be created and returned by `create_board`, consisting of `size` lists each with `size` elements. In [Lesson 6](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_6_Lists/Python6.html#two-dimensional-lists), we saw how a list of lists could be visualized as a grid (click the link!). The function `pretty_print` prints the board so that it looks like a grid.
+
+	The square at coordinates \\(x,y\\) will be the element at index `x` of the list at index `y` in `board`.
+
+	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/NavigationPrintboard?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+	Copy these two functions as well as your solution to the previous problem into one file or repl.it environment. Now, on each loop iteration, instead of printing `Moving left!` or `Moving right!`, call `pretty_print(create_board(size,x,y,10,8))`. This will print the board at each loop iteration, so that *you can watch* as the treasure is found.
+
+	Running your code should look similar to this:
+
+	<div style="text-align: center;">
+		<img src="gameplay.gif" width="500" alt="gameplay"/>
+		Correct output
+	</div>
+

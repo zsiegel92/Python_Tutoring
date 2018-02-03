@@ -1323,7 +1323,7 @@ Otherwise,
 <blockquote>
 <p>Try changing <code>while i &lt; 100</code> to <code>while i &lt; 100000</code>. That will allow some time to pass, but it also will not run smoothly.</p>
 </blockquote>
-<p><strong>Python will pause for any specified amount of time if we call <code>time.sleep()</code> from the <code>time</code> module.</strong> We have to import the <code>time</code> module to use this command, and <code>time.sleep(x)</code> will cause Python to pause for <code>x</code> seconds.</p>
+<p><strong>Python will pause for any specified amount of time if we call <code>time.sleep</code> from the <code>time</code> module.</strong> We have to import the <code>time</code> module to use this command, and <code>time.sleep(x)</code> will cause Python to pause for <code>x</code> seconds.</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Countingtimesleep?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <h2 id="games-that-use-input-can-be-made-into-movies-using-timesleep"><a name="user-content-games-that-use-input-can-be-made-into-movies-using-timesleep" href="#games-that-use-input-can-be-made-into-movies-using-timesleep" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Games that use <code>input</code> can be made into movies using <code>time.sleep</code></h2>
@@ -1354,26 +1354,36 @@ Otherwise,
 </blockquote>
 <h2 id="assignments"><a name="user-content-assignments" href="#assignments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignments</h2>
 <ol>
-<li>Logic test! Change <code>my_solution</code> so that this code prints <code>"All Correct!"</code></li>
-</ol>
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/LogicTest?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
+<li>
+<p><strong>Logic test!</strong> Change <code>my_solution</code> so that this code prints <code>"All Correct!"</code></p>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/LogicTest?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
 <p>Save your assignment as <code>logic_test.py</code> or fork on repl.it.</p>
-<ol>
+</li>
 <li>
 <p><strong>Edge Detection!</strong> Make a change to the navigation game so that when a direction is entered, movement is only recorded if <code>x</code> and <code>y</code> would stay within a certain range.</p>
-<p>Do this by creating a variable called <code>size</code>, and, when a direction is given, only change <code>x</code> or <code>y</code> if they stay between <code>-size</code> and <code>size</code>. For example, if <code>size</code> is <code>10</code>, then <code>x</code> and <code>y</code> would have to stay between <code>-10</code> and <code>10</code>. Whether the bounds (<code>size</code> and <code>-size</code>) are valid is up to you (meaning it's okay to restrict to <code>-9</code> to <code>9</code> when <code>size</code> is <code>10</code>).</p>
+<p>Do this by creating a variable called <code>size</code>, and, when a direction is given, only change <code>x</code> or <code>y</code> if they stay between <code>0</code> and <code>size</code>. For example, if <code>size</code> is <code>10</code>, then <code>x</code> and <code>y</code> would have to stay between <code>0</code> and <code>10</code>. Whether the bounds (<code>0</code> and <code>size</code>) are valid is up to you (meaning it's okay to restrict to <code>1</code> to <code>9</code> when <code>size</code> is <code>10</code>).</p>
 <ol>
-<li>When you move to the <strong>left</strong>, make sure <code>x &gt; -size</code> (<strong>This requirement is satisfied in the code below!</strong>)</li>
-<li>When you move <strong>down</strong>, make sure <code>y &gt; -size</code></li>
+<li>When you move to the <strong>left</strong>, make sure <code>x &gt; 0</code> (<strong>This requirement is satisfied in the code below!</strong>)</li>
+<li>When you move <strong>down</strong>, make sure <code>y &gt; 0</code></li>
 <li>When you move <strong>right</strong>, make sure <code>x &lt; size</code></li>
 <li>When you move <strong>up</strong>, make sure <code>y &lt; size</code></li>
 </ol>
-</li>
-</ol>
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/InputNavigationGameMovieBoundsAssignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/InputNavigationGameMovieBoundsAssignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
 <blockquote>
 <p>If you have done your work correctly, then when you play this movie, the treasure will <strong>always</strong> be found, eventually!</p>
 </blockquote>
-<p>Save your assignment as <code>navigation_movie_boundaries.py</code> or fork on repl.it.</p></article></body></html>
+<p>Save your assignment as <code>navigation_movie_boundaries.py</code> or fork on repl.it.</p>
+</li>
+<li>
+<p><strong>Visualization of Movement</strong></p>
+<p>Below are a <code>create_board</code> function and a <code>pretty_print</code> function. When <code>pretty_print(create_board(size,x,y))</code> is called, a list of lists called <code>board</code> will be created and returned by <code>create_board</code>, consisting of <code>size</code> lists each with <code>size</code> elements. In <a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_6_Lists/Python6.html#two-dimensional-lists">Lesson 6</a>, we saw how a list of lists could be visualized as a grid (click the link!). The function <code>pretty_print</code> prints the board so that it looks like a grid.</p>
+<p>The square at coordinates \(x,y\) will be the element at index <code>x</code> of the list at index <code>y</code> in <code>board</code>.</p>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/NavigationPrintboard?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<p>Copy these two functions as well as your solution to the previous problem into one file or repl.it environment. Now, on each loop iteration, instead of printing <code>Moving left!</code> or <code>Moving right!</code>, call <code>pretty_print(create_board(size,x,y,10,8))</code>. This will print the board at each loop iteration, so that <em>you can watch</em> as the treasure is found.</p>
+<p>Running your code should look similar to this:</p>
+<p><div style="text-align: center;"><br />
+    <img src="gameplay.gif" width="500" alt="gameplay"/><br />
+    Correct output<br />
+</div></p>
+</li>
+</ol></article></body></html>
