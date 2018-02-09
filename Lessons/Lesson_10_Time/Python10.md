@@ -207,6 +207,6 @@ Using `random.choice` and `time.sleep`, we can turn our game into a movie:
 
 	<div style="text-align: center;">
 		<img src="gameplay.gif" width="500" alt="gameplay"/>
-		Correct output
+		Correct output: Player icon (`O`) should move on its own, and eventually reach the treasure (`X`)
 	</div>
 
