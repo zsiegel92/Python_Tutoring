@@ -24,7 +24,7 @@ She decides on a new method:
 
 This ensures that she will draw a name, over and over, until it is NOT `'Haman'`. Whew.
 
->Note that `picked == 'Haman'` may never be true, depending on the first call to `random.choice`. That means the *body* of the `while` loop may never execute. That's just fine.
+>Note that `picked == 'Haman'` may never be true, depending on the first call to `random.choice`. That means the *body* of the `while` loop may never execute. That's just fine. This code does violate the DRY principle by calling `random.choice` twice; when you write your own code, it's up to you to make your code both as readable and efficient as possible.
 
 
 

@@ -1131,7 +1131,7 @@ MathJax.Hub.Config({
 </blockquote>
 <p>This ensures that she will draw a name, over and over, until it is NOT <code>'Haman'</code>. Whew.</p>
 <blockquote>
-<p>Note that <code>picked == 'Haman'</code> may never be true, depending on the first call to <code>random.choice</code>. That means the <em>body</em> of the <code>while</code> loop may never execute. That's just fine.</p>
+<p>Note that <code>picked == 'Haman'</code> may never be true, depending on the first call to <code>random.choice</code>. That means the <em>body</em> of the <code>while</code> loop may never execute. That's just fine. This code does violate the DRY principle by calling <code>random.choice</code> twice; when you write your own code, it's up to you to make your code both as readable and efficient as possible.</p>
 </blockquote>
 <h2 id="assignments"><a name="user-content-assignments" href="#assignments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignments</h2>
 <ol>
