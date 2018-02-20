@@ -45,7 +45,21 @@ This ensures that she will draw a name, over and over, until it is NOT `'Haman'`
 
 	For the snippet on repl.it or save in a file called `forbidden_elements.py`.
 
-2. **Create a random name.**
+2. **Create a random name.** A valid name on planet Zulu has four characters, the first and third of which are consonants, and the second and fourth of which are vowels.
+
+	Examples of valid names include:
+
+	* Boxa
+	* Veru
+	* Heha
+	* Yiyi
+	* Xuxe
+
+	Create a program that randomly creates valid names from planet Zulu. You can use the lists `vowels` and `letters` to accomplish this goal.
+
+	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Randomname?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+	>Note that the lowercase letters can be obtained `chr(i)` for `i` between `97` and `123` (all keyboard characters can be found between `33` and `126`).
 
 3. **Find the maximum.** In Mathematics, a very useful concept is that of a **set**. "In mathematics, a set is a collection of distinct objects" -[Wikipedia (Set)](https://en.wikipedia.org/wiki/Set_(mathematics)).
 
