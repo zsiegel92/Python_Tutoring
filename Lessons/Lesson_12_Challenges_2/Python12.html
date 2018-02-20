@@ -1103,295 +1103,75 @@ MathJax.Hub.Config({
   showProcessingMessages: false
 });
 </script>
-<title>Python11</title></head><body><article class="markdown-body"><h1 id="python-lesson-11-characters-and-stopwatches"><a name="user-content-python-lesson-11-characters-and-stopwatches" href="#python-lesson-11-characters-and-stopwatches" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 11 - Characters and Stopwatches</h1>
+<title>Python12</title></head><body><article class="markdown-body"><h1 id="python-lesson-12-challenges"><a name="user-content-python-lesson-12-challenges" href="#python-lesson-12-challenges" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Lesson 12 - Challenges</h1>
 <p><a href="https://zsiegel92.github.io/Eitan_S/">All Lessons</a></p>
 <div class="toc">
 <ul>
-<li><a href="#python-lesson-11-characters-and-stopwatches">Python Lesson 11 - Characters and Stopwatches</a><ul>
-<li><a href="#review-letting-time-pass-with-timesleep">Review: Letting Time Pass with time.sleep</a></li>
-<li><a href="#how-to-time-durations-with-timetime">How to Time Durations with time.time</a><ul>
-<li><a href="#activity-timing-a-ball-rolling">Activity: Timing a Ball Rolling</a><ul>
-<li><a href="#materials">Materials:</a></li>
-<li><a href="#instructions">Instructions</a></li>
-</ul>
-</li>
-<li><a href="#the-current-time-timetime">The Current Time: time.time</a><ul>
-<li><a href="#timing-processes-with-timetime">Timing Processes with time.time</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#all-the-characters-chr">All the Characters: chr</a><ul>
-<li><a href="#special-characters-n-t-and-the-escape-character">Special Characters: \n, \t, and the "Escape Character" \</a><ul>
-<li><a href="#escaping-characters">Escaping Characters</a><ul>
-<li><a href="#escaping-escape-characters">Escaping Escape Characters</a></li>
-<li><a href="#quotes-between-quotes">Quotes Between Quotes</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#ascii-values-the-chr-and-ord-functions">ASCII Values: The chr and ord Functions</a><ul>
-<li><a href="#converting-between-ascii-values-and-characters">Converting Between ASCII Values and Characters</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="#python-lesson-12-challenges">Python Lesson 12 - Challenges</a><ul>
+<li><a href="#randomly-choosing-avoiding-forbidden-elements">Randomly Choosing, Avoiding Forbidden Elements</a></li>
 <li><a href="#assignments">Assignments</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2 id="review-letting-time-pass-with-timesleep"><a name="user-content-review-letting-time-pass-with-timesleep" href="#review-letting-time-pass-with-timesleep" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Review: Letting Time Pass with <code>time.sleep</code></h2>
-<p>We have used Python's <code>time</code> module (<code>import time</code>) to access the <code>time.sleep</code> function, which allows a certain number of seconds to pass.</p>
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Countingtimesleep?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<h2 id="randomly-choosing-avoiding-forbidden-elements"><a name="user-content-randomly-choosing-avoiding-forbidden-elements" href="#randomly-choosing-avoiding-forbidden-elements" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Randomly Choosing, Avoiding Forbidden Elements</h2>
+<p>Achashverosh, the King of Persia, wants to randomly choose his next viceroy (his second-in-command). He asks his wife Esther to pick for him by drawing a name from a hat. She is able to do this in private, though, so nobody will see if she puts a name back into the hat.</p>
+<p>She decides that if she draws <code>'Haman'</code>, she will put it back into the hat. Here is her algorithm:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Randomforbidden1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <blockquote>
-<p>Try changing <code>time.sleep(1)</code> to <code>time.sleep(2)</code>.</p>
+<p>Run this a few times. What names do you get?</p>
 </blockquote>
-<h2 id="how-to-time-durations-with-timetime"><a name="user-content-how-to-time-durations-with-timetime" href="#how-to-time-durations-with-timetime" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How to Time Durations with <code>time.time</code></h2>
-<h3 id="activity-timing-a-ball-rolling"><a name="user-content-activity-timing-a-ball-rolling" href="#activity-timing-a-ball-rolling" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Activity: Timing a Ball Rolling</h3>
-<blockquote>
-<p><strong>Question</strong>: Can you tell me how long it takes for a ball to roll from one side of the room to the other?</p>
-</blockquote>
-<h5 id="materials"><a name="user-content-materials" href="#materials" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Materials:</h5>
-<ul>
-<li>Ball</li>
-<li>Watch or clock</li>
-<li>Paper and Pencil</li>
-<li>Something flat</li>
-</ul>
-<h5 id="instructions"><a name="user-content-instructions" href="#instructions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Instructions</h5>
-<ol>
-<li>
-<p>Use something flat to build a small ramp across the room from a wall. Roll the ball down the ramp a few times until you can make the ball roll around the same speed every time.</p>
-</li>
-<li>
-<p><strong>If you have a stopwatch</strong>, try timing how long it takes for the ball to roll from the ramp to the closest wall. When the ball leaves the ramp, you <strong>start</strong> the stopwatch, and when it hits the wall, you <strong>stop</strong> the stopwatch. The time on the stopwatch is the duration of the roll.</p>
-</li>
-<li>
-<p><strong>Now time the roll without a stopwatch, just with a clock</strong>. You will need to keep track of the time when the ball leaves the ramp and the time when the ball hits the wall. <em>You will then have to "subtract" the times to find the number of seconds the ball was rolling.</em></p>
-</li>
-</ol>
-<blockquote>
-<p>You have a paper and pencil to help you keep track of times and do "subtraction". Have someone else roll the ball and try to get the timing right.</p>
-</blockquote>
-<h3 id="the-current-time-timetime"><a name="user-content-the-current-time-timetime" href="#the-current-time-timetime" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>The Current Time: <code>time.time</code></h3>
-<p>Just like timing the ball, we will time processes by recording the current time at the <strong>start</strong> of a process, allowing the process to run, then recording the time at the <strong>end</strong> of a process.</p>
-<p>The current time is returned by <code>time.time()</code>:</p>
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/timetime1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
-<p><strong><code>time.time</code> returns the number of seconds since the "epoch" start date</strong>, with <code>float</code> precision.</p>
-<blockquote>
-<p>"On Windows and most Unix systems, the epoch is January 1, 1970, 00:00:00 (UTC) and leap seconds are not counted towards the time in seconds since the epoch. This is commonly referred to as Unix time." -<a href="https://docs.python.org/3.6/library/time.html">Python Documentation</a></p>
-</blockquote>
-<h4 id="timing-processes-with-timetime"><a name="user-content-timing-processes-with-timetime" href="#timing-processes-with-timetime" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Timing Processes with <code>time.time</code></h4>
-<p>"Subtracting times from each other" sounds confusing. However, since <code>time.time</code> returns the current time as a number of seconds, "subtracting times" is easy!</p>
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/timetimesubtractingtimes?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p>When she uses this method, though, she still winds up with <code>'Haman'</code>! She realizes that she drew <code>'Haman'</code>, put it back in the hat, and then, unfortunately, drew <code>'Haman'</code> again!</p>
+<p>She decides on a new method:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Randomforbidden2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <blockquote>
-<p>Change <code>time.sleep(1)</code> to <code>time.sleep(2)</code>, and <code>time.sleep(x)</code> for various values of <code>x</code>.</p>
+<p>Run this a few times. What names do you get?</p>
 </blockquote>
-<p>Run this code several times and notice that a slightly different value of <code>duration</code> is obtained each time. That's because <code>time.sleep</code> causes Python to wait a very precise number of seconds, but each command also takes a small amount of time to execute, including assigning values to the variables <code>start</code> and <code>end</code>.</p>
-<p>The expression <code>str(int(duration))</code> casts the <code>float</code> variable <code>duration</code> as an <code>int</code>, <em>then casts that</em> as a <code>str</code>.</p>
-<p>Recall that <strong>casting a <code>float</code> as an <code>int</code> returns a rounded-down integer</strong>. Casting an <code>int</code> or a <code>float</code> as a <code>str</code> returns a <code>str</code> variable containing the characters representing the number.</p>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span><span class="p">(</span><span class="mf">1.9</span><span class="p">)</span>
-<span class="s">&#39;1.9&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1.9</span><span class="p">)</span>
-<span class="mi">1</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">1.9</span><span class="p">))</span>
-<span class="s">&#39;1&#39;</span>
-</pre></div>
-
-
-<h2 id="all-the-characters-chr"><a name="user-content-all-the-characters-chr" href="#all-the-characters-chr" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>All the Characters: <code>chr</code></h2>
-<p>We have iterated through integers using <code>while</code> loops, such as:</p>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="o">...</span>     <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="o">...</span>
-<span class="mi">0</span>
-<span class="mi">1</span>
-<span class="mi">2</span>
-<span class="mi">3</span>
-<span class="mi">4</span>
-</pre></div>
-
-
-<p>We have also created random <code>int</code> variables:</p>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">random</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
-<span class="mi">8</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
-<span class="mi">13</span>
-</pre></div>
-
-
+<p>This ensures that she will draw a name, over and over, until it is NOT <code>'Haman'</code>. Whew.</p>
 <blockquote>
-<p><strong>Question</strong>: What if we wanted to <em>iterate through</em> or <em>randomly generate</em> <code>str</code> variables?</p>
+<p>Note that <code>picked == 'Haman'</code> may never be true, depending on the first call to <code>random.choice</code>. That means the <em>body</em> of the <code>while</code> loop may never execute. That's just fine.</p>
 </blockquote>
-<p>We know <code>str</code> variables are made up of individual characters.</p>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;h&quot;</span> <span class="o">+</span> <span class="s">&quot;e&quot;</span> <span class="o">+</span> <span class="s">&quot;y&quot;</span> <span class="o">==</span> <span class="s">&quot;hey&quot;</span>
-<span class="bp">True</span>
-</pre></div>
-
-
-<p><strong>Iterating through or randomly generating strings can be achieved by generating individual characters.</strong></p>
-<h3 id="special-characters-n-t-and-the-escape-character"><a name="user-content-special-characters-n-t-and-the-escape-character" href="#special-characters-n-t-and-the-escape-character" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Special Characters: <code>\n</code>, <code>\t</code>, and the "Escape Character" <code>\</code></h3>
-<p>We have seen the <strong>special character</strong> <code>\n</code>, which produces a new line, and is thus called the "new line character". We have also seen the "tab character" <code>\t</code>. Python actually has many more <strong>special characters</strong>, all of which start with a <code>\</code> symbol.</p>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">The rain</span><span class="se">\n</span><span class="s">In Spain</span><span class="se">\n</span><span class="s">Falls gently</span><span class="se">\n</span><span class="s">On the plain.&quot;</span><span class="p">)</span>
-
-<span class="n">The</span> <span class="n">rain</span>
-<span class="n">In</span> <span class="n">Spain</span>
-<span class="n">Falls</span> <span class="n">gently</span>
-<span class="n">On</span> <span class="n">the</span> <span class="n">plain</span><span class="o">.</span>
-</pre></div>
-
-
-<blockquote>
-<p>A "character" in this case consists of two symbols: <code>\</code> and <code>n</code>. Python recognizes these symbols as a single character.</p>
-</blockquote>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;Tabs create</span><span class="se">\t</span><span class="s">spaces</span><span class="se">\t</span><span class="s">in strings.&quot;</span><span class="p">)</span>
-<span class="n">Tabs</span> <span class="n">create</span>     <span class="n">space</span>       <span class="ow">in</span> <span class="n">strings</span><span class="o">.</span>
-</pre></div>
-
-
-<p><em>All Python <strong>special characters</strong> start with a <code>\</code> symbol</em>. <strong>The <code>\</code> symbol is called the *escape character</strong>*. It tells Python to "escape" the usual interpretation of the following symbol.</p>
-<h4 id="escaping-characters"><a name="user-content-escaping-characters" href="#escaping-characters" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Escaping Characters</h4>
-<h5 id="escaping-escape-characters"><a name="user-content-escaping-escape-characters" href="#escaping-escape-characters" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Escaping Escape Characters</h5>
-<blockquote>
-<p><strong>Question</strong>: What if we wanted to print an escape character without escaping it, such as <code>"\n"</code>?</p>
-</blockquote>
-<p>We can <strong>escape special characters to interpret them as regular characters</strong>.</p>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
-
-
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\\</span><span class="s">n&quot;</span><span class="p">)</span>
-\<span class="n">n</span>
-</pre></div>
-
-
-<p>We can even escape the escape character itself:</p>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\\</span><span class="s">&quot;</span><span class="p">)</span>
-\
-</pre></div>
-
-
-<blockquote>
-<p>If we try to print the escape character without escaping it, we get an error, which we will understand in a moment:<br />
-    <div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">)</span>
-<span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">)</span>
-           <span class="o">^</span>
-<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">EOL</span> <span class="k">while</span> <span class="n">scanning</span> <span class="n">string</span> <span class="n">literal</span>
-</pre></div>
-<br />
-    Any string containing a <code>\</code> character <strong>must</strong> escape that character.</p>
-</blockquote>
-<h5 id="quotes-between-quotes"><a name="user-content-quotes-between-quotes" href="#quotes-between-quotes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Quotes Between Quotes</h5>
-<p>We know we can put single quotes <code>' '</code> in strings formed by double quotes <code>" "</code> and vice versa:</p>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;I said &#39;hey&#39;!&quot;</span><span class="p">)</span>
-<span class="n">I</span> <span class="n">said</span> <span class="s">&#39;hey&#39;</span><span class="err">!</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&#39;I said &quot;hey&quot;!&#39;</span><span class="p">)</span>
-<span class="n">I</span> <span class="n">said</span> <span class="s">&quot;hey&quot;</span><span class="err">!</span>
-</pre></div>
-
-
-<blockquote>
-<p><strong>Question</strong>: But what if we wanted both kinds of quotes in a string?<br />
-<strong>Answer</strong>: We can <em>escape quotes</em> to interpret them as characters!</p>
-</blockquote>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;I said </span><span class="se">\&quot;</span><span class="s">I&#39;m Zach.</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">)</span>
-<span class="n">I</span> <span class="n">said</span> <span class="s">&quot;I&#39;m Zach.&quot;</span>
-</pre></div>
-
-
-<p>If double quotes <code>" "</code> or single quotes <code>' '</code> are used to construct a string, they must be escaped within the string to include them.</p>
-<h3 id="ascii-values-the-chr-and-ord-functions"><a name="user-content-ascii-values-the-chr-and-ord-functions" href="#ascii-values-the-chr-and-ord-functions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ASCII Values: The <code>chr</code> and <code>ord</code> Functions</h3>
-<p>Python's <code>chr</code> function generates characters one by one.</p>
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/chr1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
-<blockquote>
-<p>Try calling <code>chr(i)</code> for <code>i</code> that is less than <code>32</code> or greater than <code>126</code>. You will see something like<br />
-    <div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="s">&#39;</span><span class="se">\x14</span><span class="s">&#39;</span>
-</pre></div>
-<br />
-    Because those are all special characters. All the standard characters have values between <code>32</code> and <code>126</code>, but there are <em>many</em> special characters.<br />
-    <br>"The valid range for the argument is from 0 through 1,114,111 (0x10FFFF in base 16). ValueError will be raised if i is outside that range." -<a href="https://docs.python.org/3/library/functions.html#chr">Python documentation</a></p>
-</blockquote>
-<p>There is an inverse function <code>ord</code> that gives the number of each character:</p>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">)</span>
-<span class="mi">97</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span>
-<span class="s">&#39;a&#39;</span>
-</pre></div>
-
-
-<blockquote>
-<p>The numerical code of each character is called its <strong>ASCII Value</strong> (American Standard Code for Information Interchange).<br />
-    <div style="text-align: center;"><br />
-        <img src="ASCII_Chart.png" width="300" alt="ascii"/><br />
-        <br><br />
-        "ASCII chart from an earlier-than 1972 printer manual (b1 is the least significant bit.)" -<a href="https://en.wikipedia.org/wiki/ASCII">Wikipedia (ASCII)</a><br />
-    </div></p>
-</blockquote>
-<h4 id="converting-between-ascii-values-and-characters"><a name="user-content-converting-between-ascii-values-and-characters" href="#converting-between-ascii-values-and-characters" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Converting Between ASCII Values and Characters</h4>
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/chrord?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
 <h2 id="assignments"><a name="user-content-assignments" href="#assignments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignments</h2>
 <ol>
 <li>
-<p><strong>Create a game</strong> called "Guess My Character".</p>
-<ol>
+<p><strong>Avoid forbidden choices.</strong> You go to the movies with your friends Daniel and Sarah. There are 5 movies playing: 'Black Panther', 'Peter Rabbit', 'Jumanji', 'The Post', and 'The Shape of Water'.</p>
+<p>You want to see 'Black Panther', but Daniel wants to see 'Peter Rabbit', and Sarah wants to see 'Jumanji'.</p>
+<p>You ask your dad to randomly choose a movie for you. He chooses 'The Post' (ugh, dads!). Now nobody is happy! Sarah and Daniel say together, "Nobody wants to see boring movies like 'The Post' and 'The Shape of Water'"!</p>
+<p>Create a function that does the following:</p>
+<ul>
+<li>Randomly chooses a movie from the list <code>movies = ['Black Panther', 'Peter Rabbit', 'Jumanji', 'The Post', 'The Shape of Water']</code></li>
+<li>Chooses again (over and over) as long as the choice is in <code>boring_movies = ['The Post', 'The Shape of Water']</code></li>
+</ul>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Randomforbiddenassignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<p>For the snippet on repl.it or save in a file called <code>forbidden_elements.py</code>.</p>
+</li>
 <li>
-<p>The game should start by generating a random character by generating a random integer between <code>32</code> and <code>126</code> using <code>random.randint</code> (remember to <code>import random</code>), then converting it to a <code>str</code> using <code>chr</code>:<br />
-    <div class="codehilite"><pre><span class="nb">chr</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="mi">126</span><span class="p">))</span>
+<p><strong>Create a random name.</strong></p>
+</li>
+<li>
+<p><strong>Find the maximum.</strong> In Mathematics, a very useful concept is that of a <strong>set</strong>. "In mathematics, a set is a collection of distinct objects" -<a href="https://en.wikipedia.org/wiki/Set_(mathematics)">Wikipedia (Set)</a>.</p>
+<p>A mathematical set containing the numbers \(1, 2,\) and \(3\) can be written \(\{1,2,3\}\).</p>
+<p>Unlike a Python <code>list</code>, elements of a mathematical <em>set</em> are not in any order and repeated elements are considered the same element. That is, the set \(\{1,2,3\}\) is the same as the set \(\{3,2,1\}\), which is the same as the set \(\{1,1,2,2,3,3\}\).</p>
+<p>For a given set, the <strong>maximum</strong> is the greatest element of the set. The maximum of \(\{3,2,1\}\) is \(3\).</p>
+<p><strong>Create a function called <code>maximum_element</code> that returns the maximum element of a <code>list</code> of <code>int</code> variables</strong>.</p>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Setmaximum?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<blockquote>
+<p>Remember that to iterate through the elements of a list, we can use a <code>while</code> loop or a <code>for</code> loop:<br />
+    <div class="codehilite"><pre><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+<br />
+    or<br />
+    <div class="codehilite"><pre><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">thing</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">thing</span><span class="p">)</span>
 </pre></div>
 </p>
-</li>
-<li>
-<p>The game should then ask for the user to input a character using <code>input()</code> (which returns a <code>str</code>) until the user inputs the correct character.</p>
-</li>
-<li>
-<p>If the ASCII value of a guess is too low, the game should print <code>ASCII value too low!</code>; If the ASCII value is too high, the game should print <code>ASCII value too high!</code>.</p>
-</li>
-<li>
-<p>Your game should print a list of <strong>all</strong> ASCII characters at some point so that the user knows which characters are "too low" or "too high".</p>
-<p>You may use the following snippets of helper code for this part:<br />
-<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Guessmycharacterhelpers?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
-</li>
-</ol>
-<p>Use this "Guess my Number" game as a starting point:</p>
-<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Guessmynumberforguessmycharacter?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
-<p>Save your work as <code>guess_my_character.py</code> or fork the snippets above on repl.it.</p>
-</li>
-<li>
-<p>Time how long it takes to "crack" a safe! Note that this isn't the same process it takes to crack a real password, because a safe-cracker knows when they get an individual number/letter correct. A password-cracker has to guess the whole password at once.</p>
-<p>Below is a password cracker. Use the <code>time.time</code> function from this lesson to time how long it takes to crack different passwords!</p>
-<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Guessmywordtiming?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
-<p>Save your work as <code>guess_my_word_timer.py</code> or fork the snippets above on repl.it.</p>
-</li>
-<li>
-<p>Build a "Guess my Character" bot that plays the game from Assignment 1 (rather than using <code>input()</code>). The bot should use binary search to make optimal guesses.</p>
-<p>Note that the average of two numbers is the number directly between them. To find the average of two numbers, we can add them and divide by two:</p>
-<p>\[\text{Average of 5 and 9} = \frac{5 + 9}{2} = \frac{14}{2} = 7\]</p>
-<p>and</p>
-<p>\[\text{Average of $x$ and $y$} = \frac{x + y}{2}\]</p>
-<p>In Python we can find the average using the following function:</p>
-<div class="codehilite"><pre><span class="k">def</span> <span class="nf">avg</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">int</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-
-<p>which we call as follows:</p>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">avg</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
-<span class="mi">7</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">avg</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-<span class="mi">50</span>
-</pre></div>
-
-
-<p>Binary search always guesses the number directly between the two bounds we know our number is between.</p>
+</blockquote>
 </li>
 </ol></article></body></html>

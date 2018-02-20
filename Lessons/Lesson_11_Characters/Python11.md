@@ -259,7 +259,7 @@ There is an inverse function `ord` that gives the number of each character:
 
 	and
 
-	\\[\text{Average of x and y} = \frac{x + y}{2}\\]
+	\\[\text{Average of $x$ and $y$} = \frac{x + y}{2}\\]
 
 	In Python we can find the average using the following function:
 
