@@ -163,9 +163,9 @@ This program generates random Math facts:
 
 	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Dicegame?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-	>Use either `random.choice([1,2,3,4,5,6])` or `random.randint(1,6)` to randomly generate a random number between one and six.
-		Remember the `%` operator gives the *remainder* when one number is divided by another.
-		You may need both `if` statements and `while` loops.
+	>Remember the `%` operator gives the *remainder* when one number is divided by another.
+		Remember that **even** numbers are numbers whose remainder when divided by \\(2\\) is \\(0\\).
+		You may need `if` statements and `while` loops.
 
 	Fork the snippet on repl.it or save your work in a file `dice_game.py`.
 
