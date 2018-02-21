@@ -123,7 +123,7 @@ This program generates random Math facts:
 
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Randommathfacts?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
->Notice that no integer is divisible by an integer that is greater than it! If \\(B\\) is greater than \\(A\\), then the remainder of \\(\frac\{A\}\{B\}\\) is \\(A\\). Try this:
+>Notice that no positive integer is divisible by an integer that is greater than it! If \\(B\\) is greater than \\(A\\), then the remainder of \\(\frac\{A\}\{B\}\\) is \\(A\\). Try this:
 	```python
 	>>> 5 % 10
 	5
