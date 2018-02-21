@@ -1329,15 +1329,16 @@ MathJax.Hub.Config({
 <p><strong>Create a random name.</strong> A valid name on planet Zulu has four characters, the first and third of which are consonants, and the second and fourth of which are vowels.</p>
 <p>Examples of valid names include:</p>
 <ul>
-<li>Boxa</li>
-<li>Veru</li>
-<li>Heha</li>
-<li>Yiyi</li>
-<li>Xuxe</li>
+<li><code>Boxa</code></li>
+<li><code>Veru</code></li>
+<li><code>Heha</code></li>
+<li><code>Yiyi</code></li>
+<li><code>Xuxe</code></li>
 </ul>
 <p>Create a program that randomly creates valid names from planet Zulu.</p>
-<p>You may use the following function to help:</p>
-<p><div class="codehilite"><pre><span class="k">def</span> <span class="nf">make_letters</span><span class="p">():</span>
+<ul>
+<li>You may use the following function to help:<br />
+    <div class="codehilite"><pre><span class="k">def</span> <span class="nf">make_letters</span><span class="p">():</span>
     <span class="n">letters_list</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">97</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">123</span><span class="p">:</span>
@@ -1345,26 +1346,26 @@ MathJax.Hub.Config({
         <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">letters_list</span>
 </pre></div>
-<br />
-Now, you can use lists called <code>vowels</code> and <code>letters</code> to accomplish this goal:</p>
-<div class="codehilite"><pre><span class="n">vowels</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;e&#39;</span><span class="p">,</span><span class="s">&#39;i&#39;</span><span class="p">,</span><span class="s">&#39;o&#39;</span><span class="p">,</span><span class="s">&#39;u&#39;</span><span class="p">]</span>
+</li>
+<li>You can use lists called <code>vowels</code> and <code>letters</code> to accomplish this goal:<br />
+    <div class="codehilite"><pre><span class="n">vowels</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;e&#39;</span><span class="p">,</span><span class="s">&#39;i&#39;</span><span class="p">,</span><span class="s">&#39;o&#39;</span><span class="p">,</span><span class="s">&#39;u&#39;</span><span class="p">]</span>
 <span class="n">letters</span> <span class="o">=</span> <span class="n">make_letters</span><span class="p">()</span>
 </pre></div>
-
-
-<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Randomname?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
-<blockquote>
-<p>Note that the lowercase letters can be obtained <code>chr(i)</code> for <code>i</code> between <code>97</code> and <code>123</code> (all keyboard characters can be found between <code>33</code> and <code>126</code>).</p>
-</blockquote>
-<p>Picking a random letter amounts to the following:</p>
-<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+</li>
+<li>Now, picking a random letter or vowel amounts to the following:<br />
+    <div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
 <span class="s">&#39;v&#39;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">vowels</span><span class="p">)</span>
 <span class="s">&#39;o&#39;</span>
 </pre></div>
-
-
+</li>
+</ul>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Randomname?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<blockquote>
+<p>Note that the lowercase letters can be obtained <code>chr(i)</code> for <code>i</code> between <code>97</code> and <code>123</code> (all keyboard characters can be found between <code>33</code> and <code>126</code>).</p>
+</blockquote>
+<p>Fork the snippet on repl.it or save your work in a file called <code>zulu_names.py</code>.</p>
 </li>
 <li>
 <p><strong>Find the maximum.</strong> In Mathematics, a very useful concept is that of a <strong>set</strong>. "In mathematics, a set is a collection of distinct objects" -<a href="https://en.wikipedia.org/wiki/Set_(mathematics)">Wikipedia (Set)</a>.</p>
@@ -1389,5 +1390,9 @@ Now, you can use lists called <code>vowels</code> and <code>letters</code> to ac
 </pre></div>
 </p>
 </blockquote>
+<div class="codehilite"><pre>Fork the snippet on repl.it or save your work in a file called `maximum.py`.
+</pre></div>
+
+
 </li>
 </ol></article></body></html>
