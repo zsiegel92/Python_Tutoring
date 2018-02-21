@@ -1136,6 +1136,33 @@ MathJax.Hub.Config({
 <h2 id="assignments"><a name="user-content-assignments" href="#assignments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignments</h2>
 <ol>
 <li>
+<p><strong>Dice game.</strong> You are playing a dice game that goes as follows:</p>
+<ul>
+<li>You roll two 6-sided dice. The game prints what you rolled, like <code>You rolled 1 and 3</code></li>
+<li>If any of the dice come up as a 1, you roll those dice again, over and over until you don't roll a 1.</li>
+<li>If the sum of the dice is even, you win, and the game prints <code>You win!</code></li>
+<li>If the sum of the dice is odd, you lose, and the game prints <code>You lose!</code></li>
+</ul>
+<p>Use either <code>random.choice([1,2,3,4,5,6])</code> or <code>random.randint(1,6)</code> to randomly generate a random number between one and six.</p>
+<p>You may need both <code>if</code> statements and <code>while</code> loops.</p>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Dicegame?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<p>For the snippet on repl.it or save your work in a file <code>dice_game.py</code>.</p>
+</li>
+<li>
+<p><strong>More difficult dice game.</strong></p>
+<ul>
+<li>You roll three 6-sided dice. The game prints what you rolled, like <code>You rolled 1, 2 and 3</code></li>
+<li>If any of the dice come up as a 1, you roll those dice again, over and over until you don't roll a 1.</li>
+<li>If exactly one of the dice comes up 4, you win no matter what the other dice say!</li>
+<li>If exactly two of the dice come up 4, you lose.</li>
+<li>If exactly three of the dice come up 4, you win!</li>
+<li>If the sum of the dice is even, you win!</li>
+<li>If the sum of the dice is odd, you lose.</li>
+</ul>
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Dicegameadvanced?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<p>For the snippet on repl.it or save your work in a file <code>dice_game_advanced.py</code>.</p>
+</li>
+<li>
 <p><strong>Avoid forbidden choices.</strong> You go to the movies with your friends Daniel and Sarah. There are 5 movies playing: 'Black Panther', 'Peter Rabbit', 'Jumanji', 'The Post', and 'The Shape of Water'.</p>
 <p>You want to see 'Black Panther', but Daniel wants to see 'Peter Rabbit', and Sarah wants to see 'Jumanji'.</p>
 <p>You ask your dad to randomly choose a movie for you. He chooses 'The Post' (ugh, dads!). Now nobody is happy! Sarah and Daniel say together, "Nobody wants to see boring movies like 'The Post' and 'The Shape of Water'"!</p>

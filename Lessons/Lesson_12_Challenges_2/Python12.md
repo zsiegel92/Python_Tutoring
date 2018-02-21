@@ -30,7 +30,37 @@ This ensures that she will draw a name, over and over, until it is NOT `'Haman'`
 
 ## Assignments
 
-1. **Avoid forbidden choices.** You go to the movies with your friends Daniel and Sarah. There are 5 movies playing: 'Black Panther', 'Peter Rabbit', 'Jumanji', 'The Post', and 'The Shape of Water'.
+1. **Dice game.** You are playing a dice game that goes as follows:
+
+	* You roll two 6-sided dice. The game prints what you rolled, like `You rolled 1 and 3`
+	* If any of the dice come up as a 1, you roll those dice again, over and over until you don't roll a 1.
+	* If the sum of the dice is even, you win, and the game prints `You win!`
+	* If the sum of the dice is odd, you lose, and the game prints `You lose!`
+
+
+	Use either `random.choice([1,2,3,4,5,6])` or `random.randint(1,6)` to randomly generate a random number between one and six.
+
+	You may need both `if` statements and `while` loops.
+
+	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Dicegame?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+	For the snippet on repl.it or save your work in a file `dice_game.py`.
+
+2. **More difficult dice game.**
+
+	* You roll three 6-sided dice. The game prints what you rolled, like `You rolled 1, 2 and 3`
+	* If any of the dice come up as a 1, you roll those dice again, over and over until you don't roll a 1.
+	* If exactly one of the dice comes up 4, you win no matter what the other dice say!
+	* If exactly two of the dice come up 4, you lose.
+	* If exactly three of the dice come up 4, you win!
+	* If the sum of the dice is even, you win!
+	* If the sum of the dice is odd, you lose.
+
+	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Dicegameadvanced?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+	For the snippet on repl.it or save your work in a file `dice_game_advanced.py`.
+
+2. **Avoid forbidden choices.** You go to the movies with your friends Daniel and Sarah. There are 5 movies playing: 'Black Panther', 'Peter Rabbit', 'Jumanji', 'The Post', and 'The Shape of Water'.
 
 	You want to see 'Black Panther', but Daniel wants to see 'Peter Rabbit', and Sarah wants to see 'Jumanji'.
 
@@ -45,7 +75,7 @@ This ensures that she will draw a name, over and over, until it is NOT `'Haman'`
 
 	For the snippet on repl.it or save in a file called `forbidden_elements.py`.
 
-2. **Create a random name.** A valid name on planet Zulu has four characters, the first and third of which are consonants, and the second and fourth of which are vowels.
+3. **Create a random name.** A valid name on planet Zulu has four characters, the first and third of which are consonants, and the second and fourth of which are vowels.
 
 	Examples of valid names include:
 
@@ -61,7 +91,7 @@ This ensures that she will draw a name, over and over, until it is NOT `'Haman'`
 
 	>Note that the lowercase letters can be obtained `chr(i)` for `i` between `97` and `123` (all keyboard characters can be found between `33` and `126`).
 
-3. **Find the maximum.** In Mathematics, a very useful concept is that of a **set**. "In mathematics, a set is a collection of distinct objects" -[Wikipedia (Set)](https://en.wikipedia.org/wiki/Set_(mathematics)).
+4. **Find the maximum.** In Mathematics, a very useful concept is that of a **set**. "In mathematics, a set is a collection of distinct objects" -[Wikipedia (Set)](https://en.wikipedia.org/wiki/Set_(mathematics)).
 
 	A mathematical set containing the numbers \\(1, 2,\\) and \\(3\\) can be written \\(\\{1,2,3\\}\\).
 
