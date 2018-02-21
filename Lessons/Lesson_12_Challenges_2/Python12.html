@@ -1109,6 +1109,22 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="#python-lesson-12-challenges">Python Lesson 12 - Challenges</a><ul>
 <li><a href="#randomly-choosing-avoiding-forbidden-elements">Randomly Choosing, Avoiding Forbidden Elements</a></li>
+<li><a href="#divisible-by-the-remainder-operator">"Divisible By": The Remainder Operator %</a><ul>
+<li><a href="#dividend-divisor-and-quotient">Dividend, Divisor, and Quotient</a></li>
+<li><a href="#remainder">Remainder</a><ul>
+<li><a href="#divisible-by">"Divisible By"</a></li>
+<li><a href="#even-and-odd-numbers">Even and Odd Numbers</a></li>
+</ul>
+</li>
+<li><a href="#the-python-modulus-operator">The Python Modulus Operator: %</a><ul>
+<li><a href="#testing-for-divisibility-using">Testing for Divisibility Using %</a><ul>
+<li><a href="#random-math-facts">Random Math Facts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#assignments">Assignments</a></li>
 </ul>
 </li>
@@ -1133,8 +1149,135 @@ MathJax.Hub.Config({
 <blockquote>
 <p>Note that <code>picked == 'Haman'</code> may never be true, depending on the first call to <code>random.choice</code>. That means the <em>body</em> of the <code>while</code> loop may never execute. That's just fine. This code does violate the DRY principle by calling <code>random.choice</code> twice; when you write your own code, it's up to you to make your code both as readable and efficient as possible.</p>
 </blockquote>
+<h2 id="divisible-by-the-remainder-operator"><a name="user-content-divisible-by-the-remainder-operator" href="#divisible-by-the-remainder-operator" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>"Divisible By": The Remainder Operator <code>%</code></h2>
+<h3 id="dividend-divisor-and-quotient"><a name="user-content-dividend-divisor-and-quotient" href="#dividend-divisor-and-quotient" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dividend, Divisor, and Quotient</h3>
+<p>Dividing is an operation on two numbers, a <em>dividend</em> and a <em>divisor</em>.</p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\[\frac{\overbrace{10}^\text{dividend}}{\underbrace{2}_\text{divisor}} = \underbrace{5}_\text{quotient} \\ \Updownarrow \\ \underbrace{10}_\text{Dividend} = \underbrace{2}_\text{Divisor}\times \underbrace{5}_\text{Quotient}\]</td>
+<td>\[\frac{\overbrace{A}^\text{dividend}}{\underbrace{B}_\text{divisor}} = \underbrace{C}_\text{quotient} \\ \Updownarrow \\ \underbrace{A}_\text{Dividend} = \underbrace{B}_\text{Divisor}\times \underbrace{C}_\text{Quotient} \]</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>"The division of two <a href="https://en.wikipedia.org/wiki/Integer">integers</a> is the process of calculating the number of times one number [<strong>the divisor</strong>] is contained within another one [<strong>the dividend</strong>]." -<a href="https://en.wikipedia.org/wiki/Division_(mathematics)">Wikipedia (Division)</a>.</p>
+</blockquote>
+<div style="text-align: center;">
+    <br>
+    <img src="Divide20by4.png" width="200" alt="divide20by4"/>
+    <br>
+    "20 ÷ 5 = 4, because 20 apples contain five apples four times...One can also say that 20 ÷ 5 = 4 because when 20 apples are divided into 5 equal sets of apples, then there are 4 in each such set." -[Wikipedia (Division)](https://en.wikipedia.org/wiki/Division_(mathematics))
+</div>
+
+<h3 id="remainder"><a name="user-content-remainder" href="#remainder" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Remainder</h3>
+<p>When you divide integers, you always have a <em>quotient</em> and a <em>remainder</em>.</p>
+<div style="text-align: center;">
+    <img src="remainder_pups.png" width="200" alt="remainder_pups"/><img src="remainder_balls.jpg" width="200" alt="remainder_balls"/>
+    <br>
+    A *quotient* is the whole number of times a *divisor* "fits into" a *dividend*. The *remainder* is the part of the dividend that is "left over" after the divisor has fit in.
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\[\frac{\overbrace{11}^\text{dividend}}{\underbrace{5}_\text{divisor}} = \underbrace{2}_\text{quotient} r \underbrace{1}_\text{remainder} \\ \Updownarrow \\ \underbrace{11}_\text{Dividend} = (\underbrace{5}_\text{Divisor}\times \underbrace{2}_\text{Quotient}) + \underbrace{1}_\text{remainder}\]</td>
+<td>\[\frac{\overbrace{A}^\text{dividend}}{\underbrace{B}_\text{divisor}} = \underbrace{C}_\text{quotient} r \underbrace{D}_\text{remainder}\\ \Updownarrow \\ \underbrace{A}_\text{Dividend} = (\underbrace{B}_\text{Divisor}\times \underbrace{C}_\text{Quotient}) + \underbrace{D}_\text{remainder}\]</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The remainder is <em>always</em> less than the divisor.</p>
+</blockquote>
+<h4 id="divisible-by"><a name="user-content-divisible-by" href="#divisible-by" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>"Divisible By"</h4>
+<p>We say "\(A\) is <strong>divisible by</strong> \(B\)" if the remainder of \(\frac{A}{B}\) is \(0\).</p>
+<p>Examples:</p>
+<ul>
+<li>\(10\) is <strong>divisible by</strong> \(2\) because \(\frac{10}{2} = 5 \ r \ 0\)</li>
+<li>\(12\) is not <strong>divisible by</strong> \(5\) because \(\frac{12}{5} = 2 \ r \ 2\)</li>
+<li>\(13\) is not <strong>divisible by</strong> \(2\) because \(\frac{13}{2} = 6 \ r \ 1\)</li>
+</ul>
+<h4 id="even-and-odd-numbers"><a name="user-content-even-and-odd-numbers" href="#even-and-odd-numbers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Even and Odd Numbers</h4>
+<p>We say a number is <strong>even</strong> if it is <strong>divisible by</strong> \(2\). We say a number is <strong>odd</strong> if it is not even.</p>
+<p>Examples:</p>
+<ul>
+<li>\(12\) is <strong>even</strong> because \(\frac{12}{2} = 6 \ r \ 0\) and so \(12\) is <strong>divisible by</strong> \(2\)</li>
+<li>\(13\) is <strong>odd</strong> because \(\frac{13}{2} = 6 \ r \ 1\) and so \(13\) is not <strong>divisible by</strong> \(2\), and thus is not even</li>
+</ul>
+<h3 id="the-python-modulus-operator"><a name="user-content-the-python-modulus-operator" href="#the-python-modulus-operator" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>The Python Modulus Operator: <code>%</code></h3>
+<p>To find out whether one number is <strong>divisible by</strong> another, we need to know their remainder. The remainder is very useful in other cases as well.</p>
+<p>To find the remainder of two Python <code>int</code> variables, we can use the <code>%</code> operator:</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">11</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">2</span>
+</pre></div>
+
+
+<blockquote>
+<p>The remainder when \(5\) is divided by \(2\) is \(1\) because \(\frac{5}{2} = 2 \ r \ 1\).<br />
+    The remainder when \(11\) is divided by \(3\) is \(2\) because \(\frac{11}{3} = 3 \ r \ 2\).</p>
+</blockquote>
+<h4 id="testing-for-divisibility-using"><a name="user-content-testing-for-divisibility-using" href="#testing-for-divisibility-using" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Testing for Divisibility Using <code>%</code></h4>
+<p>To test whether one Python <code>int</code> is divisible by another, we check whether the remainder is <code>==</code> to <code>0</code>.</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">12</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">11</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="bp">False</span>
+</pre></div>
+
+
+<blockquote>
+<p>\(12\) is divisible by \(2\) because the remainder when \(12\) is divided by \(2\) is \(0\).<br />
+    \(11\) is not divisible by \(2\) because the remainder when \(11\) is divided by \(2\) is \(1\).</p>
+</blockquote>
+<p>To test whether an <code>int</code> is <strong>even</strong>, we check that it is divisible by 2:</p>
+<div class="codehilite"><pre><span class="k">def</span> <span class="nf">is_even</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+
+
+<h5 id="random-math-facts"><a name="user-content-random-math-facts" href="#random-math-facts" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Random Math Facts</h5>
+<p>This program generates random Math facts:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Randommathfacts?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>Notice that no integer is divisible by an integer that is greater than it! If \(B\) is greater than \(A\), then the remainder of \(\frac{A}{B}\) is \(A\). Try this:<br />
+    <div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">10</span>
+<span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">23</span> <span class="o">%</span> <span class="mi">50</span>
+<span class="mi">23</span>
+</pre></div>
+</p>
+</blockquote>
 <h2 id="assignments"><a name="user-content-assignments" href="#assignments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignments</h2>
 <ol>
+<li>
+<p><strong>First dice game.</strong> Write a program that simulates a dice roll by randomly generating two numbers between 1 and 6. The program should then print what you rolled, as well as the sum total of the two dice.</p>
+<p>The output should look like this:</p>
+<div class="codehilite"><pre><span class="n">You</span> <span class="n">rolled</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">4</span>
+<span class="n">The</span> <span class="n">total</span> <span class="ow">is</span> <span class="mi">5</span>
+</pre></div>
+
+
+<p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Dicegamefirst?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
+<blockquote>
+<p>Use either <code>random.choice([1,2,3,4,5,6])</code> or <code>random.randint(1,6)</code> to randomly generate a random number between one and six.</p>
+</blockquote>
+<p>Fork the snippet on repl.it or save your work in a file <code>dice_game_first.py</code>.</p>
+</li>
 <li>
 <p><strong>Dice game.</strong> You are playing a dice game that goes as follows:</p>
 <ul>
@@ -1143,10 +1286,13 @@ MathJax.Hub.Config({
 <li>If the sum of the dice is even, you win, and the game prints <code>You win!</code></li>
 <li>If the sum of the dice is odd, you lose, and the game prints <code>You lose!</code></li>
 </ul>
-<p>Use either <code>random.choice([1,2,3,4,5,6])</code> or <code>random.randint(1,6)</code> to randomly generate a random number between one and six.</p>
-<p>You may need both <code>if</code> statements and <code>while</code> loops.</p>
 <p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Dicegame?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
-<p>For the snippet on repl.it or save your work in a file <code>dice_game.py</code>.</p>
+<blockquote>
+<p>Use either <code>random.choice([1,2,3,4,5,6])</code> or <code>random.randint(1,6)</code> to randomly generate a random number between one and six.<br />
+    Remember the <code>%</code> operator gives the <em>remainder</em> when one number is divided by another.<br />
+    You may need both <code>if</code> statements and <code>while</code> loops.</p>
+</blockquote>
+<p>Fork the snippet on repl.it or save your work in a file <code>dice_game.py</code>.</p>
 </li>
 <li>
 <p><strong>More difficult dice game.</strong></p>
@@ -1160,7 +1306,7 @@ MathJax.Hub.Config({
 <li>If the sum of the dice is odd, you lose.</li>
 </ul>
 <p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Dicegameadvanced?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
-<p>For the snippet on repl.it or save your work in a file <code>dice_game_advanced.py</code>.</p>
+<p>Fork the snippet on repl.it or save your work in a file <code>dice_game_advanced.py</code>.</p>
 </li>
 <li>
 <p><strong>Avoid forbidden choices.</strong> You go to the movies with your friends Daniel and Sarah. There are 5 movies playing: 'Black Panther', 'Peter Rabbit', 'Jumanji', 'The Post', and 'The Shape of Water'.</p>
@@ -1172,7 +1318,7 @@ MathJax.Hub.Config({
 <li>Chooses again (over and over) as long as the choice is in <code>boring_movies = ['The Post', 'The Shape of Water']</code></li>
 </ul>
 <p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Randomforbiddenassignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>
-<p>For the snippet on repl.it or save in a file called <code>forbidden_elements.py</code>.</p>
+<p>Fork the snippet on repl.it or save in a file called <code>forbidden_elements.py</code>.</p>
 </li>
 <li>
 <p><strong>Create a random name.</strong> A valid name on planet Zulu has four characters, the first and third of which are consonants, and the second and fourth of which are vowels.</p>

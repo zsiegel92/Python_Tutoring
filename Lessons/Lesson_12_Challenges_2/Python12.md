@@ -27,26 +27,144 @@ This ensures that she will draw a name, over and over, until it is NOT `'Haman'`
 >Note that `picked == 'Haman'` may never be true, depending on the first call to `random.choice`. That means the *body* of the `while` loop may never execute. That's just fine. This code does violate the DRY principle by calling `random.choice` twice; when you write your own code, it's up to you to make your code both as readable and efficient as possible.
 
 
+## "Divisible By": The Remainder Operator `%`
+
+### Dividend, Divisor, and Quotient
+
+Dividing is an operation on two numbers, a *dividend* and a *divisor*.
+
+|Example|Definition|
+|---|---|
+|\\[\frac\{\overbrace\{10\}^\text\{dividend\}\}\{\underbrace\{2\}\_\text\{divisor\}\} = \underbrace\{5\}\_\text\{quotient\} \\\\ \Updownarrow \\\\ \underbrace\{10\}\_\text\{Dividend\} = \underbrace\{2\}\_\text\{Divisor\}\times \underbrace\{5\}\_\text\{Quotient\}\\]|\\[\frac\{\overbrace\{A\}^\text\{dividend\}\}\{\underbrace\{B\}\_\text\{divisor\}\} = \underbrace\{C\}\_\text\{quotient\} \\\\ \Updownarrow \\\\ \underbrace\{A\}\_\text\{Dividend\} = \underbrace\{B\}\_\text\{Divisor\}\times \underbrace\{C\}\_\text\{Quotient\} \\]|
+
+>"The division of two [integers](https://en.wikipedia.org/wiki/Integer) is the process of calculating the number of times one number [**the divisor**] is contained within another one [**the dividend**]." -[Wikipedia (Division)](https://en.wikipedia.org/wiki/Division_(mathematics)).
+
+<div style="text-align: center;">
+	<br>
+	<img src="Divide20by4.png" width="200" alt="divide20by4"/>
+	<br>
+	"20 ÷ 5 = 4, because 20 apples contain five apples four times...One can also say that 20 ÷ 5 = 4 because when 20 apples are divided into 5 equal sets of apples, then there are 4 in each such set." -[Wikipedia (Division)](https://en.wikipedia.org/wiki/Division_(mathematics))
+</div>
+
+### Remainder
+
+When you divide integers, you always have a *quotient* and a *remainder*.
+
+<div style="text-align: center;">
+	<img src="remainder_pups.png" width="200" alt="remainder_pups"/><img src="remainder_balls.jpg" width="200" alt="remainder_balls"/>
+	<br>
+	A *quotient* is the whole number of times a *divisor* "fits into" a *dividend*. The *remainder* is the part of the dividend that is "left over" after the divisor has fit in.
+</div>
+
+
+|Example|Definition|
+|---|---|
+|\\[\frac\{\overbrace\{11\}^\text\{dividend\}\}\{\underbrace\{5\}\_\text\{divisor\}\} = \underbrace\{2\}\_\text\{quotient\} r \underbrace\{1\}\_\text\{remainder\} \\\\ \Updownarrow \\\\ \underbrace\{11\}\_\text\{Dividend\} = (\underbrace\{5\}\_\text\{Divisor\}\times \underbrace\{2\}\_\text\{Quotient\}) + \underbrace\{1\}\_\text\{remainder\}\\]|\\[\frac\{\overbrace\{A\}^\text\{dividend\}\}\{\underbrace\{B\}\_\text\{divisor\}\} = \underbrace\{C\}\_\text\{quotient\} r \underbrace\{D\}\_\text\{remainder\}\\\\ \Updownarrow \\\\ \underbrace\{A\}\_\text\{Dividend\} = (\underbrace\{B\}\_\text\{Divisor\}\times \underbrace\{C\}\_\text\{Quotient\}) + \underbrace\{D\}\_\text\{remainder\}\\]|
+
+>The remainder is *always* less than the divisor.
+
+#### "Divisible By"
+
+We say "\\(A\\) is **divisible by** \\(B\\)" if the remainder of \\(\frac\{A\}\{B\}\\) is \\(0\\).
+
+Examples:
+
+* \\(10\\) is **divisible by** \\(2\\) because \\(\frac\{10\}\{2\} = 5 \\ r \\ 0\\)
+* \\(12\\) is not **divisible by** \\(5\\) because \\(\frac\{12\}\{5\} = 2 \\ r \\ 2\\)
+* \\(13\\) is not **divisible by** \\(2\\) because \\(\frac\{13\}\{2\} = 6 \\ r \\ 1\\)
+
+#### Even and Odd Numbers
+
+We say a number is **even** if it is **divisible by** \\(2\\). We say a number is **odd** if it is not even.
+
+Examples:
+
+* \\(12\\) is **even** because \\(\frac\{12\}\{2\} = 6 \\ r \\ 0\\) and so \\(12\\) is **divisible by** \\(2\\)
+* \\(13\\) is **odd** because \\(\frac\{13\}\{2\} = 6 \\ r \\ 1\\) and so \\(13\\) is not **divisible by** \\(2\\), and thus is not even
+
+### The Python Modulus Operator: `%`
+
+To find out whether one number is **divisible by** another, we need to know their remainder. The remainder is very useful in other cases as well.
+
+To find the remainder of two Python `int` variables, we can use the `%` operator:
+
+```python
+>>> 5 % 2
+1
+>>> 11 % 3
+2
+```
+>The remainder when \\(5\\) is divided by \\(2\\) is \\(1\\) because \\(\frac\{5\}\{2\} = 2 \\ r \\ 1\\).
+	The remainder when \\(11\\) is divided by \\(3\\) is \\(2\\) because \\(\frac\{11\}\{3\} = 3 \\ r \\ 2\\).
+
+#### Testing for Divisibility Using `%`
+
+To test whether one Python `int` is divisible by another, we check whether the remainder is `==` to `0`.
+
+```python
+>>> (12 % 2) == 0
+True
+>>> (11 % 2) == 0
+False
+```
+>\\(12\\) is divisible by \\(2\\) because the remainder when \\(12\\) is divided by \\(2\\) is \\(0\\).
+	\\(11\\) is not divisible by \\(2\\) because the remainder when \\(11\\) is divided by \\(2\\) is \\(1\\).
+
+To test whether an `int` is **even**, we check that it is divisible by 2:
+
+```python
+def is_even(number):
+	return (number % 2) == 0
+```
+
+##### Random Math Facts
+
+This program generates random Math facts:
+
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Randommathfacts?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+>Notice that no integer is divisible by an integer that is greater than it! If \\(B\\) is greater than \\(A\\), then the remainder of \\(\frac\{A\}\{B\}\\) is \\(A\\). Try this:
+	```python
+	>>> 5 % 10
+	5
+	>>> 23 % 50
+	23
+	```
+
 
 ## Assignments
 
-1. **Dice game.** You are playing a dice game that goes as follows:
+1. **First dice game.** Write a program that simulates a dice roll by randomly generating two numbers between 1 and 6. The program should then print what you rolled, as well as the sum total of the two dice.
+
+	The output should look like this:
+
+	```python
+	You rolled 1 and 4
+	The total is 5
+	```
+
+	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Dicegamefirst?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+	>Use either `random.choice([1,2,3,4,5,6])` or `random.randint(1,6)` to randomly generate a random number between one and six.
+
+	Fork the snippet on repl.it or save your work in a file `dice_game_first.py`.
+
+2. **Dice game.** You are playing a dice game that goes as follows:
 
 	* You roll two 6-sided dice. The game prints what you rolled, like `You rolled 1 and 3`
 	* If any of the dice come up as a 1, you roll those dice again, over and over until you don't roll a 1.
 	* If the sum of the dice is even, you win, and the game prints `You win!`
 	* If the sum of the dice is odd, you lose, and the game prints `You lose!`
 
-
-	Use either `random.choice([1,2,3,4,5,6])` or `random.randint(1,6)` to randomly generate a random number between one and six.
-
-	You may need both `if` statements and `while` loops.
-
 	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Dicegame?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-	For the snippet on repl.it or save your work in a file `dice_game.py`.
+	>Use either `random.choice([1,2,3,4,5,6])` or `random.randint(1,6)` to randomly generate a random number between one and six.
+		Remember the `%` operator gives the *remainder* when one number is divided by another.
+		You may need both `if` statements and `while` loops.
 
-2. **More difficult dice game.**
+	Fork the snippet on repl.it or save your work in a file `dice_game.py`.
+
+3. **More difficult dice game.**
 
 	* You roll three 6-sided dice. The game prints what you rolled, like `You rolled 1, 2 and 3`
 	* If any of the dice come up as a 1, you roll those dice again, over and over until you don't roll a 1.
@@ -58,9 +176,9 @@ This ensures that she will draw a name, over and over, until it is NOT `'Haman'`
 
 	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Dicegameadvanced?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-	For the snippet on repl.it or save your work in a file `dice_game_advanced.py`.
+	Fork the snippet on repl.it or save your work in a file `dice_game_advanced.py`.
 
-2. **Avoid forbidden choices.** You go to the movies with your friends Daniel and Sarah. There are 5 movies playing: 'Black Panther', 'Peter Rabbit', 'Jumanji', 'The Post', and 'The Shape of Water'.
+4. **Avoid forbidden choices.** You go to the movies with your friends Daniel and Sarah. There are 5 movies playing: 'Black Panther', 'Peter Rabbit', 'Jumanji', 'The Post', and 'The Shape of Water'.
 
 	You want to see 'Black Panther', but Daniel wants to see 'Peter Rabbit', and Sarah wants to see 'Jumanji'.
 
@@ -73,9 +191,9 @@ This ensures that she will draw a name, over and over, until it is NOT `'Haman'`
 
 	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Randomforbiddenassignment?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-	For the snippet on repl.it or save in a file called `forbidden_elements.py`.
+	Fork the snippet on repl.it or save in a file called `forbidden_elements.py`.
 
-3. **Create a random name.** A valid name on planet Zulu has four characters, the first and third of which are consonants, and the second and fourth of which are vowels.
+5. **Create a random name.** A valid name on planet Zulu has four characters, the first and third of which are consonants, and the second and fourth of which are vowels.
 
 	Examples of valid names include:
 
@@ -91,7 +209,7 @@ This ensures that she will draw a name, over and over, until it is NOT `'Haman'`
 
 	>Note that the lowercase letters can be obtained `chr(i)` for `i` between `97` and `123` (all keyboard characters can be found between `33` and `126`).
 
-4. **Find the maximum.** In Mathematics, a very useful concept is that of a **set**. "In mathematics, a set is a collection of distinct objects" -[Wikipedia (Set)](https://en.wikipedia.org/wiki/Set_(mathematics)).
+6. **Find the maximum.** In Mathematics, a very useful concept is that of a **set**. "In mathematics, a set is a collection of distinct objects" -[Wikipedia (Set)](https://en.wikipedia.org/wiki/Set_(mathematics)).
 
 	A mathematical set containing the numbers \\(1, 2,\\) and \\(3\\) can be written \\(\\{1,2,3\\}\\).
 
