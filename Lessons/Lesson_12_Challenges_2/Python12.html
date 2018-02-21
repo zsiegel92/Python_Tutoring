@@ -1368,9 +1368,21 @@ MathJax.Hub.Config({
 <p>Fork the snippet on repl.it or save your work in a file called <code>zulu_names.py</code>.</p>
 </li>
 <li>
-<p><strong>Find the maximum.</strong> In Mathematics, a very useful concept is that of a <strong>set</strong>. "In mathematics, a set is a collection of distinct objects" -<a href="https://en.wikipedia.org/wiki/Set_(mathematics)">Wikipedia (Set)</a>.</p>
+<p><strong>Find the maximum.</strong> In Mathematics, a very useful concept is that of a <strong>set</strong>. Every finite set of numbers has a maximum.</p>
+<blockquote>
+<p>"In mathematics, a set is a collection of distinct objects" -<a href="https://en.wikipedia.org/wiki/Set_(mathematics)">Wikipedia (Set)</a>.</p>
+</blockquote>
 <p>A mathematical set containing the numbers \(1, 2,\) and \(3\) can be written \(\{1,2,3\}\).</p>
 <p>Unlike a Python <code>list</code>, elements of a mathematical <em>set</em> are not in any order and repeated elements are considered the same element. That is, the set \(\{1,2,3\}\) is the same as the set \(\{3,2,1\}\), which is the same as the set \(\{1,1,2,2,3,3\}\).</p>
+<blockquote>
+<p>Sets are different from Python <code>list</code> variables in several important ways:<br />
+    <div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="bp">False</span>
+</pre></div>
+</p>
+</blockquote>
 <p>For a given set, the <strong>maximum</strong> is the greatest element of the set. The maximum of \(\{3,2,1\}\) is \(3\).</p>
 <p><strong>Create a function called <code>maximum_element</code> that returns the maximum element of a <code>list</code> of <code>int</code> variables</strong>.</p>
 <p><iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Setmaximum?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></p>

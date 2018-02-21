@@ -240,11 +240,21 @@ This program generates random Math facts:
 
 	Fork the snippet on repl.it or save your work in a file called `zulu_names.py`.
 
-6. **Find the maximum.** In Mathematics, a very useful concept is that of a **set**. "In mathematics, a set is a collection of distinct objects" -[Wikipedia (Set)](https://en.wikipedia.org/wiki/Set_(mathematics)).
+6. **Find the maximum.** In Mathematics, a very useful concept is that of a **set**. Every finite set of numbers has a maximum.
+
+	>"In mathematics, a set is a collection of distinct objects" -[Wikipedia (Set)](https://en.wikipedia.org/wiki/Set_(mathematics)).
 
 	A mathematical set containing the numbers \\(1, 2,\\) and \\(3\\) can be written \\(\\{1,2,3\\}\\).
 
 	Unlike a Python `list`, elements of a mathematical *set* are not in any order and repeated elements are considered the same element. That is, the set \\(\\{1,2,3\\}\\) is the same as the set \\(\\{3,2,1\\}\\), which is the same as the set \\(\\{1,1,2,2,3,3\\}\\).
+
+	>Sets are different from Python `list` variables in several important ways:
+		```python
+		>>> [1,2,3] == [3,2,1]
+		False
+		>>> [1,1,2,3] == [1,2,3]
+		False
+		```
 
 	For a given set, the **maximum** is the greatest element of the set. The maximum of \\(\\{3,2,1\\}\\) is \\(3\\).
 
