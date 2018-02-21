@@ -208,11 +208,39 @@ This program generates random Math facts:
 	* Yiyi
 	* Xuxe
 
-	Create a program that randomly creates valid names from planet Zulu. You can use the lists `vowels` and `letters` to accomplish this goal.
+	Create a program that randomly creates valid names from planet Zulu.
+
+	You may use the following function to help:
+
+	```python
+	def make_letters():
+		letters_list = []
+		i = 97
+		while i < 123:
+			letters_list.append(chr(i))
+			i += 1
+		return letters_list
+	```
+	Now, you can use lists called `vowels` and `letters` to accomplish this goal:
+
+	```python
+	vowels = ['a','e','i','o','u']
+	letters = make_letters()
+	```
 
 	<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/Randomname?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 	>Note that the lowercase letters can be obtained `chr(i)` for `i` between `97` and `123` (all keyboard characters can be found between `33` and `126`).
+
+	Picking a random letter amounts to the following:
+
+	```python
+	>>> random.choice(letters)
+	>>> random.choice(letters)
+	'v'
+	>>> random.choice(vowels)
+	'o'
+	```
 
 6. **Find the maximum.** In Mathematics, a very useful concept is that of a **set**. "In mathematics, a set is a collection of distinct objects" -[Wikipedia (Set)](https://en.wikipedia.org/wiki/Set_(mathematics)).
 
