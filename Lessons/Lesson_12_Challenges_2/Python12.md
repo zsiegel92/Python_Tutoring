@@ -1,5 +1,7 @@
 # Python Lesson 12 - Challenges
 
+[Let's talk about motors!](https://zsiegel92.github.io/Eitan_S/Lessons/motors/motors.html)
+
 [All Lessons](https://zsiegel92.github.io/Eitan_S/)
 
 [TOC]
