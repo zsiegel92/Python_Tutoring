@@ -1103,60 +1103,136 @@ MathJax.Hub.Config({
   showProcessingMessages: false
 });
 </script>
-<title>README</title></head><body><article class="markdown-body"><h2 id="python-tutorial"><a name="user-content-python-tutorial" href="#python-tutorial" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python Tutorial</h2>
+<title>Lesson13</title></head><body><article class="markdown-body"><h1 id="lesson-13-serving-html"><a name="user-content-lesson-13-serving-html" href="#lesson-13-serving-html" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Lesson 13 - Serving HTML</h1>
+<p><a href="https://zsiegel92.github.io/Eitan_S/">All Lessons</a></p>
+<div class="toc">
 <ul>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_1/Python1.html">Lesson 1: Python</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_1/HTML1.html">Lesson 1: HTML</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_2_Variables_and_Conditionals/Python2.html">Lesson 2: Variables and Conditionals</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_3_Loops/Python3.html">Lesson 3: Loops</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_4_Strings/Python4.html">Lesson 4: Strings</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_5_Functions/Python5.html">Lesson 5: Functions</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_6_Lists/Python6.html">Lesson 6: Lists</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_7_Classes/Python7.html">Lesson 7: Classes</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_8_Input_and_Challenges/Python8.html">Lesson 8: Input and Challenges</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_9_Sorting/Python9.html">Lesson 9: Sorting</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_10_Time/Python10.html">Lesson 10: Logic and Time</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_11_Characters/Python11.html">Lesson 11: Characters and Stopwatches</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_12_Challenges_2/Python12.html">Lesson 12: Challenges</a></li>
-<li><a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_13_HTML/Lesson13.html">Lesson 13: Serving HTML</a></li>
+<li><a href="#lesson-13-serving-html">Lesson 13 - Serving HTML</a><ul>
+<li><a href="#html-meet-plunker">HTML - Meet Plunker!</a><ul>
+<li><a href="#browser-code">"Browser Code"</a></li>
 </ul>
-<h1 id="getting-started-with-the-webapp-project-navigating-the-terminal"><a name="user-content-getting-started-with-the-webapp-project-navigating-the-terminal" href="#getting-started-with-the-webapp-project-navigating-the-terminal" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Getting Started with the "Webapp" Project: Navigating The Terminal</h1>
-<p>Before getting started, you have to take care of a few things:</p>
+</li>
+<li><a href="#why-have-we-been-learning-python">Why have we been learning Python?!</a><ul>
+<li><a href="#server">Server</a><ul>
+<li><a href="#make-changes">Make Changes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#assignments">Assignments</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="html-meet-plunker"><a name="user-content-html-meet-plunker" href="#html-meet-plunker" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>HTML - Meet Plunker!</h2>
+<p>We have mentioned that browsers (Google Chrome, Mozilla Firefox, Microsoft Edge/Internet Explorer) render webpages by reading <strong>HTML</strong>.</p>
+<iframe height="400px" width="100%" src="https://embed.plnkr.co/YJENImxWcIprhYBn6Ax0/" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>This embedded window is called a <strong>plunk</strong> from <em>Plunker</em>. Just like <em>repl.it</em> allows us to run Python code in the browser, <em>plnkr.co</em> allows us to run <em>browser code</em> in the browser.</p>
+<p>You may be thinking "but my browser <em>already</em> runs browser code!" You're right. Plunker gives us a nice little editor, though, and allows us to see changes immediately.</p>
+<p>Press the <img src="fullscreen.png" width="20" alt="fullscreen"/> button to see how a page like this would be rendered in your browser.</p>
+</blockquote>
+<h3 id="browser-code"><a name="user-content-browser-code" href="#browser-code" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>"Browser Code"</h3>
+<p>Browsers run the following types of code:</p>
+<ul>
+<li><strong>HTML</strong>: this tells your browser what to display. It includes the content of a webpage (text, images, etc), as well as instructions for where and how to position everything. These instructions are written so that the browser knows what to do even when a window is resized or even when a small device (like a phone) is used.<ul>
+<li>HTML is stored in <code>.html</code> files</li>
+</ul>
+</li>
+<li><strong>JavaScript</strong>: this tells your browser what to <em>do</em>. For example, a browser can run complicated code to display the correct information. This code will be written in JavaScript.<ul>
+<li>JavaScript is stored in <code>.js</code> files, and can also be inserted in <code>.html</code> files.</li>
+</ul>
+</li>
+<li><strong>CSS</strong>: this tells your browser how to format your HTML. CSS affects the font, color, position, size, and shape of elements on your page; CSS also affects the space between elements.<ul>
+<li>CSS is stored in <code>.css</code> files, and can also be inserted in <code>.html</code> files.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>HTML</strong> is short for <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage. A <em>markup</em> language is a language that includes content as well as instructions for how to display that content.</li>
+<li><strong>CSS</strong> is short for <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets. CSS provides style instructions, and they are <em>cascading</em> in the following sense:<br />
+      "The CSS specification describes a priority scheme to determine which style rules apply if more than one rule matches against a particular element. In this so-called cascade, priorities (or weights) are calculated and assigned to rules, so that the results are predictable." -<a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">Wikipeida (Cascading Style Sheets)</a></li>
+</ul>
+</blockquote>
+<h2 id="why-have-we-been-learning-python"><a name="user-content-why-have-we-been-learning-python" href="#why-have-we-been-learning-python" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Why have we been learning Python?!</h2>
+<p>Press the <img src="filetree.png" width="20" alt="file_tree"/> button to view the <strong>file tree</strong> in the following plunk.</p>
+<iframe height="400px" width="100%" src="https://embed.plnkr.co/T3ehZ37qrg5ErRVIuz60/" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>A <strong>file tree</strong> is the folders and files that make up a project.</p>
+</blockquote>
+<p><strong>The file <code>app.py</code> is a Python file! That can't run in your browser!</strong> What's it doing there?</p>
+<h3 id="server"><a name="user-content-server" href="#server" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Server</h3>
+<blockquote>
+<p>"In computing, a server is a computer program or a device that provides functionality for other programs or devices, called "clients". This architecture is called the client–server model, and a single overall computation is distributed across multiple processes or devices. Servers can provide various functionalities, often called "services", such as sharing data or resources among multiple clients, or performing computation for a client." -<a href="https://en.wikipedia.org/wiki/Server_(computing)">Wikipedia (Server)</a></p>
+</blockquote>
+<p><strong>The code in <code>app.py</code> contains commands to </strong>serve<strong> the files that are being served by Plunker.</strong> We can serve these files from any computer by running <code>app.py</code> within the filetree of this project.</p>
+<p>Let's serve this project:</p>
+<ol>
+<li>Press the <img src="download.png" width="20" alt="download"/> button (<code>Project.zip</code> is fine).</li>
+<li>Navigate to the <code>.zip</code> file and "unzip" it (by double-clicking the file). This is your project folder.</li>
+<li>Open the <em>command prompt</em> and navigate into the project folder: <code>cd something/something/.../Downloads/Project</code></li>
+<li>Type <code>python app.py</code> and navigate to <code>127.0.0.1</code> <em>in any browser on your computer</em>.<ul>
+<li>The address may be slightly different. Look in your command prompt window for text like <code>* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)</code> and navigate to the link provided.</li>
+</ul>
+</li>
+<li><strong>Now you're both the <em>client</em> and the *server</strong>*.</li>
+</ol>
+<h4 id="make-changes"><a name="user-content-make-changes" href="#make-changes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Make Changes</h4>
+<p>Simplify your <code>index</code> function from this:</p>
+<div class="codehilite"><pre><span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">send_static_file</span><span class="p">(</span><span class="s">&#39;index.html&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>to this:</p>
+<div class="codehilite"><pre><span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">&quot;Hello&quot;</span>
+</pre></div>
+
+
+<p>Now <code>app.py</code> should look like this:</p>
+<div class="codehilite"><pre><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">,</span><span class="n">static_url_path</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">&quot;Hello&quot;</span>
+
+<span class="k">if</span> <span class="n">__name__</span><span class="o">==</span><span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+
+
+<p>When you navigate to the page you're serving, you should just see the text "Hello". That's because browsers can render very complex HTML, or very simple HTML with no markup instructions.</p>
+<blockquote>
+<p><code>send_static_file</code> sends your browser a <code>.html</code> file, and your browser puts it on screen. If you just send text (in a <code>str</code> variable) to your browser, it will display it like it would the contents of a <code>.html</code> file.</p>
+</blockquote>
+<p>Try editing the <code>.html</code> file like you would in Plunker and refresh your browser. The Python server framework <code>Flask</code> will serve the updated webpage.</p>
+<h2 id="assignments"><a name="user-content-assignments" href="#assignments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignments</h2>
+<p><strong>For these assignments, you will need to watch all the Khan Academy videos accompanying each lesson</strong>.</p>
 <ol>
 <li>
-<p>Download our project from <a href="https://github.com/zsiegel92/Eitan_S">the GitHub repository I made</a></p>
-<ul>
-<li>Click the green "Clone or download" button and "Download Zip"</li>
-</ul>
+<p>Watch <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/p/html-basics">this introduction to HTML video from Khan Academy</a>. If you don't have a Khan Academy account, please make one to track your progress.</p>
 </li>
 <li>
-<p>Navigate to the the folder with the download, "unzip" the .zip file, and go into the folder. These are the commands you will need to navigate using the command line (press <kbd>Enter</kbd> after typing each command):</p>
-<ul>
-<li>Type <code>cd</code> to see what folder you are in.</li>
-<li>Type <code>cd [folder name]</code> to navigate to a specific folder.</li>
-<li>Type <code>cd ..</code> to navigate up one folder (into the condaining folder)</li>
-<li>Type <code>ls</code> to list all the files and folders in the folder you are in.</li>
-<li>Type <code>ls -AL</code> to list all the files and folders in the folder you are in, INCLUDING the hidden folders, which begin with a dot (such as <code>.env</code>).</li>
-</ul>
+<p>Complete the <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/p/challenge-write-a-poem">Khan Academy "Write a Poem" assignment</a>.</p>
 </li>
 <li>
-<p>When you are in the folder called <code>webapp</code>, type the command<br />
-<code>venv\Scripts\activate.bat</code><br />
-This command tells your computer "hey, I'm working on the <code>webapp</code> project, so if I install anything, please don't let it affect the rest of my computer."</p>
+<p>Use <code>&lt;strong&gt;&lt;/strong&gt;</code> and <code>&lt;em&gt;&lt;/em&gt;</code> tags to make text <strong>bold</strong> and <em>italicized</em> in <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/p/challenge-you-can-learn-text-tags">Khan Academy's "You can learn text tags" challenge</a>.</p>
 </li>
-</ol>
-<h1 id="important-info"><a name="user-content-important-info" href="#important-info" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Important Info</h1>
-<p>This will be your first website. This will also be your first time running code from the command line. There are a few things to keep in mind:</p>
-<ol>
-<li>NEVER delete files from the command line unless they are files you created. If you delete a file that Windows needs, Windows may start malfunctioning.</li>
-<li>Only use commands that you have learned from me (Zach) or from sources that I have introduced myself.</li>
-<li>Feel free to ask questions about anything that you don't understand! There is a very good reason why everything is the way it is, and if I don't know, I will do my best to find out for you. If you are with your parents and not me, please ask them to ask me - I will respond to messages from them within a few hours.</li>
-</ol>
-<h1 id="suggested-download-sublimetext"><a name="user-content-suggested-download-sublimetext" href="#suggested-download-sublimetext" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Suggested Download: Sublimetext</h1>
-<p>I suggest that you download SublimeText 2, a text editor (like Microsoft Word or Google Docs) designed for writing code. Other good options are Emacs, Aquamacs, and Atom.</p>
-<h1 id="resources"><a name="user-content-resources" href="#resources" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Resources:</h1>
-<p><a href="https://www.khanacademy.org/computing/computer-programming/html-css">Khan Academy HTML Lessons</a></p>
-<p><a href="https://www.w3schools.com/html/html_elements.asp">HTML Guide</a></p>
-<p><a href="https://codepen.io/zsiegel/">codepen.com</a></p>
-<p><a href="https://jsfiddle.net/">jsfiddle.net</a></p>
-<p><a href="https://github.com/zsiegel92">Zach's Github Page</a></p></article></body></html>
+<li>
+<p>Use <code>&lt;li&gt;&lt;/li&gt;</code> tags to make a list in <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/p/challenge-your-learning-list">Khan Academy's "Your learning list" challenge</a>.</p>
+</li>
+<li>
+<p>Use <code>&lt;img&gt;</code> tags to complete <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/p/challenge-a-picture-perfect-trip">Khan Academy's "A picture perfect trip" challenge</a>.</p>
+</li>
+<li>
+<p>Watch the <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-css/p/css-basics">Khan Academy CSS Basics video</a>.</p>
+</li>
+</ol></article></body></html>

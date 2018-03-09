@@ -13,6 +13,7 @@
 * [Lesson 10: Logic and Time](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_10_Time/Python10.html)
 * [Lesson 11: Characters and Stopwatches](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_11_Characters/Python11.html)
 * [Lesson 12: Challenges](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_12_Challenges_2/Python12.html)
+* [Lesson 13: Serving HTML](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_13_HTML/Lesson13.html)
 # Getting Started with the "Webapp" Project: Navigating The Terminal
 Before getting started, you have to take care of a few things:
 
