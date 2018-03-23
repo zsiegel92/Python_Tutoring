@@ -43,7 +43,7 @@ Press the Run/Play button and then click the <img src="popout.png" width="20" al
 
 >This is just like what you were able to see on your browser when you executed `python app.py` and opened your browser to `http://127.0.0.1:5000/`!
 
-Now, navigate to that same URL, with a `/goodbye` on the end ([https://flask-basic--ZSiegel.repl.co](https://flask-basic--ZSiegel.repl.co)). What do you see? How did Python sgenerate what you see?
+Now, navigate to that same URL, with a `/goodbye` on the end ([https://flask-basic--ZSiegel.repl.co](https://flask-basic--ZSiegel.repl.co)). What do you see? How did Python generate what you see?
 
 ## Cooler Content
 
@@ -77,9 +77,9 @@ Now, the line `@app.route('/triangle')` means that **if we request our website w
 
 >Navigate to [`.../triangle`](https://asterisktriangleflaskn--ZSiegel.repl.co/triangle). Do you see our triangle? No, just a flat row of asterisks?
 
-In our first HTML lessons, we have seen that to create a **line break** in HTML, we use the `<br>` tag. It seems that the browser doesn't use the newline character `\n` character in the same way Python does.
+In our first HTML lessons, we have seen that to create a **line break** in HTML, we use the `<br>` tag. It seems that the browser doesn't use the newline character `\n` in the same way Python does.
 
-Let's spruce up our function to display a proper triangle by replacing `\n` with `<br>` and try to pull of the triangle in the browser.
+Let's spruce up our function to display a proper triangle by replacing `\n` with `<br>` and try to pull off the triangle in the browser.
 
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/asterisktriangleflaskbr?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 >Now, navigating to [`.../triangle`](https://asterisktriangleflaskbr--zsiegel.repl.co/triangle) should render a full triangle!
@@ -87,14 +87,14 @@ Let's spruce up our function to display a proper triangle by replacing `\n` with
 
 ## Content in Other Files
 
-Flask can send files using `app.send_static_file`, and it can also send a file that it has *rendered* (or *templated*) using `render_template`.
+Flask can send a file using `app.send_static_file`, and it can also send a file that it has *rendered* (or *templated*) using `render_template`.
 
 The `render_template` function looks for files in the `templates` directory. The `app.send_static_file` function looks for files in the `static` directory.
 
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/flask-templating?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 * When we `return` the output of `app.send_static_file`, we just send whatever is in a file, as is, to the browser, which figures out what to do with it.
-* When we `return` the output of `render_template`, we send whatever is in a file, but before we send it, all the pairs of curly braces in the file (`{{something}}`) get looked at. If we give information about what `something` is, then `{{something}}` gets replaced with the value of `something`.
+* When we `return` the output of `render_template`, we send whatever is in a file, but, before we send it, all the pairs of curly braces in the file (`{{something}}`) get looked at. If we give information about what `something` is, then `{{something}}` gets replaced with the value of `something`.
 
 The line `return render_template('templated1.html', student_name="Wall-E")` does the following:
 

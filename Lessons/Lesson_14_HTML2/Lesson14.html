@@ -1158,7 +1158,7 @@ MathJax.Hub.Config({
 <blockquote>
 <p>This is just like what you were able to see on your browser when you executed <code>python app.py</code> and opened your browser to <code>http://127.0.0.1:5000/</code>!</p>
 </blockquote>
-<p>Now, navigate to that same URL, with a <code>/goodbye</code> on the end (<a href="https://flask-basic--ZSiegel.repl.co"><a href="https://flask-basic--ZSiegel.repl.co"><a href="https://flask-basic--ZSiegel.repl.co">https://flask-basic--ZSiegel.repl.co</a></a></a>). What do you see? How did Python sgenerate what you see?</p>
+<p>Now, navigate to that same URL, with a <code>/goodbye</code> on the end (<a href="https://flask-basic--ZSiegel.repl.co"><a href="https://flask-basic--ZSiegel.repl.co"><a href="https://flask-basic--ZSiegel.repl.co">https://flask-basic--ZSiegel.repl.co</a></a></a>). What do you see? How did Python generate what you see?</p>
 <h2 id="cooler-content"><a name="user-content-cooler-content" href="#cooler-content" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Cooler Content</h2>
 <p>Early on, we used iteration in Python to create cool images. Now, we will do that in your browser.</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/asterisktriangle?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
@@ -1189,21 +1189,21 @@ Also recall that the <strong>special character</strong> <code>"\n"</code> is the
 <blockquote>
 <p>Navigate to <a href="https://asterisktriangleflaskn--ZSiegel.repl.co/triangle"><code>.../triangle</code></a>. Do you see our triangle? No, just a flat row of asterisks?</p>
 </blockquote>
-<p>In our first HTML lessons, we have seen that to create a <strong>line break</strong> in HTML, we use the <code>&lt;br&gt;</code> tag. It seems that the browser doesn't use the newline character <code>\n</code> character in the same way Python does.</p>
-<p>Let's spruce up our function to display a proper triangle by replacing <code>\n</code> with <code>&lt;br&gt;</code> and try to pull of the triangle in the browser.</p>
+<p>In our first HTML lessons, we have seen that to create a <strong>line break</strong> in HTML, we use the <code>&lt;br&gt;</code> tag. It seems that the browser doesn't use the newline character <code>\n</code> in the same way Python does.</p>
+<p>Let's spruce up our function to display a proper triangle by replacing <code>\n</code> with <code>&lt;br&gt;</code> and try to pull off the triangle in the browser.</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/asterisktriangleflaskbr?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <blockquote>
 <p>Now, navigating to <a href="https://asterisktriangleflaskbr--zsiegel.repl.co/triangle"><code>.../triangle</code></a> should render a full triangle!</p>
 </blockquote>
 <h2 id="content-in-other-files"><a name="user-content-content-in-other-files" href="#content-in-other-files" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Content in Other Files</h2>
-<p>Flask can send files using <code>app.send_static_file</code>, and it can also send a file that it has <em>rendered</em> (or <em>templated</em>) using <code>render_template</code>.</p>
+<p>Flask can send a file using <code>app.send_static_file</code>, and it can also send a file that it has <em>rendered</em> (or <em>templated</em>) using <code>render_template</code>.</p>
 <p>The <code>render_template</code> function looks for files in the <code>templates</code> directory. The <code>app.send_static_file</code> function looks for files in the <code>static</code> directory.</p>
 <iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/flask-templating?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <ul>
 <li>When we <code>return</code> the output of <code>app.send_static_file</code>, we just send whatever is in a file, as is, to the browser, which figures out what to do with it.</li>
-<li>When we <code>return</code> the output of <code>render_template</code>, we send whatever is in a file, but before we send it, all the pairs of curly braces in the file (<code>{{something}}</code>) get looked at. If we give information about what <code>something</code> is, then <code>{{something}}</code> gets replaced with the value of <code>something</code>.</li>
+<li>When we <code>return</code> the output of <code>render_template</code>, we send whatever is in a file, but, before we send it, all the pairs of curly braces in the file (<code>{{something}}</code>) get looked at. If we give information about what <code>something</code> is, then <code>{{something}}</code> gets replaced with the value of <code>something</code>.</li>
 </ul>
 <p>The line <code>return render_template('templated1.html', student_name="Wall-E")</code> does the following:</p>
 <ol>
