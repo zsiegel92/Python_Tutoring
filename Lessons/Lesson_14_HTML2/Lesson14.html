@@ -1103,20 +1103,16 @@ MathJax.Hub.Config({
   showProcessingMessages: false
 });
 </script>
-<title>Lesson13</title></head><body><article class="markdown-body"><h1 id="lesson-13-html"><a name="user-content-lesson-13-html" href="#lesson-13-html" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Lesson 13 - HTML</h1>
+<title>Lesson14</title></head><body><article class="markdown-body"><h1 id="lesson-14-advanced-html"><a name="user-content-lesson-14-advanced-html" href="#lesson-14-advanced-html" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Lesson 14 - Advanced HTML</h1>
 <p><a href="https://zsiegel92.github.io/Eitan_S/">All Lessons</a></p>
 <div class="toc">
 <ul>
-<li><a href="#lesson-13-html">Lesson 13 - HTML</a><ul>
-<li><a href="#html-meet-plunker">HTML - Meet Plunker!</a><ul>
-<li><a href="#browser-code">"Browser Code"</a></li>
-</ul>
-</li>
-<li><a href="#why-have-we-been-learning-python">Why have we been learning Python?!</a><ul>
-<li><a href="#server">Server</a><ul>
-<li><a href="#make-changes">Make Changes</a></li>
-</ul>
-</li>
+<li><a href="#lesson-14-advanced-html">Lesson 14 - Advanced HTML</a><ul>
+<li><a href="#review-of-lesson-13">Review of Lesson 13</a></li>
+<li><a href="#serving-content">Serving Content</a></li>
+<li><a href="#cooler-content">Cooler Content</a></li>
+<li><a href="#content-in-other-files">Content in Other Files</a><ul>
+<li><a href="#questions">Questions</a></li>
 </ul>
 </li>
 <li><a href="#assignments">Assignments</a></li>
@@ -1124,52 +1120,20 @@ MathJax.Hub.Config({
 </li>
 </ul>
 </div>
-<h2 id="html-meet-plunker"><a name="user-content-html-meet-plunker" href="#html-meet-plunker" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>HTML - Meet Plunker!</h2>
-<p>We have mentioned that browsers (Google Chrome, Mozilla Firefox, Microsoft Edge/Internet Explorer) render webpages by reading <strong>HTML</strong>.</p>
-<iframe height="400px" width="100%" src="https://embed.plnkr.co/YJENImxWcIprhYBn6Ax0/" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
+<h2 id="review-of-lesson-13"><a name="user-content-review-of-lesson-13" href="#review-of-lesson-13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Review of <a href="https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_13_HTML/Lesson13.html">Lesson 13</a></h2>
 <blockquote>
-<p>This embedded window is called a <strong>plunk</strong> from <em>Plunker</em>. Just like <em>repl.it</em> allows us to run Python code in the browser, <em>plnkr.co</em> allows us to run <em>browser code</em> in the browser.</p>
-<p>You may be thinking "but my browser <em>already</em> runs browser code!" You're right. Plunker gives us a nice little editor, though, and allows us to see changes immediately.</p>
-<p>Press the <img src="fullscreen.png" width="20" alt="fullscreen"/> button to see how a page like this would be rendered in your browser.</p>
+<p>Make sure you have completed the Khan Academy HTML-CSS basics sequence starting with <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/p/html-basics">this video</a>.</p>
 </blockquote>
-<h3 id="browser-code"><a name="user-content-browser-code" href="#browser-code" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>"Browser Code"</h3>
-<p>Browsers run the following types of code:</p>
-<ul>
-<li><strong>HTML</strong>: this tells your browser what to display. It includes the content of a webpage (text, images, etc), as well as instructions for where and how to position everything. These instructions are written so that the browser knows what to do even when a window is resized or even when a small device (like a phone) is used.<ul>
-<li>HTML is stored in <code>.html</code> files</li>
-</ul>
-</li>
-<li><strong>JavaScript</strong>: this tells your browser what to <em>do</em>. For example, a browser can run complicated code to display the correct information. This code will be written in JavaScript.<ul>
-<li>JavaScript is stored in <code>.js</code> files, and can also be inserted in <code>.html</code> files.</li>
-</ul>
-</li>
-<li><strong>CSS</strong>: this tells your browser how to format your HTML. CSS affects the font, color, position, size, and shape of elements on your page; CSS also affects the space between elements.<ul>
-<li>CSS is stored in <code>.css</code> files, and can also be inserted in <code>.html</code> files.</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<ul>
-<li><strong>HTML</strong> is short for <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage. A <em>markup</em> language is a language that includes content as well as instructions for how to display that content.</li>
-<li><strong>CSS</strong> is short for <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets. CSS provides style instructions, and they are <em>cascading</em> in the following sense:<br />
-      "The CSS specification describes a priority scheme to determine which style rules apply if more than one rule matches against a particular element. In this so-called cascade, priorities (or weights) are calculated and assigned to rules, so that the results are predictable." -<a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">Wikipeida (Cascading Style Sheets)</a></li>
-</ul>
-</blockquote>
-<h2 id="why-have-we-been-learning-python"><a name="user-content-why-have-we-been-learning-python" href="#why-have-we-been-learning-python" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Why have we been learning Python?!</h2>
-<p>Press the <img src="filetree.png" width="20" alt="file_tree"/> button to view the <strong>file tree</strong> in the following plunk.</p>
+<p>Browsers send <strong>requests</strong> to <strong>servers</strong>, and servers respond by sending <strong>HTML</strong>, <strong>JavaScript</strong>, and <strong>CSS</strong> code to the browser. The browser then <em>runs</em> the JavaScript code, <em>renders</em> (<em>displays</em>) the HTML, and uses the CSS to <em>style</em> the HTML. <strong>If this all sounds confusing, please review the previous lesson!</strong></p>
+<p>We have seen that we can edit HTML, CSS, and Javascript, and instantly see changes in the resulting website using <strong>Plunker</strong>:</p>
 <iframe height="400px" width="100%" src="https://embed.plnkr.co/T3ehZ37qrg5ErRVIuz60/" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <blockquote>
-<p>A <strong>file tree</strong> is the folders and files that make up a project.</p>
+<p>This embedded window is called a <strong>plunk</strong> from <em>Plunker</em>. Just like <em>repl.it</em> allows us to run Python code in the browser, <em>plnkr.co</em> allows us to run <em>browser code</em> in the browser.</p>
+<p>Press the <img src="fullscreen.png" width="20" alt="fullscreen"/> button to see how a page like this would be rendered in your browser.</p>
 </blockquote>
-<p><strong>The file <code>app.py</code> is a Python file! That can't run in your browser!</strong> What's it doing there?</p>
-<h3 id="server"><a name="user-content-server" href="#server" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Server</h3>
-<blockquote>
-<p>"In computing, a server is a computer program or a device that provides functionality for other programs or devices, called "clients". This architecture is called the client–server model, and a single overall computation is distributed across multiple processes or devices. Servers can provide various functionalities, often called "services", such as sharing data or resources among multiple clients, or performing computation for a client." -<a href="https://en.wikipedia.org/wiki/Server_(computing)">Wikipedia (Server)</a></p>
-</blockquote>
-<p><strong>The code in <code>app.py</code> contains commands to </strong>serve<strong> the files that are being served by Plunker.</strong> We can serve these files from any computer by running <code>app.py</code> within the filetree of this project.</p>
-<p>Let's serve this project:</p>
+<p>Now, press the <img src="filetree.png" width="20" alt="file_tree"/> button to view the <strong>file tree</strong> in the following plunk. Notice the <em>Python</em> file <code>app.py</code>! Python <em>does not</em> run in a browser.</p>
+<p>We <strong>served</strong> this website by following these steps:</p>
 <ol>
 <li>Press the <img src="download.png" width="20" alt="download"/> button (<code>Project.zip</code> is fine).</li>
 <li>Navigate to the <code>.zip</code> file and "unzip" it (by double-clicking the file). This is your project folder.</li>
@@ -1180,59 +1144,80 @@ MathJax.Hub.Config({
 </li>
 <li><strong>Now you're both the <em>client</em> and the *server</strong>*.</li>
 </ol>
-<h4 id="make-changes"><a name="user-content-make-changes" href="#make-changes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Make Changes</h4>
-<p>Simplify your <code>index</code> function from this:</p>
-<div class="codehilite"><pre><span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">send_static_file</span><span class="p">(</span><span class="s">&#39;index.html&#39;</span><span class="p">)</span>
-</pre></div>
-
-
-<p>to this:</p>
-<div class="codehilite"><pre><span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s">&quot;Hello&quot;</span>
-</pre></div>
-
-
-<p>Now <code>app.py</code> should look like this:</p>
-<div class="codehilite"><pre><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
-
-<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">,</span><span class="n">static_url_path</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
-
-<span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s">&quot;Hello&quot;</span>
-
-<span class="k">if</span> <span class="n">__name__</span><span class="o">==</span><span class="s">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div>
-
-
-<p>When you navigate to the page you're serving, you should just see the text "Hello". That's because browsers can render very complex HTML, or very simple HTML with no markup instructions.</p>
 <blockquote>
-<p><code>send_static_file</code> sends your browser a <code>.html</code> file, and your browser puts it on screen. If you just send text (in a <code>str</code> variable) to your browser, it will display it like it would the contents of a <code>.html</code> file.</p>
+<p>Make sure to get local file serving up and running before moving on!</p>
 </blockquote>
-<p>Try editing the <code>.html</code> file like you would in Plunker and refresh your browser. The Python server framework <code>Flask</code> will serve the updated webpage.</p>
-<h2 id="assignments"><a name="user-content-assignments" href="#assignments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignments</h2>
-<p><strong>For these assignments, you will need to watch all the Khan Academy videos accompanying each lesson</strong>.</p>
+<h2 id="serving-content"><a name="user-content-serving-content" href="#serving-content" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Serving Content</h2>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/flask-basic?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>It's important to know how to run code and, in particular, <strong>serve</strong> content from your own computer, but we will be doing most of our work on repl.it.</p>
+<p>On <code>repl.it</code>, <strong>the server code will usually be in the file <code>main.py</code></strong>.</p>
+</blockquote>
+<p>Press the Run/Play button and then click the <img src="popout.png" width="20" alt="popout"/> button (or navigate to <a href="https://flask-basic--ZSiegel.repl.co"><a href="https://flask-basic--ZSiegel.repl.co"><a href="https://flask-basic--ZSiegel.repl.co">https://flask-basic--ZSiegel.repl.co</a></a></a>) to view <strong>the served content</strong> in your browser window, courtesy of <code>repl.it</code> making sure it makes it to us.</p>
+<blockquote>
+<p>This is just like what you were able to see on your browser when you executed <code>python app.py</code> and opened your browser to <code>http://127.0.0.1:5000/</code>!</p>
+</blockquote>
+<p>Now, navigate to that same URL, with a <code>/goodbye</code> on the end (<a href="https://flask-basic--ZSiegel.repl.co"><a href="https://flask-basic--ZSiegel.repl.co"><a href="https://flask-basic--ZSiegel.repl.co">https://flask-basic--ZSiegel.repl.co</a></a></a>). What do you see? How did Python sgenerate what you see?</p>
+<h2 id="cooler-content"><a name="user-content-cooler-content" href="#cooler-content" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Cooler Content</h2>
+<p>Early on, we used iteration in Python to create cool images. Now, we will do that in your browser.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/asterisktriangle?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>Recall that we can <em>multiply</em> a <code>str</code> variable by an <code>int</code> to <strong>copy</strong> the <code>str</code> over and over again<br />
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">hellohellohello</span>
+</pre></div>
+<br />
+Also recall that the <strong>special character</strong> <code>"\n"</code> is the <em>newline character</em> that creates a line break:<br />
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;hello&quot;</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\n</span><span class="s">&quot;</span> <span class="o">+</span> <span class="s">&quot;hello&quot;</span><span class="o">+</span> <span class="s">&quot;</span><span class="se">\n\n</span><span class="s">&quot;</span> <span class="o">+</span> <span class="s">&quot;hello&quot;</span><span class="p">)</span>
+<span class="n">hello</span>
+
+<span class="n">hello</span>
+
+<span class="n">hello</span>
+</pre></div>
+</p>
+</blockquote>
+<p>Now, let's put that process in a <strong>function</strong> (using <code>def</code>), so that we can call it over and over (without failing the DRY principl):</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/asterisktrianglefunction?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Finally, let's SERVE our triangle using Flask:</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/asterisktriangleflaskn?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Now, the line <code>@app.route('/triangle')</code> means that <strong>if we request our website with <code>/triangle</code> at the end of the URL</strong> (<a href="https://asterisktriangleflaskn--ZSiegel.repl.co/triangle"><code>https://asterisktriangleflaskn--ZSiegel.repl.co/triangle</code></a>), <strong>we will be served whatever the function <code>show_triangle</code> returns</strong>.</p>
+<blockquote>
+<p>Navigate to <a href="https://asterisktriangleflaskn--ZSiegel.repl.co/triangle"><code>.../triangle</code></a>. Do you see our triangle? No, just a flat row of asterisks?</p>
+</blockquote>
+<p>In our first HTML lessons, we have seen that to create a <strong>line break</strong> in HTML, we use the <code>&lt;br&gt;</code> tag. It seems that the browser doesn't use the newline character <code>\n</code> character in the same way Python does.</p>
+<p>Let's spruce up our function to display a proper triangle by replacing <code>\n</code> with <code>&lt;br&gt;</code> and try to pull of the triangle in the browser.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/asterisktriangleflaskbr?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<blockquote>
+<p>Now, navigating to <a href="https://asterisktriangleflaskbr--zsiegel.repl.co/triangle"><code>.../triangle</code></a> should render a full triangle!</p>
+</blockquote>
+<h2 id="content-in-other-files"><a name="user-content-content-in-other-files" href="#content-in-other-files" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Content in Other Files</h2>
+<p>Flask can send files using <code>app.send_static_file</code>, and it can also send a file that it has <em>rendered</em> (or <em>templated</em>) using <code>render_template</code>.</p>
+<p>The <code>render_template</code> function looks for files in the <code>templates</code> directory. The <code>app.send_static_file</code> function looks for files in the <code>static</code> directory.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/flask-templating?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<ul>
+<li>When we <code>return</code> the output of <code>app.send_static_file</code>, we just send whatever is in a file, as is, to the browser, which figures out what to do with it.</li>
+<li>When we <code>return</code> the output of <code>render_template</code>, we send whatever is in a file, but before we send it, all the pairs of curly braces in the file (<code>{{something}}</code>) get looked at. If we give information about what <code>something</code> is, then <code>{{something}}</code> gets replaced with the value of <code>something</code>.</li>
+</ul>
+<p>The line <code>return render_template('templated1.html', student_name="Wall-E")</code> does the following:</p>
 <ol>
-<li>
-<p>Watch <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/p/html-basics">this introduction to HTML video from Khan Academy</a>. If you don't have a Khan Academy account, please make one to track your progress.</p>
-</li>
-<li>
-<p>Complete the <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/p/challenge-write-a-poem">Khan Academy "Write a Poem" assignment</a>.</p>
-</li>
-<li>
-<p>Use <code>&lt;strong&gt;&lt;/strong&gt;</code> and <code>&lt;em&gt;&lt;/em&gt;</code> tags to make text <strong>bold</strong> and <em>italicized</em> in <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/p/challenge-you-can-learn-text-tags">Khan Academy's "You can learn text tags" challenge</a>.</p>
-</li>
-<li>
-<p>Use <code>&lt;li&gt;&lt;/li&gt;</code> tags to make a list in <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/p/challenge-your-learning-list">Khan Academy's "Your learning list" challenge</a>.</p>
-</li>
-<li>
-<p>Use <code>&lt;img&gt;</code> tags to complete <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/p/challenge-a-picture-perfect-trip">Khan Academy's "A picture perfect trip" challenge</a>.</p>
-</li>
-<li>
-<p>Watch the <a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-css/p/css-basics">Khan Academy CSS Basics video</a>.</p>
-</li>
-</ol></article></body></html>
+<li>Finds <code>templated1.html</code> in the <code>templates</code> directory</li>
+<li>Looks through <code>templated1.html</code> and notices the <code>{{ student_name }}</code> on line 15</li>
+<li>Replaces <code>{{ student_name }}</code> with the value <code>"Wall-E"</code> because we called <code>render_template('templated1.html', student_name="Wall-E")</code></li>
+<li>Flask sends whatever is after <code>return</code> to anyone who visits our website with the route <code>/coolestpage</code> because of the command <code>@app.route('/coolestpage')</code> above the definition of the function <code>coolest_page</code>.</li>
+</ol>
+<h3 id="questions"><a name="user-content-questions" href="#questions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Questions</h3>
+<p>We have a lot to explore! The upcoming topics are:</p>
+<ul>
+<li><strong>HTML Navigation</strong> - Inserting links in our HTML using <strong>anchor tags</strong> (<code>&lt;a href="http://website.com"&gt;A link!&lt;/a&gt;</code>) so that we don't have to type routes into the browser</li>
+<li><strong>Routing</strong> - determining what should be returned based on what URL a request is sent to</li>
+<li><strong>Templating</strong> - Inserting interesting content in HTML using <code>render_template</code></li>
+</ul>
+<h2 id="assignments"><a name="user-content-assignments" href="#assignments" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Assignments</h2>
+<p>Fork any of the <code>repl.it</code> apps above and make ANY changes to the HTML and the Python code so that something new is displayed on screen. You can make WHATEVER changes you want, as long as the website runs.</p></article></body></html>
