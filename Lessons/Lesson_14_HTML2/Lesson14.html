@@ -1111,7 +1111,8 @@ MathJax.Hub.Config({
 <li><a href="#review-of-lesson-13">Review of Lesson 13</a></li>
 <li><a href="#serving-content">Serving Content</a></li>
 <li><a href="#cooler-content">Cooler Content</a></li>
-<li><a href="#content-in-other-files">Content in Other Files</a><ul>
+<li><a href="#content-in-other-files">Content in Other Files</a></li>
+<li><a href="#templating-replacing-something">Templating - Replacing {{something}}</a><ul>
 <li><a href="#questions">Questions</a></li>
 </ul>
 </li>
@@ -1212,6 +1213,22 @@ Also recall that the <strong>special character</strong> <code>"\n"</code> is the
 <li>Replaces <code>{{ student_name }}</code> with the value <code>"Wall-E"</code> because we called <code>render_template('templated1.html', student_name="Wall-E")</code></li>
 <li>Flask sends whatever is after <code>return</code> to anyone who visits our website with the route <code>/coolestpage</code> because of the command <code>@app.route('/coolestpage')</code> above the definition of the function <code>coolest_page</code>.</li>
 </ol>
+<h2 id="templating-replacing-something"><a name="user-content-templating-replacing-something" href="#templating-replacing-something" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Templating - Replacing <code>{{something}}</code></h2>
+<p>We have already seen Python's <code>str.format</code> function:</p>
+<div class="codehilite"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">sentence</span> <span class="o">=</span> <span class="s">&quot;I like {something}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">something</span><span class="o">=</span><span class="s">&quot;fruit&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+<span class="n">I</span> <span class="n">like</span> <span class="n">fruit</span>
+</pre></div>
+
+
+<p>The <code>format</code> function replaces <code>{something}</code> with the value of <code>something</code>, specified in <code>.format(something="fruit")</code>.</p>
+<p>Using Flask's <code>render_template</code> function does <em>the exact same thing</em>, but it replaces <code>{{something}}</code> with the value of <code>something</code>.</p>
+<p>Note how we can <em>template</em> anything - including our triangle!</p>
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/flask-templating-advanced?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p>Now, visit <a href="https://flask-templating-advanced--zsiegel.repl.co/cool"><code>.../cool</code></a> to view our triangle <em>templated</em> in the <em>template</em> <code>templated1.html</code>.</p>
+<p>Notice the difference between <code>{{cool_thing | safe}}</code> and <code>{{cool_thing}}</code>. When we <em>template</em> Python <code>str</code> variables, Flask tries to make them look nice in HTML. <strong>Flask doesn't expect us to template in HTML code</strong>, unless we tell Flask that it's <em>safe</em> to template that in using <code>{{something | safe}}</code>.</p>
+<p>Now, visit <a href="https://flask-templating-advanced--zsiegel.repl.co/coolPython"><code>.../coolPython</code></a> to view our triangle <em>templated</em> in the <em>template</em> <code>templated1.html</code>. Flask turned <code>\n</code> into nothing, because we still need <code>&lt;br&gt;</code> to make a line break in HTML.</p>
 <h3 id="questions"><a name="user-content-questions" href="#questions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Questions</h3>
 <p>We have a lot to explore! The upcoming topics are:</p>
 <ul>

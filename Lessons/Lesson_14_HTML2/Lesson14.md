@@ -103,6 +103,31 @@ The line `return render_template('templated1.html', student_name="Wall-E")` does
 3. Replaces `{{ student_name }}` with the value `"Wall-E"` because we called `render_template('templated1.html', student_name="Wall-E")`
 4. Flask sends whatever is after `return` to anyone who visits our website with the route `/coolestpage` because of the command `@app.route('/coolestpage')` above the definition of the function `coolest_page`.
 
+
+## Templating - Replacing `{{something}}`
+
+We have already seen Python's `str.format` function:
+
+```python
+>>> sentence = "I like {something}".format(something="fruit")
+>>> print(sentence)
+I like fruit
+```
+
+The `format` function replaces `{something}` with the value of `something`, specified in `.format(something="fruit")`.
+
+Using Flask's `render_template` function does *the exact same thing*, but it replaces `{{something}}` with the value of `something`.
+
+Note how we can *template* anything - including our triangle!
+
+<iframe height="400px" width="100%" src="https://repl.it/@ZSiegel/flask-templating-advanced?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+Now, visit [`.../cool`](https://flask-templating-advanced--zsiegel.repl.co/cool) to view our triangle *templated* in the *template* `templated1.html`.
+
+Notice the difference between `{{cool_thing | safe}}` and `{{cool_thing}}`. When we *template* Python `str` variables, Flask tries to make them look nice in HTML. **Flask doesn't expect us to template in HTML code**, unless we tell Flask that it's *safe* to template that in using `{{something | safe}}`.
+
+Now, visit [`.../coolPython`](https://flask-templating-advanced--zsiegel.repl.co/coolPython) to view our triangle *templated* in the *template* `templated1.html`. Flask turned `\n` into nothing, because we still need `<br>` to make a line break in HTML.
+
 ### Questions
 
 We have a lot to explore! The upcoming topics are:
