@@ -16,7 +16,7 @@ You have used the following types of *resources*:
 * Magazine
 * Essay
 
-A **wiki** is just another informational resource:
+A <a href="https://en.wikipedia.org/wiki/Wiki">**wiki**</a> is just another informational resource:
 
 * wi·ki<br>
 	ˈwikē<br>
