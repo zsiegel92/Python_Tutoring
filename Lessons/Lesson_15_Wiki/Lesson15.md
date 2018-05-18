@@ -28,7 +28,7 @@ A wiki *always* contains information on different *pages*, each of which are lik
 ### A **Hamilton** Wiki
 
 <iframe height="400px" width="100%" src="https://embed.plnkr.co/AMlmuCi011oQlQSSaA1E/" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-(<a href="https://run.plnkr.co/preview/cjhchusaa00063i5r8tvli31h/">view fullscreen here</a>)
+
 
 ## Assignments
 
