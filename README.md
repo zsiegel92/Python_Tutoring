@@ -15,6 +15,7 @@
 * [Lesson 12: Challenges](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_12_Challenges_2/Python12.html)
 * [Lesson 13: Serving HTML](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_13_HTML/Lesson13.html)
 * [Lesson 14: HTML (advanced)](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_14_HTML2/Lesson14.html)
+* [Lesson 15: HTML Wiki](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_15_Wiki/Lesson15.html)
 
 # Getting Started with the "Webapp" Project: Navigating The Terminal
 Before getting started, you have to take care of a few things:
