@@ -305,7 +305,7 @@ When we use `extend` or `+` to concatenate two `list` variables, the values from
 	********************
 	```
 
-	>**HINT**: Remember that `'*'*5` returns `'*****'` (see the **Strings are Like Lists!** section).
+	>**HINT**: Remember that `'*'*5` returns `'*****'` (see the [**Strings are Like Lists!**](https://zsiegel92.github.io/Eitan_S/Lessons/Lesson_6_Lists/Python6.html#strings-are-like-lists) section).
 	>**HINT**: Remember that the `'\n'` character sequence is a "line break".
 	```python
 	>>> print('hey\nmy\nfriend')
